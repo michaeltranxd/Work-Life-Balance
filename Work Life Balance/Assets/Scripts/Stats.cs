@@ -27,4 +27,30 @@ public class Stats : MonoBehaviour
                         "\nPhysical: " + PhysHealth.ToString() +
                         "\nMental: " + MentHealth.ToString();
     }
+
+    public void SpendTime(int amount)
+    {
+        Time -= amount;
+    }
+
+    public void DecrementPhys(int amount)
+    {
+        PhysHealth -= amount;
+    }
+
+    public void IncrementPhys(int amount)
+    {
+        PhysHealth += amount;
+    }
+
+    public void DecrementMent(int amount)
+    {
+        MentHealth -= amount;
+    }
+
+    public void IncrementMent(int amount)
+    {
+        MentHealth += amount;
+    }
+
 }
