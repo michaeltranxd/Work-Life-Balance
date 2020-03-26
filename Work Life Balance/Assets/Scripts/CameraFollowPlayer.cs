@@ -6,7 +6,8 @@ public class CameraFollowPlayer : MonoBehaviour
 {
     public float mouseSensitivity = 50f;
 
-    public Transform playerBody;
+    public Player playerCharacter;
+    public Transform cameraFollow;
     private Vector3 cameraOffset;
 
     // Start is called before the first frame update
@@ -14,20 +15,23 @@ public class CameraFollowPlayer : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        cameraOffset = transform.position - playerBody.transform.position;
+        cameraOffset = transform.position - cameraFollow.transform.position;
     }
 
     // LateUpdate called after Update methods
     void LateUpdate()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        if (playerCharacter.playerInControl)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        Quaternion camTurnAngle = Quaternion.AngleAxis(mouseX, Vector3.up);
-        cameraOffset = camTurnAngle * cameraOffset;
+            Quaternion camTurnAngle = Quaternion.AngleAxis(mouseX, Vector3.up);
+            cameraOffset = camTurnAngle * cameraOffset;
 
-        transform.position = playerBody.transform.position + cameraOffset;
-        transform.LookAt(playerBody);
+            transform.position = cameraFollow.transform.position + cameraOffset;
+            transform.LookAt(cameraFollow);
+        }
     }
 
 }

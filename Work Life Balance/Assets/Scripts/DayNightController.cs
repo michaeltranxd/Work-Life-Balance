@@ -3,12 +3,11 @@ using System.Collections;
 
 public class DayNightController : MonoBehaviour
 {
-
     public Light sun;
     public Light moon;
-    public float secondsInFullDay = 1200f;
-    public float currentTimeOfDay = 0;
-    public float timeMultiplier = 1f;
+    private static float secondsInFullDay = 1200f;
+    private static float currentTimeOfDay = 0;
+    private static float timeMultiplier = 1f;
 
     public const float startOfSunrise = .25f;
     public const float startOfDaytime = .35f;
@@ -16,29 +15,31 @@ public class DayNightController : MonoBehaviour
     public const float startOfNighttime = .80f;
 
     float sunInitialIntensity;
-    private int numDays = 0;
-    private float currentHour = 0f;
-    private float currentMinute = 0f;
+    private static int numDays = 0;
+    private static float currentHour = 0f;
+    private static float currentMinute = 0f;
+
+    private static Event currentEvent = null;
 
     void Start()
     {
         sunInitialIntensity = sun.intensity;
     }
 
-    bool isSunrise()
+    static bool isSunrise()
     {
         return currentTimeOfDay >= startOfSunrise && currentTimeOfDay < startOfDaytime;
     }
 
-    bool isDaytime()
+    static bool isDaytime()
     {
         return currentTimeOfDay >= startOfDaytime && currentTimeOfDay < startOfSunset;
     }
-    bool isSunset()
+    static bool isSunset()
     {
         return currentTimeOfDay >= startOfSunset && currentTimeOfDay < startOfNighttime;
     }
-    bool isNighttime()
+    static bool isNighttime()
     {
         return currentTimeOfDay >= startOfNighttime || currentTimeOfDay < startOfSunrise;
     }
@@ -49,17 +50,30 @@ public class DayNightController : MonoBehaviour
 
         currentTimeOfDay += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
 
-        // Digital time
-        currentHour = 24 * currentTimeOfDay;
-        currentMinute = 60 * (currentHour - Mathf.Floor(currentHour));
-
-        print((int)currentHour + ": " + (int)currentMinute);
-
         if (currentTimeOfDay >= 1)
         {
             currentTimeOfDay = 0;
             numDays++;
         }
+
+        if(currentEvent != null)
+        {
+            if(currentEvent is SleepEvent && isDaytime())
+            {
+                timeMultiplier = 1f;
+                currentEvent.end();
+                currentEvent = null;
+            }
+        }
+    }
+
+    void getCurrentTime()
+    {
+        // Digital time
+        currentHour = 24 * currentTimeOfDay;
+        currentMinute = 60 * (currentHour - Mathf.Floor(currentHour));
+
+        //print((int)currentHour + ": " + (int)currentMinute);
     }
 
     void UpdateSunAndMoon()
@@ -84,5 +98,15 @@ public class DayNightController : MonoBehaviour
 
         sun.intensity = sunInitialIntensity * intensityMultiplier;
        // moon.intensity = sunInitialIntensity * intensityMultiplier;
+    }
+
+    public static bool CanSkipNighttime()
+    {
+        return isNighttime();
+    }
+    public static void SkipNighttime(Event e)
+    {
+        currentEvent = e;
+        timeMultiplier = 40f;
     }
 }
