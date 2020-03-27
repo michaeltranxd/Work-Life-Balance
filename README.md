@@ -1,5 +1,7 @@
 # Work Life Balance
 
+Work-life balance is a 3d healthcare awareness serious game that is targeted for individuals that have experienced hospital admission. Players will play as a patient recently discharged from the hospital and have to perform specific actions under restrictions to achieve one goal: to prevent hospital readmission. Each action will increase/decrease the physical, mental, nutrition, wakefulness, hygiene, and energy, depending on the action.
+
 [Design Document](https://docs.google.com/document/d/1Ck8zF3Yt3X1N1JXT_AUpbYGIUTo74_H7UZIEWQ4_muc/edit?usp=sharing)
 
 **Group Members**  
@@ -7,9 +9,8 @@
 - Spancer Guo [@spancerrr](https://github.com/spancerrr)
 - Michael Tran [@michaeltranxd](https://github.com/michaeltranxd)
 
-## Executive Summary
-Work Life Balance is a 3D healthcare awareness serious game that is targeted for young adults that are entering college and/or adjusting to work-life. Players perform specific actions under restrictions of action points to achieve one goal: to stay healthy. Each action will increase/decrease the hunger, hygiene, health, and enjoyment status bars, depending on the action.
-
+Collaboration with Memes for Health under Dr. Younge
 
 ## Credits:
-[TBD]
+- Mouse orbit using camera (Jayanam) https://youtu.be/xcn7hz7J7sI
+- Day and Night cycle (SpeedTutor) https://youtu.be/MOuS2Wuntl8
