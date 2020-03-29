@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Stats : MonoBehaviour
 {
-    public Text stats;
+    //public Text stats;
     public Text message;
     public Text TimeText;
 
