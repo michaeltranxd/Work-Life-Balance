@@ -1,6 +1,0 @@
-Schedule and deliverable:
-	Character movement -- Sun by 5pm (estimate: 2hrs)
-	Camera movement with character -- Mon by 12am (estimate: 3hrs)
-	Day & night lighting-- Wed by 5pm (estimate: 1 hrs)
-	Sync the day & night lighting to the current time of day within the game-- Thurs by 5pm (estimate: 1 hrs)
-	Go to sleep using bed-- Fri by 5pm (estimate: 1 hrs)
