@@ -1,0 +1,4 @@
+Schedule and deliverable:
+	Add 5 stats (variables) to player that can be incremented/decremented on collision --- Sat by 11pm (estimate: 4 hrs)
+	Add UI element to show the stats-- Sun by 11pm (estimate: 2 hr)
+	Syncing UI element with stat-- Mon by 11pm (estimate: 2 hrs)

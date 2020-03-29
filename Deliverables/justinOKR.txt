@@ -1,0 +1,4 @@
+Schedule and deliverables:
+	Menu Functionality (estimate: 4hrs)
+		- includes: collision activation, button functions, tbd.
+	
