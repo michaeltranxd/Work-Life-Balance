@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         playerInControl = true;
+        inEvent = false;
         //Cursor.visible = true;
         //Cursor.lockState = CursorLockMode.Confined;
     }

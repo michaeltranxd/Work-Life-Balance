@@ -6,25 +6,31 @@ public class DayNightController : MonoBehaviour
     public Light sun;
     public Light moon;
     private static float secondsInFullDay = 1200f;
-    private static float currentTimeOfDay = 0;
+    private static float currentTimeOfDay = .20f;
     private static float timeMultiplier = 1f;
 
     public const float startOfSunrise = .25f;
     public const float startOfDaytime = .35f;
-    public const float startOfSunset = .70f; 
+    public const float startOfSunset = .65f; 
     public const float startOfNighttime = .80f;
+    float startOfNoon = .5f;
 
-    float sunInitialIntensity;
+    float sunIntensity = 1;
+    float moonIntensity = 1;
+
+    // For the sun intensities
+    float daytimeMaxIntensity = .7f;
+    float sunriseMaxIntesity = .3f;
+
+    // For the moon intensities
+    float nighttimeMaxIntensity = .7f;
+    float sunsetMaxIntensity = .3f;
+
     private static int numDays = 0;
     private static float currentHour = 0f;
     private static float currentMinute = 0f;
 
     private static Event currentEvent = null;
-
-    void Start()
-    {
-        sunInitialIntensity = sun.intensity;
-    }
 
     static bool isSunrise()
     {
@@ -49,7 +55,7 @@ public class DayNightController : MonoBehaviour
         UpdateSunAndMoon();
 
         currentTimeOfDay += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
-
+        print(currentTimeOfDay);
         if (currentTimeOfDay >= 1)
         {
             currentTimeOfDay = 0;
@@ -82,22 +88,28 @@ public class DayNightController : MonoBehaviour
         sun.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360) - 90, 170, 0);
         moon.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360) - 270, 170, 0);
 
-        float intensityMultiplier = 1;
-        if (currentTimeOfDay <= 0.23f || currentTimeOfDay >= 0.75f)
+        if (isNighttime())
         {
-            intensityMultiplier = 0;
+            sunIntensity = 0;
+            moonIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfNighttime, startOfSunrise, sunsetMaxIntensity, nighttimeMaxIntensity));
         }
-        else if (currentTimeOfDay <= 0.25f)
+        else if (isSunrise())
         {
-            intensityMultiplier = Mathf.Clamp01((currentTimeOfDay - 0.23f) * (1 / 0.02f));
+            sunIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfSunrise, startOfDaytime, 0, sunriseMaxIntesity));
+            moonIntensity = Mathf.Clamp01(startOfDaytime - map(currentTimeOfDay, startOfSunrise, startOfDaytime, 0, nighttimeMaxIntensity));
         }
-        else if (currentTimeOfDay >= 0.73f)
+        else if (isSunset())
         {
-            intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
+            sunIntensity = Mathf.Clamp01(startOfNighttime - map(currentTimeOfDay, startOfSunset, startOfNighttime, 0f, daytimeMaxIntensity));
+            moonIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfSunset, startOfNighttime, 0, sunsetMaxIntensity));
         }
-
-        sun.intensity = sunInitialIntensity * intensityMultiplier;
-       // moon.intensity = sunInitialIntensity * intensityMultiplier;
+        else if (isDaytime())
+        {
+            sunIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfDaytime, startOfNoon, sunriseMaxIntesity, daytimeMaxIntensity));
+            moonIntensity = 0f;
+        }
+        sun.intensity = sunIntensity;
+        moon.intensity = moonIntensity;
     }
 
     public static bool CanSkipNighttime()
@@ -108,5 +120,16 @@ public class DayNightController : MonoBehaviour
     {
         currentEvent = e;
         timeMultiplier = 40f;
+    }
+
+    /* Function will remap range of [a,b] to new range [c,d]
+     * and return the value that you want mapped from [a, b] to [c,d]
+     * 
+     * Credit to Eric5h5
+     * https://forum.unity.com/threads/mapping-or-scaling-values-to-a-new-range.180090/
+     */
+    private float map(float value, float a, float b, float c, float d)
+    {
+        return Mathf.Lerp(c, d, Mathf.InverseLerp(a, b, value));
     }
 }
