@@ -13,6 +13,7 @@ public class DayNightController : MonoBehaviour
     public const float startOfDaytime = .35f;
     public const float startOfSunset = .65f; 
     public const float startOfNighttime = .80f;
+    public const float startOfMidnight = 0f;
     float startOfNoon = .5f;
 
     float sunIntensity = 1;
@@ -118,12 +119,13 @@ public class DayNightController : MonoBehaviour
         if (isNighttime())
         {
             sunIntensity = 0;
-            moonIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfNighttime, startOfSunrise, sunsetMaxIntensity, nighttimeMaxIntensity));
+            if(currentTimeOfDay > startOfNighttime)
+                moonIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfNighttime, .99f, sunsetMaxIntensity, sunsetMaxIntensity + (nighttimeMaxIntensity / 2)));
         }
         else if (isSunrise())
         {
             sunIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfSunrise, startOfDaytime, 0, sunriseMaxIntesity));
-            moonIntensity = Mathf.Clamp01(startOfDaytime - map(currentTimeOfDay, startOfSunrise, startOfDaytime, 0, nighttimeMaxIntensity));
+            moonIntensity = Mathf.Clamp01(sunsetMaxIntensity + (nighttimeMaxIntensity / 2) - map(currentTimeOfDay, startOfSunrise, startOfDaytime, 0, sunsetMaxIntensity + (nighttimeMaxIntensity / 2)));
         }
         else if (isSunset())
         {
