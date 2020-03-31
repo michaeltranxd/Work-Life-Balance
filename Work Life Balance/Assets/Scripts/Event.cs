@@ -46,3 +46,25 @@ public class SleepEvent : Event
     }
 
 }
+
+public class SkipTimeEvent : Event
+{
+    public float secondsToSkip
+    { get; set; }
+public float initialTime
+    { get; set; }
+    public SkipTimeEvent(Player player, float seconds) : base(player) {
+        secondsToSkip = seconds;
+    }
+
+    protected override bool hasPrereqs()
+    {
+        return DayNightController.CanSkipTime(this.secondsToSkip);
+    }
+
+    protected override void doEvent()
+    {
+        DayNightController.SkipTime(this);
+    }
+
+}

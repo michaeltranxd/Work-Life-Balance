@@ -55,7 +55,7 @@ public class DayNightController : MonoBehaviour
         UpdateSunAndMoon();
 
         currentTimeOfDay += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
-        print(currentTimeOfDay);
+        //print(currentTimeOfDay);
         if (currentTimeOfDay >= 1)
         {
             currentTimeOfDay = 0;
@@ -70,14 +70,36 @@ public class DayNightController : MonoBehaviour
                 currentEvent.end();
                 currentEvent = null;
             }
+            else if(currentEvent is SkipTimeEvent)
+            {
+                SkipTimeEvent anEvent = (SkipTimeEvent)currentEvent;
+                if (currentTimeOfDay >= anEvent.initialTime + anEvent.secondsToSkip / secondsInFullDay)
+                {
+                    timeMultiplier = 1f;
+                    currentEvent.end();
+                    currentEvent = null;
+                }
+            }
         }
+    }
+
+    public int getCurrentHour()
+    {
+        currentHour = 24 * currentTimeOfDay;
+        return (int)currentHour;
+    }
+
+    public int getCurrentMinute()
+    {
+        currentMinute = 60 * (currentHour - Mathf.Floor(currentHour));
+        return (int)currentMinute;
     }
 
     void getCurrentTime()
     {
         // Digital time
-        currentHour = 24 * currentTimeOfDay;
-        currentMinute = 60 * (currentHour - Mathf.Floor(currentHour));
+        
+        
 
         //print((int)currentHour + ": " + (int)currentMinute);
     }
@@ -120,6 +142,19 @@ public class DayNightController : MonoBehaviour
     {
         currentEvent = e;
         timeMultiplier = 40f;
+    }
+
+    public static bool CanSkipTime(float seconds)
+    {
+        print(currentTimeOfDay + seconds / secondsInFullDay);
+        return currentTimeOfDay + seconds / secondsInFullDay > startOfDaytime && (currentTimeOfDay + seconds / secondsInFullDay) < startOfNighttime;
+    }
+    public static void SkipTime(SkipTimeEvent e)
+    {
+        e.initialTime = currentTimeOfDay;
+        currentEvent = e;
+        timeMultiplier = 40f;
+        print("hello");
     }
 
     /* Function will remap range of [a,b] to new range [c,d]

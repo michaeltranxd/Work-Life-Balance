@@ -99,11 +99,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        speed = 0f;
-    }    
-
     // Function to signify an event beginning, most likely dialogue so we stop player movement
     // To be used only by Event class
     public void eventBegin()
@@ -116,5 +111,11 @@ public class Player : MonoBehaviour
     {
         inEvent = false;
         playerInControl = true;
+    }
+
+    public void playerSkipTime(float amount)
+    {
+        SkipTimeEvent skipTimeEvent = new SkipTimeEvent(this, amount);
+        skipTimeEvent.run();
     }
 }

@@ -733,8 +733,9 @@ GameObject:
   - component: {fileID: 196946818}
   - component: {fileID: 196946817}
   - component: {fileID: 196946816}
+  - component: {fileID: 196946819}
   m_Layer: 5
-  m_Name: Button 3
+  m_Name: B3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,51 +803,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 196946817}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1634597557}
-        m_MethodName: OnButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1928281630}
-        m_MethodName: SpendTime
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1928281630}
-        m_MethodName: DecrementPhys
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1928281630}
-        m_MethodName: DecrementPhys
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &196946817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +840,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196946814}
   m_CullTransparentMesh: 0
+--- !u!114 &196946819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196946814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae00500a6f1b54b4c81e4b8039ff4126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &205580022
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,8 +864,9 @@ GameObject:
   - component: {fileID: 205580026}
   - component: {fileID: 205580025}
   - component: {fileID: 205580024}
+  - component: {fileID: 205580027}
   m_Layer: 5
-  m_Name: Button 1
+  m_Name: B1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -964,40 +934,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 205580025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1634597557}
-        m_MethodName: OnButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: OnButtonClick
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1928281630}
-        m_MethodName: SpendTime
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 120
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1928281630}
-        m_MethodName: IncrementPhys
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &205580025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,6 +971,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205580022}
   m_CullTransparentMesh: 0
+--- !u!114 &205580027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205580022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae00500a6f1b54b4c81e4b8039ff4126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &216699786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,8 +2400,9 @@ GameObject:
   - component: {fileID: 1006938029}
   - component: {fileID: 1006938028}
   - component: {fileID: 1006938027}
+  - component: {fileID: 1006938030}
   m_Layer: 5
-  m_Name: Button 2
+  m_Name: B2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2520,51 +2470,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1006938028}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1634597557}
-        m_MethodName: OnButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1928281630}
-        m_MethodName: SpendTime
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 80
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1928281630}
-        m_MethodName: IncrementPhys
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1928281630}
-        m_MethodName: IncrementMent
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1006938028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2601,6 +2507,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006938025}
   m_CullTransparentMesh: 0
+--- !u!114 &1006938030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006938025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae00500a6f1b54b4c81e4b8039ff4126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1232551661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,7 +3550,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634597556}
-  - component: {fileID: 1634597557}
   m_Layer: 5
   m_Name: Button Manager
   m_TagString: Untagged
@@ -3662,18 +3579,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1634597557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634597555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae00500a6f1b54b4c81e4b8039ff4126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1644090215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4513,7 +4418,7 @@ GameObject:
   - component: {fileID: 1928281631}
   - component: {fileID: 1928281630}
   m_Layer: 5
-  m_Name: Stats Manager
+  m_Name: StatManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4526,7 +4431,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928281628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.28943, y: 0.28943, z: 0.28943}
   m_Children: []
@@ -4535,7 +4440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1011, y: 221}
+  m_AnchoredPosition: {x: -1015.5302, y: 210.02942}
   m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928281630
@@ -4567,6 +4472,8 @@ MonoBehaviour:
   HygieneBar: {fileID: 1909239203}
   EnergyBar: {fileID: 1248877478}
   WakeBar: {fileID: 2015699718}
+  dayNightController: {fileID: 925766467}
+  player: {fileID: 2024954013}
 --- !u!114 &1928281631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,6 +4919,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 216699786}
+  b1: {fileID: 205580024}
+  b2: {fileID: 1006938027}
+  b3: {fileID: 196946816}
+  StatsManager: {fileID: 1928281630}
 --- !u!114 &2024954013
 MonoBehaviour:
   m_ObjectHideFlags: 0

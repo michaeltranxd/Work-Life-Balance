@@ -10,14 +10,14 @@ public class Stats : MonoBehaviour
     public Text TimeText;
 
     // set to public for testing purposes
-    public int Timeleft;
-    private int TimeWasLeft;
-    public int PhysHealth;
-    public int MentHealth;
+    public float Timeleft;
+    private float TimeWasLeft;
+    public float PhysHealth;
+    public float MentHealth;
     public float Nutri;
     public float Hygiene;
-    public int Energy;
-    public int Wake;
+    public float Energy;
+    public float Wake;
 
     public int ThirstOverTime;
     public int HungerOverTime;
@@ -31,13 +31,18 @@ public class Stats : MonoBehaviour
 
     // set to public for testing purposes
 
-    Rigidbody body;
+    public DayNightController dayNightController;
+    public Player player;
+
     // Start is called before the first frame update
     void Start()
     {
-        body = GetComponent<Rigidbody>();
         PhysHealthBar.maxValue = PhysHealth;
         MentHealthBar.maxValue = MentHealth;
+        NutriBar.maxValue = Nutri;
+        HygieneBar.maxValue = Hygiene;
+        EnergyBar.maxValue = Energy;
+        WakeBar.maxValue = Wake;
         TimeWasLeft = Timeleft;
 
     }
@@ -48,9 +53,9 @@ public class Stats : MonoBehaviour
         Nutri -= HungerOverTime * (Time.deltaTime)/60;
         Hygiene -= ThirstOverTime * (Time.deltaTime)/60;
         if(TimeWasLeft != Timeleft){
-            Debug.Log(TimeWasLeft - Timeleft);
-            Nutri -= HungerOverTime * (TimeWasLeft - Timeleft);
-            Hygiene -= ThirstOverTime * (TimeWasLeft - Timeleft);
+            //Debug.Log(TimeWasLeft - Timeleft);
+            Nutri -= HungerOverTime * (TimeWasLeft - Timeleft) / 60;    // Every minute = 1 point
+            Hygiene -= ThirstOverTime * (TimeWasLeft - Timeleft) / 60;  // Every minute = 1 point
             TimeWasLeft = Timeleft;
         }
 
@@ -58,92 +63,68 @@ public class Stats : MonoBehaviour
     }
 
     public void UpdateUI(){
-        if(PhysHealth < 0){
-            message.text = "You have died";
+        PhysHealthBar.value = PhysHealth;
+        MentHealthBar.value = MentHealth;
+        NutriBar.value = Nutri;
+        HygieneBar.value = Hygiene;
+        WakeBar.value = Wake;
+        EnergyBar.value = Energy;
+        if (PhysHealth == 0){
+            message.text = "You have been sent back to the hospital";
         }
-        else if(PhysHealth > PhysHealthBar.maxValue){
-            PhysHealth = (int)PhysHealthBar.maxValue;
+        else if(MentHealth == 0){
+            message.text = "You have been sent back to the hospital";
         }
-        else if(MentHealth < 0){
-            message.text = "You went crazy";
-        }
-        else if(MentHealth > MentHealthBar.maxValue){
-            MentHealth = (int)MentHealthBar.maxValue;
-        }
-        else if(Timeleft < 0){
+        if (Timeleft == 0){
             TimeText.text = "Time: 0";
             message.text = "Time's up";
         }
-        else{
-            PhysHealthBar.value = PhysHealth;
-            MentHealthBar.value = MentHealth;
-            TimeText.text = "Time: " + Timeleft.ToString();
-            NutriBar.value = Nutri;
-            HygieneBar.value = Hygiene;
-            WakeBar.value = Wake;
-            EnergyBar.value = Energy;
+        else
+        {
+            TimeText.text = "Time: " + dayNightController.getCurrentHour() + ":" + dayNightController.getCurrentMinute();
         }
+
     }
-    public void SpendTime(int amount)
-    {
+    public void SpendTime(float amount)
+    { 
         TimeWasLeft = Timeleft;
         Timeleft -= amount;
+
+        player.playerSkipTime(amount);
     }
 
-    public void DecrementPhys(int amount)
+    public bool EnoughTime(float amount)
     {
-        PhysHealth -= amount;
+        return Timeleft - amount > 0;
     }
 
-    public void IncrementPhys(int amount)
+    public void AddPhys(float amount)
     {
-        PhysHealth += amount;
+        PhysHealth = Mathf.Clamp(PhysHealth + amount, 0, PhysHealthBar.maxValue);
     }
 
-    public void DecrementMent(int amount)
+    public void AddMent(float amount)
     {
-        MentHealth -= amount;
+        MentHealth = Mathf.Clamp(MentHealth + amount, 0, MentHealthBar.maxValue);
     }
 
-    public void IncrementMent(int amount)
+    public void AddNutri(float amount)
     {
-        MentHealth += amount;
+        Nutri = Mathf.Clamp(Nutri + amount, 0, NutriBar.maxValue);
     }
 
-    public void DecrementNutri(float amount)
+    public void AddWake(float amount)
     {
-        Nutri += amount;
-    }
-    public void IncrementNutri(float amount)
-    {
-        Nutri += amount;
+        Wake = Mathf.Clamp(Wake + amount, 0, WakeBar.maxValue);
     }
 
-    public void DecrementWake(int amount)
+    public void AddHygiene(float amount)
     {
-        Wake += amount;
+        Hygiene = Mathf.Clamp(Hygiene + amount, 0, HygieneBar.maxValue);
     }
-    public void IncrementWake(int amount)
+    public void AddEnergy(float amount)
     {
-        Wake += amount;
-    }
-
-    public void DecrementHygiene(float amount)
-    {
-        Hygiene += amount;
-    }
-    public void IncrementHygiene(float amount)
-    {
-        Hygiene += amount;
-    }
-
-    public void DecrementEnergy(int amount)
-    {
-        Energy += amount;
-    }
-    public void IncrementEnergy(int amount)
-    {
-        Energy += amount;
+        Energy = Mathf.Clamp(Energy + amount, 0, EnergyBar.maxValue);
     }
 
 }
