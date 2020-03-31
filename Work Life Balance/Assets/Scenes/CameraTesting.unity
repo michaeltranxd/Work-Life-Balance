@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 191532257}
   m_Layer: 0
   m_Name: Gym Placeholder
-  m_TagString: Untagged
+  m_TagString: Gym
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -733,7 +733,6 @@ GameObject:
   - component: {fileID: 196946818}
   - component: {fileID: 196946817}
   - component: {fileID: 196946816}
-  - component: {fileID: 196946819}
   m_Layer: 5
   m_Name: B3
   m_TagString: Untagged
@@ -840,18 +839,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196946814}
   m_CullTransparentMesh: 0
---- !u!114 &196946819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196946814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae00500a6f1b54b4c81e4b8039ff4126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &205580022
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +851,6 @@ GameObject:
   - component: {fileID: 205580026}
   - component: {fileID: 205580025}
   - component: {fileID: 205580024}
-  - component: {fileID: 205580027}
   m_Layer: 5
   m_Name: B1
   m_TagString: Untagged
@@ -971,18 +957,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205580022}
   m_CullTransparentMesh: 0
---- !u!114 &205580027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205580022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae00500a6f1b54b4c81e4b8039ff4126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &216699786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,7 +2374,6 @@ GameObject:
   - component: {fileID: 1006938029}
   - component: {fileID: 1006938028}
   - component: {fileID: 1006938027}
-  - component: {fileID: 1006938030}
   m_Layer: 5
   m_Name: B2
   m_TagString: Untagged
@@ -2507,18 +2480,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006938025}
   m_CullTransparentMesh: 0
---- !u!114 &1006938030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006938025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae00500a6f1b54b4c81e4b8039ff4126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1232551661
 GameObject:
   m_ObjectHideFlags: 0
