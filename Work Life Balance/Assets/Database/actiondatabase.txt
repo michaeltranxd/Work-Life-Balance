@@ -1,4 +1,7 @@
 // Time, PH, MH, N, W, H, E, Name, tag
-100, -20, 0, 0, 0, 20, 50, Run on treadmill, Gym
-1, -50, -50, -100, -100, -200, -200, Lift weights, Gym
-120, -30, 0, 50, 0, 20, 0, Do yoga, Gym
+100, 10, -20, 0, 0, -40, -25, Run on treadmill, Gym
+120, 30, -15, 0, -20, -40, -20, Lift weights, Gym
+60, 5, 0, 0, 0, -10, -10, Do yoga, Gym
+30, -10, 10, 5, -5, -5, 10, Cheeseburger, Restaurant
+45, 10, 5, 10, 0, 0, 10, Cob Salad, Restaurant
+60, -15, 15, 10, -10, -10, 5, Meat Combo, Restaurant

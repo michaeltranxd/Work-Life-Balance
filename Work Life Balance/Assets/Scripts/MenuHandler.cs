@@ -52,6 +52,9 @@ public class MenuHandler : MonoBehaviour
          * Enable menu
          */
 
+        string building = other.tag;
+
+
         // Access the actions in the database using the code below
         List<Action> actions;
         if (database.TryGetValue(other.tag, out actions))

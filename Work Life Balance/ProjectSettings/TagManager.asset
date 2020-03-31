@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bed
   - Gym
+  - Restaurant
   layers:
   - Default
   - TransparentFX
