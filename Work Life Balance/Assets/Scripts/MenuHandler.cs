@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +11,7 @@ public class MenuHandler : MonoBehaviour
     public ActionButton ab1, ab2, ab3;
     public Stats StatsManager;
 
+    private Dictionary<string, List<Action>> database = new Dictionary<string, List<Action>>();
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class MenuHandler : MonoBehaviour
         {
             onButtonClick(ab3);
         });
+        parseActions();
     }
 
     // Update is called once per frame
@@ -50,13 +52,17 @@ public class MenuHandler : MonoBehaviour
          * Enable menu
          */
 
-        /* Testing code */
-        Action a1 = new Action(100, -20, 0, 0, 0, 20, 50, "Run on Treadmill");
-        Action a2 = new Action(1, -50, -50, -100, -100, -200, -200, "3");
-        Action a3 = new Action(100, -30, 0, 50, 0, 20, 0, "6");
-        ab1.actionToTake = a1;
-        ab2.actionToTake = a2;
-        ab3.actionToTake = a3;
+        // Access the actions in the database using the code below
+        List<Action> actions;
+        if (database.TryGetValue(other.tag, out actions))
+        {
+            ab1.actionToTake = actions[0];
+            b1.GetComponentInChildren<Text>().text = actionToString(actions[0]);
+            ab2.actionToTake = actions[1];
+            b2.GetComponentInChildren<Text>().text = actionToString(actions[1]);
+            ab3.actionToTake = actions[2];
+            b3.GetComponentInChildren<Text>().text = actionToString(actions[2]);
+        }
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -90,5 +96,60 @@ public class MenuHandler : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    private string actionToString(Action action)
+    {
+        return action.name + " - " + action.Time;
+    }
+
+    private void parseActions()
+    {
+        // Read each line of the file into a string array. Each element
+        // of the array is one line of the file.
+        string[] lines = System.IO.File.ReadAllLines(Application.dataPath + "/Database/actiondatabase.txt");
+        
+        foreach(string line in lines)
+        {
+            if (line.StartsWith("//"))
+            {
+                // Skip comments
+                continue;
+            }
+
+            // Parse each line into respective attributes
+            string[] splittedLine = line.Split(',');
+            if(splittedLine.Length != 9)
+            {
+                print("This line could not be parsed: " + line);
+                continue;
+            }
+            float time = float.Parse(splittedLine[0]);
+            float ph = float.Parse(splittedLine[1]);
+            float mh = float.Parse(splittedLine[2]);
+            float n = float.Parse(splittedLine[3]);
+            float w = float.Parse(splittedLine[4]);
+            float h = float.Parse(splittedLine[5]);
+            float e = float.Parse(splittedLine[6]);
+            string name = splittedLine[7].Trim();
+            string tag = splittedLine[8].Trim();
+
+            Action action = new Action(time, ph, mh, n, w, h, e, name);
+
+            List<Action> actions;
+            if (!database.TryGetValue(tag, out actions))
+            {
+                // Database does not have a key to list entry, we need to create one
+                actions = new List<Action>();
+                actions.Add(action);
+                database.Add(tag, actions);
+            }
+            else
+            {
+                actions.Add(action);
+                database[tag] = actions;
+            }
+                                          
+        }
     }
 }

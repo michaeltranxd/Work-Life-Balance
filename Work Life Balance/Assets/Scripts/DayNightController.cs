@@ -5,9 +5,9 @@ public class DayNightController : MonoBehaviour
 {
     public Light sun;
     public Light moon;
-    private static float secondsInFullDay = 1200f;
-    private static float currentTimeOfDay = .20f;
-    private static float timeMultiplier = 1f;
+    private static float minutesInFullDay = 1200f;
+    private static float currentTimeOfDay = .80f;
+    public static float timeMultiplier = 1f;
 
     public const float startOfSunrise = .25f;
     public const float startOfDaytime = .35f;
@@ -37,7 +37,7 @@ public class DayNightController : MonoBehaviour
         return currentTimeOfDay >= startOfSunrise && currentTimeOfDay < startOfDaytime;
     }
 
-    static bool isDaytime()
+    public static bool isDaytime()
     {
         return currentTimeOfDay >= startOfDaytime && currentTimeOfDay < startOfSunset;
     }
@@ -50,11 +50,24 @@ public class DayNightController : MonoBehaviour
         return currentTimeOfDay >= startOfNighttime || currentTimeOfDay < startOfSunrise;
     }
 
+    public bool isCloseToSleep()
+    {
+        return currentTimeOfDay < .90f && currentTimeOfDay > .85f;
+    }
+    public bool isPastSleep()
+    {
+        return currentTimeOfDay >= .90f;
+    }
+    public float timeLeft()
+    {
+        return (.90f - currentTimeOfDay) * 24f * 60f;
+    }
+
     void Update()
     {
         UpdateSunAndMoon();
 
-        currentTimeOfDay += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
+        currentTimeOfDay += (Time.deltaTime / minutesInFullDay) * timeMultiplier;
         //print(currentTimeOfDay);
         if (currentTimeOfDay >= 1)
         {
@@ -70,10 +83,10 @@ public class DayNightController : MonoBehaviour
                 currentEvent.end();
                 currentEvent = null;
             }
-            else if(currentEvent is SkipTimeEvent)
+            else if (currentEvent is SkipTimeEvent anEvent)
             {
-                SkipTimeEvent anEvent = (SkipTimeEvent)currentEvent;
-                if (currentTimeOfDay >= anEvent.initialTime + anEvent.secondsToSkip / secondsInFullDay)
+                // 1 hr / 24hrs is ratio, since we are in minutes we / 60 / 24, if we were 1 hr we do / 24
+                if (currentTimeOfDay >= (anEvent.initialTime + anEvent.minutesToSkip / 60 / 24))
                 {
                     timeMultiplier = 1f;
                     currentEvent.end();
@@ -95,14 +108,6 @@ public class DayNightController : MonoBehaviour
         return (int)currentMinute;
     }
 
-    void getCurrentTime()
-    {
-        // Digital time
-        
-        
-
-        //print((int)currentHour + ": " + (int)currentMinute);
-    }
 
     void UpdateSunAndMoon()
     {
@@ -144,17 +149,16 @@ public class DayNightController : MonoBehaviour
         timeMultiplier = 40f;
     }
 
-    public static bool CanSkipTime(float seconds)
+    public static bool CanSkipTime(float minutes)
     {
-        print(currentTimeOfDay + seconds / secondsInFullDay);
-        return currentTimeOfDay + seconds / secondsInFullDay > startOfDaytime && (currentTimeOfDay + seconds / secondsInFullDay) < startOfNighttime;
+        print(currentTimeOfDay + minutes / minutesInFullDay);
+        return currentTimeOfDay + minutes / minutesInFullDay > startOfDaytime && (currentTimeOfDay + minutes / minutesInFullDay) < startOfNighttime;
     }
     public static void SkipTime(SkipTimeEvent e)
     {
         e.initialTime = currentTimeOfDay;
         currentEvent = e;
         timeMultiplier = 40f;
-        print("hello");
     }
 
     /* Function will remap range of [a,b] to new range [c,d]

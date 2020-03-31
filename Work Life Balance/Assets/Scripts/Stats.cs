@@ -50,14 +50,11 @@ public class Stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Timeleft = dayNightController.timeLeft();
         Nutri -= HungerOverTime * (Time.deltaTime)/60;
         Hygiene -= ThirstOverTime * (Time.deltaTime)/60;
-        if(TimeWasLeft != Timeleft){
-            //Debug.Log(TimeWasLeft - Timeleft);
-            Nutri -= HungerOverTime * (TimeWasLeft - Timeleft) / 60;    // Every minute = 1 point
-            Hygiene -= ThirstOverTime * (TimeWasLeft - Timeleft) / 60;  // Every minute = 1 point
-            TimeWasLeft = Timeleft;
-        }
+        Nutri -= HungerOverTime * Time.deltaTime / 60 * DayNightController.timeMultiplier;    // Every minute = 1 point
+        Hygiene -= ThirstOverTime * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
 
         UpdateUI();
     }
@@ -75,20 +72,24 @@ public class Stats : MonoBehaviour
         else if(MentHealth == 0){
             message.text = "You have been sent back to the hospital";
         }
-        if (Timeleft == 0){
-            TimeText.text = "Time: 0";
-            message.text = "Time's up";
-        }
-        else
+        if (dayNightController.isPastSleep())
         {
-            TimeText.text = "Time: " + dayNightController.getCurrentHour() + ":" + dayNightController.getCurrentMinute();
+            message.text = "Time's up";
+            print("past sleep");
+            // TODO, reset day and send user back home
         }
+        else if (dayNightController.isCloseToSleep())
+        {
+            message.text = "Hurry to sleep, it is almost time to sleep";
+        }
+        TimeText.text = "Time: " + dayNightController.getCurrentHour() + ":" + dayNightController.getCurrentMinute();
 
     }
     public void SpendTime(float amount)
     { 
         TimeWasLeft = Timeleft;
         Timeleft -= amount;
+        print(Timeleft);
 
         player.playerSkipTime(amount);
     }

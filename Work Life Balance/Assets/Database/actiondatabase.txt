@@ -1,0 +1,4 @@
+// Time, PH, MH, N, W, H, E, Name, tag
+100, -20, 0, 0, 0, 20, 50, Run on treadmill, Gym
+1, -50, -50, -100, -100, -200, -200, Lift weights, Gym
+120, -30, 0, 50, 0, 20, 0, Do yoga, Gym
