@@ -32,6 +32,8 @@ public class DayNightController : MonoBehaviour
     private static float currentMinute = 0f;
 
     private static Event currentEvent = null;
+    public Camera SceneCamera;
+    public Camera PlayerCamera;
 
     static bool isSunrise()
     {
@@ -78,11 +80,18 @@ public class DayNightController : MonoBehaviour
 
         if(currentEvent != null)
         {
-            if(currentEvent is SleepEvent && isDaytime())
+            if (currentEvent is SleepEvent)
             {
-                timeMultiplier = 1f;
-                currentEvent.end();
-                currentEvent = null;
+                SceneCamera.gameObject.SetActive(true);
+                PlayerCamera.gameObject.SetActive(false);
+                if (isDaytime())
+                {
+                    timeMultiplier = 1f;
+                    currentEvent.end();
+                    currentEvent = null;
+                    SceneCamera.gameObject.SetActive(false);
+                    PlayerCamera.gameObject.SetActive(true);
+                }
             }
             else if (currentEvent is SkipTimeEvent anEvent)
             {
