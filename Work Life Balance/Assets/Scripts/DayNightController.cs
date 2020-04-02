@@ -6,7 +6,7 @@ public class DayNightController : MonoBehaviour
     public Light sun;
     public Light moon;
     private static float minutesInFullDay = 1200f;
-    private static float currentTimeOfDay = .80f;
+    private static float currentTimeOfDay = startOfNighttime;
     public static float timeMultiplier = 1f;
 
     public const float startOfSunrise = .25f;
@@ -48,7 +48,7 @@ public class DayNightController : MonoBehaviour
     {
         return currentTimeOfDay >= startOfSunset && currentTimeOfDay < startOfNighttime;
     }
-    static bool isNighttime()
+    public static bool isNighttime()
     {
         return currentTimeOfDay >= startOfNighttime || currentTimeOfDay < startOfSunrise;
     }
@@ -64,6 +64,14 @@ public class DayNightController : MonoBehaviour
     public float timeLeft()
     {
         return (.90f - currentTimeOfDay) * 24f * 60f;
+    }
+    public bool isSkippingNight()
+    {
+        return currentEvent != null && currentEvent is SleepEvent;
+    }
+    public bool isInEvent()
+    {
+        return currentEvent != null;
     }
 
     void Update()

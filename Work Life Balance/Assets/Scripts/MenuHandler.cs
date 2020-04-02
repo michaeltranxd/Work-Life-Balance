@@ -107,7 +107,7 @@ public class MenuHandler : MonoBehaviour
     {
         // Read each line of the file into a string array. Each element
         // of the array is one line of the file.
-        string[] lines = System.IO.File.ReadAllLines(Application.dataPath + "/Database/actiondatabase.txt");
+        string[] lines = System.IO.File.ReadAllLines(Application.dataPath + "/StreamingAssets" + "/actiondatabase.txt");
         
         foreach(string line in lines)
         {

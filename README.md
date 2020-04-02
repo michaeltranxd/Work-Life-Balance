@@ -11,6 +11,15 @@ Work-life balance is a 3d healthcare awareness serious game that is targeted for
 
 Collaboration with Memes for Health under Dr. Younge
 
+## How to play:
+- Move with WASD keys
+- Move the camera using the mouse
+
+## Important notes for current build
+- The bed can only be slept on when it is night time, system will tell you when it is nighttime. To do so, just collide with the bed
+- When selecting an action, if there is not enough time in the day to do the action, the game will not let you do the action. Please note that a window to display the message that player does not have enough time is not yet implemented.
+- Please collide with the other gray cube in the scene for actions
+
 ## Credits:
 - Mouse orbit using camera (Jayanam) https://youtu.be/xcn7hz7J7sI
 - Day and Night cycle (SpeedTutor) https://youtu.be/MOuS2Wuntl8
