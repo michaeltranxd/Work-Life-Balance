@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public bool playerInControl               // Boolean value describing if player can control character
     { get; set; }
     public Camera PlayerCamera;
+    public GameObject bed;              // Bed at which player starts from
 
     Vector3 velocity = new Vector3(0, 0, 0);                   // Velocity of the player
     void Start()
