@@ -11,14 +11,16 @@ Work-life balance is a 3d healthcare awareness serious game that is targeted for
 
 Collaboration with Memes for Health under Dr. Younge
 
-## How to play:
-- Move with WASD keys
-- Move the camera using the mouse
+Level and Character Design: 
+The reason we are choosing to have the realistic level design and character design is
+because our serious game is set in the world as a simulator of someone who has some
+sort of illness that needs to take care of themself. 
 
-## Important notes for current build
-- The bed can only be slept on when it is night time, system will tell you when it is nighttime. To do so, just collide with the bed
-- When selecting an action, if there is not enough time in the day to do the action, the game will not let you do the action. Please note that a window to display the message that player does not have enough time is not yet implemented.
-- Please collide with the other gray cube in the scene for actions
+As we are trying to make this as analogous to real life as we can, it is
+important that we have designs that the player will not realize are abstract. The
+player model will not have a jetpack on or a hospital won't be just 1 floor are some
+examples that will make the player think twice about what kind of world this is set
+in.
 
 ## Credits:
 - Mouse orbit using camera (Jayanam) https://youtu.be/xcn7hz7J7sI
