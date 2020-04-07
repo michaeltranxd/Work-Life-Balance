@@ -76,8 +76,8 @@ public class Stats : MonoBehaviour
             PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
         }
         if(MentHealth <= 0 || PhysHealth <= 0){
-            //GameOverText.text = "Game Over";
-            //GameOverPanle.gameObject.SetActive(true);
+            GameOverText.text = "Game Over";
+            GameOverPanle.gameObject.SetActive(true);
         }
     }
     public void UpdateUI(){
