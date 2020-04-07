@@ -12,6 +12,9 @@ public class CameraFollowPlayer : MonoBehaviour
     private Vector3 maxCameraOffset;
     private float maxCameraMagnitude;
 
+    RaycastHit raycast;
+    bool hit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,11 @@ public class CameraFollowPlayer : MonoBehaviour
         maxCameraOffset = transform.position - cameraFollow.transform.position;
         maxCameraMagnitude = maxCameraOffset.magnitude;
         cameraOffset = maxCameraOffset;
+    }
+
+    void Update()
+    {
+        hit = Physics.Raycast(playerCharacter.transform.position, cameraOffset, out raycast, cameraOffset.magnitude);
     }
 
     // LateUpdate called after Update methods
@@ -34,8 +42,8 @@ public class CameraFollowPlayer : MonoBehaviour
             cameraOffset = camTurnAngle * cameraOffset;
             
 
-            RaycastHit raycast;
-            bool hit = Physics.Raycast(playerCharacter.transform.position, cameraOffset, out raycast, cameraOffset.magnitude);
+            
+            
 
             Debug.DrawLine(playerCharacter.transform.position, transform.position, Color.red);
 
@@ -43,8 +51,8 @@ public class CameraFollowPlayer : MonoBehaviour
             {
                 if (!raycast.transform.tag.Equals("Player"))
                 {
-                    Vector3 scaleCamera = cameraOffset / (1.01f);
-                    if ((cameraFollow.transform.position - raycast.point).sqrMagnitude - 1.2f < scaleCamera.sqrMagnitude)
+                    Vector3 scaleCamera = cameraOffset / (1.05f);
+                    if ((cameraFollow.transform.position - raycast.point).sqrMagnitude - 1.5f < scaleCamera.sqrMagnitude)
                     {
                         cameraOffset = scaleCamera;
                     }
@@ -55,7 +63,7 @@ public class CameraFollowPlayer : MonoBehaviour
             }
             else
             {
-                Vector3 scaleCamera = cameraOffset * (1.01f);
+                Vector3 scaleCamera = cameraOffset * (1.05f);
                 if (scaleCamera.magnitude < maxCameraMagnitude)
                 {
                     cameraOffset = scaleCamera;
@@ -66,13 +74,6 @@ public class CameraFollowPlayer : MonoBehaviour
             transform.position = cameraFollow.transform.position + cameraOffset;
             transform.LookAt(cameraFollow);
         }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        // Draws a 5 unit long red line in front of the object
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, cameraOffset);
     }
 
 }
