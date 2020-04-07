@@ -41,13 +41,17 @@ public class CameraFollowPlayer : MonoBehaviour
 
             if (hit)
             {
-                Vector3 scaleCamera = cameraOffset / (1.01f);
-                if((cameraFollow.transform.position - raycast.point).sqrMagnitude - 1.2f < scaleCamera.sqrMagnitude)
+                if (!raycast.transform.tag.Equals("Player"))
                 {
-                    cameraOffset = scaleCamera;
+                    Vector3 scaleCamera = cameraOffset / (1.01f);
+                    if ((cameraFollow.transform.position - raycast.point).sqrMagnitude - 1.2f < scaleCamera.sqrMagnitude)
+                    {
+                        cameraOffset = scaleCamera;
+                    }
+                    print("cam" + scaleCamera.magnitude);
+                    print("player" + (cameraFollow.transform.position - raycast.point).magnitude);
                 }
-                print("cam" + scaleCamera.magnitude);
-                print("player" + (cameraFollow.transform.position - raycast.point).magnitude);
+
             }
             else
             {
