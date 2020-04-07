@@ -8,6 +8,7 @@ public class Stats : MonoBehaviour
     //public Text stats;
     public Text message;
     public Text TimeText;
+    public Text GameOverText;
 
     // set to public for testing purposes
     public float Timeleft;
@@ -28,6 +29,8 @@ public class Stats : MonoBehaviour
     public Slider HygieneBar;
     public Slider EnergyBar;
     public Slider WakeBar;
+
+    public RectTransform GameOverPanle;
 
     // set to public for testing purposes
 
@@ -55,10 +58,28 @@ public class Stats : MonoBehaviour
         Hygiene -= ThirstOverTime * (Time.deltaTime)/60;
         Nutri -= HungerOverTime * Time.deltaTime / 60 * DayNightController.timeMultiplier;    // Every minute = 1 point
         Hygiene -= ThirstOverTime * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
-
+        checkStats();
         UpdateUI();
     }
 
+    public void checkStats(){
+        if(Nutri <=0){
+            PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier; //1 point per mins
+        }
+        if(Hygiene <= 0){
+            PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
+        }
+        if(Wake <= 0){
+            MentHealth-= Time.deltaTime / 60 * DayNightController.timeMultiplier;
+        }
+        if(Energy <= 0){
+            PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
+        }
+        if(MentHealth <= 0 || PhysHealth <= 0){
+            GameOverText.text = "Game Over";
+            GameOverPanle.gameObject.SetActive(true);
+        }
+    }
     public void UpdateUI(){
         PhysHealthBar.value = PhysHealth;
         MentHealthBar.value = MentHealth;
