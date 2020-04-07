@@ -15,11 +15,15 @@ public class Player : MonoBehaviour
     public GameObject bed;              // Bed at which player starts from
 
     Vector3 velocity = new Vector3(0, 0, 0);                   // Velocity of the player
+
+    Animator playerAnimation;         // Animation of player
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
         playerInControl = true;
         inEvent = false;
+        playerAnimation = GetComponent<Animator>();
         //Cursor.visible = true;
         //Cursor.lockState = CursorLockMode.Confined;
     }
@@ -34,6 +38,8 @@ public class Player : MonoBehaviour
 
         playerGravity();
         playerControl();
+
+
     }
 
     /* 
@@ -82,6 +88,13 @@ public class Player : MonoBehaviour
             // Only rotate when moving
             if (move != Vector3.zero)
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move.normalized), 0.1f);
+
+            if (move == Vector3.zero)
+            {
+                playerAnimation.SetBool("IsWalking", false);
+            }
+            else
+                playerAnimation.SetBool("IsWalking", true);
         }
     }
 
