@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     Vector3 velocity = new Vector3(0, 0, 0);                   // Velocity of the player
 
     Animator playerAnimation;         // Animation of player
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -37,6 +38,8 @@ public class Player : MonoBehaviour
 
         playerGravity();
         playerControl();
+
+
     }
 
     /* 
