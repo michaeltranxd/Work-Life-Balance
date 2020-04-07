@@ -72,15 +72,31 @@ public class Stats : MonoBehaviour
         else if(MentHealth == 0){
             message.text = "You have been sent back to the hospital";
         }
-        if (dayNightController.isPastSleep())
+        if (dayNightController.isSkippingNight())
         {
-            message.text = "Time's up";
-            print("past sleep");
-            // TODO, reset day and send user back home
+            message.text = "Sleeping for the day";
+        }
+        else if (dayNightController.isInEvent())
+        {
+            message.text = "Doing event...";
         }
         else if (dayNightController.isCloseToSleep())
         {
-            message.text = "Hurry to sleep, it is almost time to sleep";
+            message.text = "You should sleep soon";
+        }
+        else if (dayNightController.isPastSleep())
+        {
+            message.text = "You feel very tired";
+            print("past sleep");
+            // TODO, reset day and send user back home
+        }
+        else if (DayNightController.isNighttime())
+        {
+            message.text = "It is night time";
+        }
+        else
+        {
+            message.text = "Start doing actions";
         }
         TimeText.text = "Time: " + dayNightController.getCurrentHour() + ":" + dayNightController.getCurrentMinute();
 

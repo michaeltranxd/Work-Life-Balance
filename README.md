@@ -11,6 +11,17 @@ Work-life balance is a 3d healthcare awareness serious game that is targeted for
 
 Collaboration with Memes for Health under Dr. Younge
 
+Level and Character Design: 
+The reason we are choosing to have the realistic level design and character design is
+because our serious game is set in the world as a simulator of someone who has some
+sort of illness that needs to take care of themself. 
+
+As we are trying to make this as analogous to real life as we can, it is
+important that we have designs that the player will not realize are abstract. The
+player model will not have a jetpack on or a hospital won't be just 1 floor are some
+examples that will make the player think twice about what kind of world this is set
+in.
+
 ## Credits:
 - Mouse orbit using camera (Jayanam) https://youtu.be/xcn7hz7J7sI
 - Day and Night cycle (SpeedTutor) https://youtu.be/MOuS2Wuntl8

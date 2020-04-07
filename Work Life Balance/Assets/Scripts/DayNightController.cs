@@ -6,13 +6,14 @@ public class DayNightController : MonoBehaviour
     public Light sun;
     public Light moon;
     private static float minutesInFullDay = 1200f;
-    private static float currentTimeOfDay = .80f;
+    private static float currentTimeOfDay = startOfNighttime;
     public static float timeMultiplier = 1f;
 
     public const float startOfSunrise = .25f;
     public const float startOfDaytime = .35f;
     public const float startOfSunset = .65f; 
     public const float startOfNighttime = .80f;
+    public const float startOfMidnight = 0f;
     float startOfNoon = .5f;
 
     float sunIntensity = 1;
@@ -31,6 +32,8 @@ public class DayNightController : MonoBehaviour
     private static float currentMinute = 0f;
 
     private static Event currentEvent = null;
+    public Camera SceneCamera;
+    public Camera PlayerCamera;
 
     static bool isSunrise()
     {
@@ -45,7 +48,7 @@ public class DayNightController : MonoBehaviour
     {
         return currentTimeOfDay >= startOfSunset && currentTimeOfDay < startOfNighttime;
     }
-    static bool isNighttime()
+    public static bool isNighttime()
     {
         return currentTimeOfDay >= startOfNighttime || currentTimeOfDay < startOfSunrise;
     }
@@ -62,6 +65,14 @@ public class DayNightController : MonoBehaviour
     {
         return (.90f - currentTimeOfDay) * 24f * 60f;
     }
+    public bool isSkippingNight()
+    {
+        return currentEvent != null && currentEvent is SleepEvent;
+    }
+    public bool isInEvent()
+    {
+        return currentEvent != null;
+    }
 
     void Update()
     {
@@ -77,11 +88,18 @@ public class DayNightController : MonoBehaviour
 
         if(currentEvent != null)
         {
-            if(currentEvent is SleepEvent && isDaytime())
+            if (currentEvent is SleepEvent)
             {
-                timeMultiplier = 1f;
-                currentEvent.end();
-                currentEvent = null;
+                SceneCamera.gameObject.SetActive(true);
+                PlayerCamera.gameObject.SetActive(false);
+                if (isDaytime())
+                {
+                    timeMultiplier = 1f;
+                    currentEvent.end();
+                    currentEvent = null;
+                    SceneCamera.gameObject.SetActive(false);
+                    PlayerCamera.gameObject.SetActive(true);
+                }
             }
             else if (currentEvent is SkipTimeEvent anEvent)
             {
@@ -118,12 +136,13 @@ public class DayNightController : MonoBehaviour
         if (isNighttime())
         {
             sunIntensity = 0;
-            moonIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfNighttime, startOfSunrise, sunsetMaxIntensity, nighttimeMaxIntensity));
+            if(currentTimeOfDay > startOfNighttime)
+                moonIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfNighttime, .99f, sunsetMaxIntensity, sunsetMaxIntensity + (nighttimeMaxIntensity / 2)));
         }
         else if (isSunrise())
         {
             sunIntensity = Mathf.Clamp01(map(currentTimeOfDay, startOfSunrise, startOfDaytime, 0, sunriseMaxIntesity));
-            moonIntensity = Mathf.Clamp01(startOfDaytime - map(currentTimeOfDay, startOfSunrise, startOfDaytime, 0, nighttimeMaxIntensity));
+            moonIntensity = Mathf.Clamp01(sunsetMaxIntensity + (nighttimeMaxIntensity / 2) - map(currentTimeOfDay, startOfSunrise, startOfDaytime, 0, sunsetMaxIntensity + (nighttimeMaxIntensity / 2)));
         }
         else if (isSunset())
         {

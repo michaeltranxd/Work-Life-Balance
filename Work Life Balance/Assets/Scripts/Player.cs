@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
     bool isGrounded;                    // Boolean value describing the groundness of the player
     bool inEvent;                       // Boolean value describing if player is currently in event
     public bool playerInControl               // Boolean value describing if player can control character
-    { get; set; }               
-
+    { get; set; }
+    public Camera PlayerCamera;
+    public GameObject bed;              // Bed at which player starts from
 
     Vector3 velocity = new Vector3(0, 0, 0);                   // Velocity of the player
     void Start()
@@ -70,7 +71,7 @@ public class Player : MonoBehaviour
             float z = Input.GetAxis("Vertical");
 
             // Apply movement relative to camera
-            Vector3 move = Camera.main.transform.right * x + Camera.main.transform.forward * z;
+            Vector3 move = PlayerCamera.transform.right * x + PlayerCamera.transform.forward * z;
 
             // Remove rotation up/down direction
             move.y = 0f;
