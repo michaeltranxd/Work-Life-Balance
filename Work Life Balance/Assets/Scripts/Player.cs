@@ -4,8 +4,9 @@ public class Player : MonoBehaviour
 {
     private CharacterController controller;
 
-    public float speed = 8f;            // Speed of player
-    public float gravity = -9.81f;      // Gravity constant for world
+    private float speed = 0f;            // Speed of player
+    private float maxSpeed = 8f;         // Max speed of player
+    private float gravity = -9.81f;      // Gravity constant for world
 
     bool isGrounded;                    // Boolean value describing the groundness of the player
     bool inEvent;                       // Boolean value describing if player is currently in event
@@ -34,7 +35,7 @@ public class Player : MonoBehaviour
         if (inEvent)
             speed = 0f;
         else
-            speed = 8f;
+            speed = maxSpeed;
 
         playerGravity();
         playerControl();

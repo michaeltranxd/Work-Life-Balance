@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 934a169fc7d807d4b872a7335453663a, type: 2}
 --- !u!4 &3185520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4740953323717002, guid: 863150854ac5540408a55fc45f32e317,
@@ -258,9 +258,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -309,9 +325,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1282630046808424, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464856644111164, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513870673102192, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1596739967677388, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_Name
       value: Road 8 tiles (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606073917726784, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620452803171082, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627258338744528, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816755137082916, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939293724110910, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4154483444672150, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -536,6 +584,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (22)
@@ -1035,6 +1087,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102777214}
     m_Modifications:
+    - target: {fileID: 1245691286032944, guid: d3563796ab2fa2d4ba462eb11916b77f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4069368142781384, guid: d3563796ab2fa2d4ba462eb11916b77f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35
@@ -1428,6 +1484,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (34)
@@ -2128,6 +2188,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (11)
@@ -2384,6 +2448,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1170451777080360, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1370723493970886, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
       propertyPath: m_Name
       value: Crossing (3)
@@ -3095,6 +3163,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1245691286032944, guid: d3563796ab2fa2d4ba462eb11916b77f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1817002793791402, guid: d3563796ab2fa2d4ba462eb11916b77f, type: 3}
       propertyPath: m_Name
       value: Parking lot 15 (2)
@@ -4465,9 +4537,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1282630046808424, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464856644111164, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513870673102192, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1596739967677388, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_Name
       value: Road 8 tiles (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606073917726784, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620452803171082, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627258338744528, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816755137082916, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939293724110910, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4154483444672150, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5042,6 +5146,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0398b97943a5fd4f8bc102a121965b5, type: 3}
+--- !u!1 &211809103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211809104}
+  m_Layer: 0
+  m_Name: Spawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &211809104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211809103}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.757, y: 0, z: -119.876}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 620694320}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &211995302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5416,6 +5550,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (43)
@@ -5664,7 +5802,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &251704226
 Transform:
@@ -5824,6 +5962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossing T (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.459835
@@ -5875,6 +6017,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1170451777080360, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1370723493970886, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
       propertyPath: m_Name
       value: Crossing (6)
@@ -6642,6 +6788,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.459835
@@ -7081,9 +7231,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7141,6 +7307,10 @@ PrefabInstance:
     - target: {fileID: 1416031260457768, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_Name
       value: Crossing T (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8630,6 +8800,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4619985651939632, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.459835
@@ -8945,6 +9119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (23)
@@ -9177,9 +9355,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10187,6 +10381,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (28)
@@ -10411,6 +10609,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (7)
@@ -10521,9 +10723,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11183,9 +11401,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11403,6 +11637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossing T (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.540165
@@ -11449,6 +11687,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+--- !u!1 &482438650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482438651}
+  - component: {fileID: 482438652}
+  m_Layer: 0
+  m_Name: Spawner1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &482438651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482438650}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 48.957, y: 0.5, z: 4.039}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 620694320}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482438652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482438650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fcf2cd0ccc58f4e9d28687fdb58b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefab: {fileID: 3355738947212017211, guid: 0486c97dd3ed6fb49a409518665a0346,
+    type: 3}
+  destinationList: {fileID: 660422242}
 --- !u!1001 &482947107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11501,6 +11785,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (7)
@@ -12044,6 +12332,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (8)
@@ -12321,6 +12613,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (40)
@@ -12683,6 +12979,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (15)
@@ -13237,6 +13537,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4386691475404770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.459835
@@ -13674,6 +13978,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (10)
@@ -14127,6 +14435,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (30)
@@ -14434,9 +14746,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1282630046808424, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464856644111164, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513870673102192, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1596739967677388, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_Name
       value: Road 8 tiles (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606073917726784, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620452803171082, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627258338744528, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816755137082916, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939293724110910, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4154483444672150, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14678,6 +15022,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (11)
@@ -14786,6 +15134,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (26)
@@ -14881,6 +15233,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31d5af46872794c47831f7a6da72a909, type: 3}
+--- !u!1 &620694318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 620694320}
+  - component: {fileID: 620694319}
+  m_Layer: 0
+  m_Name: CarSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &620694319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620694318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fcf2cd0ccc58f4e9d28687fdb58b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefab: {fileID: 3355738947212017211, guid: 0486c97dd3ed6fb49a409518665a0346,
+    type: 3}
+  destinationList: {fileID: 660422242}
+--- !u!4 &620694320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620694318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 482438651}
+  - {fileID: 211809104}
+  - {fileID: 1409719947}
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &626325849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15181,6 +15582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossing T (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.540165
@@ -15401,9 +15806,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15760,6 +16181,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 512731580}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &660422242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660422243}
+  m_Layer: 0
+  m_Name: Destinations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &660422243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660422242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2066106375}
+  - {fileID: 809723249}
+  - {fileID: 971274786}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &660882344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 16a6d96f073f0f941b9ce55635b4ffb6,
@@ -16582,9 +17036,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1282630046808424, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464856644111164, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513870673102192, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1596739967677388, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_Name
       value: Road 8 tiles (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606073917726784, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620452803171082, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627258338744528, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816755137082916, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939293724110910, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4154483444672150, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17780,6 +18266,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (3)
@@ -18024,6 +18514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (36)
@@ -18978,6 +19472,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (16)
@@ -19020,6 +19518,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+--- !u!1 &809723248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809723249}
+  m_Layer: 0
+  m_Name: Destination2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809723249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809723248}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -52.42, y: 0.5, z: -23.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 660422243}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &809844482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4593373216185002, guid: 45dcbc0d02a319949b685e7d70deacb4,
@@ -19033,6 +19561,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (5)
@@ -19389,6 +19921,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (9)
@@ -19446,9 +19982,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19515,6 +20067,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (9)
@@ -19682,6 +20238,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1170451777080360, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1370723493970886, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
       propertyPath: m_Name
       value: Crossing (4)
@@ -19983,6 +20543,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (35)
@@ -20146,6 +20710,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (3)
@@ -20918,6 +21486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossing T (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.459835
@@ -21224,6 +21796,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (17)
@@ -21434,9 +22010,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21485,6 +22077,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1170451777080360, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4593373216185002, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.540165
@@ -21650,9 +22246,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21994,6 +22606,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.459835
@@ -22142,6 +22770,10 @@ PrefabInstance:
     - target: {fileID: 1416031260457768, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_Name
       value: Crossing T (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22502,6 +23134,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2062527296}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &971274785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971274786}
+  m_Layer: 0
+  m_Name: Destination3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &971274786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971274785}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.199, y: 0, z: -124.24381}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 660422243}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &971463013
 GameObject:
   m_ObjectHideFlags: 0
@@ -22724,6 +23386,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (27)
@@ -23015,6 +23681,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (32)
@@ -23273,9 +23943,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24194,9 +24880,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24239,9 +24941,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24386,6 +25104,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (10)
@@ -24496,6 +25218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (39)
@@ -24907,9 +25633,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25793,6 +26535,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (38)
@@ -25956,6 +26702,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (2)
@@ -26013,6 +26763,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1282630046808424, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464856644111164, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513870673102192, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606073917726784, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620452803171082, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627258338744528, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816755137082916, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939293724110910, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4154483444672150, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.540165
@@ -26588,6 +27370,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (31)
@@ -26733,8 +27519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e807f5c84ba6e4fad9d45bc6be61b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  gravity: -9.81
   PlayerCamera: {fileID: 909808642}
   bed: {fileID: 2049379605}
 --- !u!114 &1148004634
@@ -26820,9 +27604,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26930,9 +27730,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27137,9 +27953,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27281,6 +28113,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (24)
@@ -27341,6 +28177,10 @@ PrefabInstance:
     - target: {fileID: 1416031260457768, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_Name
       value: Crossing T (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27580,6 +28420,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (41)
@@ -28035,9 +28879,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29885,6 +30745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossing T (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.459835
@@ -30782,6 +31646,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (18)
@@ -30920,6 +31788,10 @@ PrefabInstance:
     - target: {fileID: 1416031260457768, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_Name
       value: Crossing T (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31171,6 +32043,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (33)
@@ -32049,9 +32925,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32097,6 +32989,10 @@ PrefabInstance:
     - target: {fileID: 1416031260457768, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_Name
       value: Crossing T (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32404,6 +33300,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407265935}
   m_CullTransparentMesh: 0
+--- !u!1 &1409719946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409719947}
+  m_Layer: 0
+  m_Name: Spawner3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1409719947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409719946}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -93.587, y: 0, z: -105.363}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 620694320}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1410802033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32617,6 +33543,10 @@ PrefabInstance:
     - target: {fileID: 1416031260457768, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_Name
       value: Crossing T (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33497,6 +34427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (4)
@@ -33621,9 +34555,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33835,6 +34785,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (4)
@@ -33901,6 +34855,10 @@ PrefabInstance:
     - target: {fileID: 1416031260457768, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_Name
       value: Crossing T (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34161,6 +35119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1245691286032944, guid: d3563796ab2fa2d4ba462eb11916b77f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1817002793791402, guid: d3563796ab2fa2d4ba462eb11916b77f, type: 3}
       propertyPath: m_Name
       value: Parking lot 15 (1)
@@ -34470,9 +35432,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1282630046808424, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464856644111164, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513870673102192, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1596739967677388, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_Name
       value: Road 8 tiles (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606073917726784, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620452803171082, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627258338744528, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816755137082916, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939293724110910, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4154483444672150, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34831,6 +35825,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (37)
@@ -35268,9 +36266,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35492,6 +36506,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (8)
@@ -35609,6 +36627,10 @@ PrefabInstance:
     - target: {fileID: 1416031260457768, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_Name
       value: Crossing T (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36137,9 +37159,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36406,6 +37444,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1170451777080360, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1370723493970886, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
       propertyPath: m_Name
       value: Crossing (5)
@@ -36757,6 +37799,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (1)
@@ -36802,6 +37848,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1170451777080360, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1370723493970886, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
       propertyPath: m_Name
       value: Crossing (1)
@@ -37197,6 +38247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1090849569450562, guid: f79ac4e821519164194463f7fa336938, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1914973339172262, guid: f79ac4e821519164194463f7fa336938, type: 3}
       propertyPath: m_Name
       value: Turn (1)
@@ -37455,9 +38509,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39010,6 +40080,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (25)
@@ -39549,6 +40623,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (29)
@@ -39945,6 +41023,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1170451777080360, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1370723493970886, guid: 45dcbc0d02a319949b685e7d70deacb4, type: 3}
       propertyPath: m_Name
       value: Crossing (2)
@@ -40368,6 +41450,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (21)
@@ -40638,7 +41724,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 4294967287
   m_IsActive: 1
 --- !u!4 &1818917692
 Transform:
@@ -40981,6 +42067,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (20)
@@ -41337,6 +42427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (42)
@@ -41493,9 +42587,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1282630046808424, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464856644111164, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513870673102192, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1596739967677388, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_Name
       value: Road 8 tiles (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606073917726784, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620452803171082, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627258338744528, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816755137082916, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939293724110910, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4154483444672150, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41854,6 +42980,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (13)
@@ -41914,6 +43044,10 @@ PrefabInstance:
     - target: {fileID: 1416031260457768, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_Name
       value: Crossing T (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809759014739776, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393563875128502, guid: f133fe363b3d09e40b5bf2b268253326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43436,6 +44570,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (19)
@@ -43936,6 +45074,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (14)
@@ -44471,6 +45613,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (6)
@@ -44528,6 +45674,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (2)
@@ -44937,9 +46087,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45847,6 +47013,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (12)
@@ -46642,9 +47812,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47725,6 +48911,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066063863}
   m_CullTransparentMesh: 0
+--- !u!1 &2066106374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2066106375}
+  m_Layer: 0
+  m_Name: Destination1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2066106375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066106374}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -36.144, y: 0.5, z: 40.871}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 660422243}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2067688882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4386691475404770, guid: c5504b94d4e32ac42943544a2748bd43,
@@ -48658,6 +49874,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1007402490823894, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1499449674445770, guid: c5504b94d4e32ac42943544a2748bd43, type: 3}
       propertyPath: m_Name
       value: Straight (5)
@@ -49242,9 +50462,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1282630046808424, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464856644111164, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513870673102192, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1596739967677388, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_Name
       value: Road 8 tiles (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606073917726784, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620452803171082, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627258338744528, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816755137082916, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939293724110910, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4154483444672150, guid: 9cbe114ded05b77408703dd681924e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49471,9 +50723,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55893112}
     m_Modifications:
+    - target: {fileID: 1241471981628680, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1481643903758650, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_Name
       value: Road 4 tiles (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795626135403496, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818278400582210, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879198666126068, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4269170414533632, guid: 8f7c1c3559fb0e845bf76101dd60df17, type: 3}
       propertyPath: m_LocalPosition.x
