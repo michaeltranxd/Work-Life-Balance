@@ -9,6 +9,7 @@ public class Dog : MonoBehaviour
     private GameObject attention;
     private GameObject lastAttention;
     private float Speed;
+    private Animator dogAnimator;
 
     public GameObject[] patrolPoints;
     public GameObject Player;
@@ -16,11 +17,13 @@ public class Dog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Animator dogAnimator = GetComponent<Animator>();
+        dogAnimator = GetComponent<Animator>();
         walkState = false;
         waitState = true;
         Speed = 5;
         attention = patrolPoints[0];
+        lastAttention = patrolPoints[0];
+        
     }
 
     // Update is called once per frame
@@ -34,10 +37,22 @@ public class Dog : MonoBehaviour
 
         transform.Translate(Vector3.forward * Speed * Time.deltaTime);
 
-        Debug.Log(Vector3.Distance(transform.position, Player.transform.position));
+        //Debug.Log(Vector3.Distance(transform.position, Player.transform.position));
+
+        //Debug.Log(attention.name);
+
 
         if (Vector3.Distance(transform.position, Player.transform.position) < 5)
+        {
             found();
+        }
+        else if (Vector3.Distance(transform.position, Player.transform.position) >= 5
+            && attention.Equals(Player))
+        {
+            attention = patrolPoints[0];
+            Speed = 5;
+            dogAnimator.SetInteger("Walk", 0);
+        }
 
     }
 
@@ -45,9 +60,8 @@ public class Dog : MonoBehaviour
     {
 
         Speed = 0;
-        lastAttention = attention;
         attention = Player;
-        
+        dogAnimator.SetInteger("Walk", 1);
 
     }
 
