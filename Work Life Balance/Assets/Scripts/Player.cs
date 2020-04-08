@@ -40,7 +40,10 @@ public class Player : MonoBehaviour
         playerGravity();
         playerControl();
 
-
+        if (DayNightController.getDayNightController().isPastSleep())
+        {
+            teleportToSleep();
+        }
     }
 
     /* 
@@ -107,10 +110,9 @@ public class Player : MonoBehaviour
             // Add prompt for user to decide if to sleep
 
             // If "yes" to sleep, run the following code:
-            SleepEvent sleepEvent = new SleepEvent(this);
-            sleepEvent.run();
+            SleepEvent.createAndRunSleepEvent(this);
             // Remove above code when we add dialogue for the bed
-            
+
         }
     }
 
@@ -132,5 +134,18 @@ public class Player : MonoBehaviour
     {
         SkipTimeEvent skipTimeEvent = new SkipTimeEvent(this, amount);
         skipTimeEvent.run();
+    }
+
+
+    public void teleportToSleep()
+    {
+        SleepEvent.createAndRunSleepEvent(this);
+        foreach (Transform child in bed.transform)
+        { 
+            if (child.name.Equals("NextToBed"))
+            {
+                transform.position = child.position;
+            }
+        }
     }
 }

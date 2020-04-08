@@ -45,6 +45,12 @@ public class SleepEvent : Event
         DayNightController.SkipNighttime(this);
     }
 
+    public static void createAndRunSleepEvent(Player player)
+    {
+        SleepEvent sleepEvent = new SleepEvent(player);
+        sleepEvent.run();
+    }
+
 }
 
 public class SkipTimeEvent : Event

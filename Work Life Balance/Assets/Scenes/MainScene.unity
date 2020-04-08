@@ -11696,7 +11696,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 482438651}
-  - component: {fileID: 482438652}
   m_Layer: 0
   m_Name: Spawner1
   m_TagString: Untagged
@@ -11718,21 +11717,6 @@ Transform:
   m_Father: {fileID: 620694320}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &482438652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482438650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79fcf2cd0ccc58f4e9d28687fdb58b0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carPrefab: {fileID: 3355738947212017211, guid: 0486c97dd3ed6fb49a409518665a0346,
-    type: 3}
-  destinationList: {fileID: 660422242}
 --- !u!1001 &482947107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17183,6 +17167,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 74710910}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &707241922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 707241923}
+  m_Layer: 0
+  m_Name: NextToBed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &707241923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707241922}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -13.2, y: -3.4, z: -0.9700012}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 2049379607}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &708623794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4980345440866794, guid: 030c083b63658d2409864330589d7c2e,
@@ -21987,6 +22001,7 @@ MonoBehaviour:
   moon: {fileID: 532321839}
   SceneCamera: {fileID: 1144529929}
   PlayerCamera: {fileID: 909808642}
+  player: {fileID: 1148004633}
 --- !u!4 &925766468
 Transform:
   m_ObjectHideFlags: 0
@@ -48208,6 +48223,12 @@ PrefabInstance:
 --- !u!1 &2049379605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1580611398001286, guid: 313df21c32a46e247960cfd9a4c84a32,
+    type: 3}
+  m_PrefabInstance: {fileID: 2049379604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2049379607 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4481593083717680, guid: 313df21c32a46e247960cfd9a4c84a32,
     type: 3}
   m_PrefabInstance: {fileID: 2049379604}
   m_PrefabAsset: {fileID: 0}

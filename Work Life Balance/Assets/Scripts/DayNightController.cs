@@ -6,14 +6,16 @@ public class DayNightController : MonoBehaviour
     public Light sun;
     public Light moon;
     private static float minutesInFullDay = 1200f;
-    private static float currentTimeOfDay = startOfNighttime;
+    private static float currentTimeOfDay = startOfDaytime;
     public static float timeMultiplier = 1f;
+    static DayNightController dayNightController;
 
     public const float startOfSunrise = .25f;
     public const float startOfDaytime = .35f;
     public const float startOfSunset = .65f; 
     public const float startOfNighttime = .80f;
     public const float startOfMidnight = 0f;
+    public const float startOfNoAction = .90f;
     float startOfNoon = .5f;
 
     float sunIntensity = 1;
@@ -34,6 +36,7 @@ public class DayNightController : MonoBehaviour
     private static Event currentEvent = null;
     public Camera SceneCamera;
     public Camera PlayerCamera;
+    public Player player;
 
     static bool isSunrise()
     {
@@ -55,15 +58,15 @@ public class DayNightController : MonoBehaviour
 
     public bool isCloseToSleep()
     {
-        return currentTimeOfDay < .90f && currentTimeOfDay > .85f;
+        return currentTimeOfDay < startOfNoAction && currentTimeOfDay > .85f;
     }
     public bool isPastSleep()
     {
-        return currentTimeOfDay >= .90f;
+        return currentTimeOfDay >= startOfNoAction;
     }
     public float timeLeft()
     {
-        return (.90f - currentTimeOfDay) * 24f * 60f;
+        return (startOfNoAction - currentTimeOfDay) * 24f * 60f;
     }
     public bool isSkippingNight()
     {
@@ -72,6 +75,16 @@ public class DayNightController : MonoBehaviour
     public bool isInEvent()
     {
         return currentEvent != null;
+    }
+
+    public static DayNightController getDayNightController()
+    {
+        return dayNightController;
+    }
+
+    void Start()
+    {
+        dayNightController = this;
     }
 
     void Update()
@@ -111,6 +124,9 @@ public class DayNightController : MonoBehaviour
                     currentEvent = null;
                 }
             }
+        }
+        else
+        {
         }
     }
 
@@ -165,7 +181,7 @@ public class DayNightController : MonoBehaviour
     public static void SkipNighttime(Event e)
     {
         currentEvent = e;
-        timeMultiplier = 40f;
+        timeMultiplier = 50f;
     }
 
     public static bool CanSkipTime(float minutes)
