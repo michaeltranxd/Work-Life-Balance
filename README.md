@@ -25,3 +25,5 @@ in.
 ## Credits:
 - Mouse orbit using camera (Jayanam) https://youtu.be/xcn7hz7J7sI
 - Day and Night cycle (SpeedTutor) https://youtu.be/MOuS2Wuntl8
+- Double Shader for Flag 
+https://assetstore.unity.com/packages/vfx/shaders/double-sided-shaders-23087
