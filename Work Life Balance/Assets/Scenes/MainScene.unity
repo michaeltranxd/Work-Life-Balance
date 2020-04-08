@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1529711948}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -14564,6 +14564,7 @@ MonoBehaviour:
   messagePlane: {fileID: 1285839343}
   message: {fileID: 818279877}
   StatsManager: {fileID: 1012248477}
+  player: {fileID: 1148004631}
 --- !u!65 &559225661
 BoxCollider:
   m_ObjectHideFlags: 0
