@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Work Life Balance/Assets/Scenes/MainScene.meta
+guid: fcafb3e8d9cccf74cac7a3e6a724f8ad
+folderAsset: yes
+DefaultImporter:
+=======
 guid: d09c2e06273a1304cb19275780584c0c
 NativeFormatImporter:
+>>>>>>> justin:Work Life Balance/Assets/Objects/dog/Cube.controller.meta
   externalObjects: {}
   mainObjectFileID: 0
   userData: 

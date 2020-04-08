@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Work Life Balance/Assets/Characters/Timmy.meta
+guid: 9c14bf272afcaa34d9f2ccaef5c79101
+=======
 guid: 51466b2fe65483045a8e6409d63d85c8
+>>>>>>> justin:Work Life Balance/Assets/Objects/dog.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

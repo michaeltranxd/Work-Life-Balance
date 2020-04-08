@@ -4,8 +4,9 @@ public class Player : MonoBehaviour
 {
     private CharacterController controller;
 
-    public float speed = 8f;            // Speed of player
-    public float gravity = -9.81f;      // Gravity constant for world
+    private float speed = 0f;            // Speed of player
+    private float maxSpeed = 8f;         // Max speed of player
+    private float gravity = -9.81f;      // Gravity constant for world
 
     bool isGrounded;                    // Boolean value describing the groundness of the player
     bool inEvent;                       // Boolean value describing if player is currently in event
@@ -34,12 +35,15 @@ public class Player : MonoBehaviour
         if (inEvent)
             speed = 0f;
         else
-            speed = 8f;
+            speed = maxSpeed;
 
         playerGravity();
         playerControl();
 
-
+        if (DayNightController.getDayNightController().isPastSleep())
+        {
+            teleportToSleep();
+        }
     }
 
     /* 
@@ -106,10 +110,9 @@ public class Player : MonoBehaviour
             // Add prompt for user to decide if to sleep
 
             // If "yes" to sleep, run the following code:
-            SleepEvent sleepEvent = new SleepEvent(this);
-            sleepEvent.run();
+            SleepEvent.createAndRunSleepEvent(this);
             // Remove above code when we add dialogue for the bed
-            
+
         }
     }
 
@@ -131,5 +134,18 @@ public class Player : MonoBehaviour
     {
         SkipTimeEvent skipTimeEvent = new SkipTimeEvent(this, amount);
         skipTimeEvent.run();
+    }
+
+
+    public void teleportToSleep()
+    {
+        SleepEvent.createAndRunSleepEvent(this);
+        foreach (Transform child in bed.transform)
+        { 
+            if (child.name.Equals("NextToBed"))
+            {
+                transform.position = child.position;
+            }
+        }
     }
 }

@@ -12,6 +12,8 @@ public class MenuHandler : MonoBehaviour
     public Stats StatsManager;
 
     private Dictionary<string, List<Action>> database = new Dictionary<string, List<Action>>();
+
+    public AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
@@ -51,6 +53,9 @@ public class MenuHandler : MonoBehaviour
          * Give Button an object that has information of the actions (+- which stats)
          * Enable menu
          */
+
+        if (!audioSource.isPlaying)
+            audioSource.Play();
 
         string building = other.tag;
 
