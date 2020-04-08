@@ -6,7 +6,7 @@ public class DayNightController : MonoBehaviour
     public Light sun;
     public Light moon;
     private static float minutesInFullDay = 1200f;
-    private static float currentTimeOfDay = startOfDaytime;
+    private static float currentTimeOfDay = startOfNighttime;
     public static float timeMultiplier = 1f;
     static DayNightController dayNightController;
 
@@ -37,6 +37,9 @@ public class DayNightController : MonoBehaviour
     public Camera SceneCamera;
     public Camera PlayerCamera;
     public Player player;
+
+    private static bool playSleepClip = false;
+    public AudioSource audioSource;
 
     static bool isSunrise()
     {
@@ -103,10 +106,18 @@ public class DayNightController : MonoBehaviour
         {
             if (currentEvent is SleepEvent)
             {
+                if (playSleepClip)
+                {
+                    playSleepClip = false;
+                    if (!audioSource.isPlaying)
+                        audioSource.Play();
+                }
                 SceneCamera.gameObject.SetActive(true);
                 PlayerCamera.gameObject.SetActive(false);
                 if (isDaytime())
                 {
+                    if (audioSource.isPlaying)
+                        audioSource.Stop();
                     timeMultiplier = 1f;
                     currentEvent.end();
                     currentEvent = null;
@@ -182,6 +193,7 @@ public class DayNightController : MonoBehaviour
     {
         currentEvent = e;
         timeMultiplier = 50f;
+        playSleepClip = true;
     }
 
     public static bool CanSkipTime(float minutes)
