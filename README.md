@@ -16,22 +16,7 @@ The reason we are choosing to have the realistic level design and character desi
 because our serious game is set in the world as a simulator of someone who has some
 sort of illness that needs to take care of themself. 
 
-<<<<<<< Updated upstream
-As we are trying to make this as analogous to real life as we can, it is
-important that we have designs that the player will not realize are abstract. The
-player model will not have a jetpack on or a hospital won't be just 1 floor are some
-examples that will make the player think twice about what kind of world this is set
-in.
-<<<<<<< Updated upstream
 As we are trying to make this as analogous to real life as we can, it is important that we have designs that the player will not realize are abstract. The player model will not have a jetpack on or a hospital won't be just 1 floor are some examples that will make the player think twice about what kind of world this is set in.
-=======
-As we are trying to make this as analogous to real life as we can, it is important that 
-we have designs that the player will not realize are abstract. The player model will not 
-have a jetpack on or a hospital won't be just 1 floor are some examples that will make the 
-player think twice about what kind of world this is set in.
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 ## How to play:
 - Move with WASD keys
@@ -45,10 +30,6 @@ player think twice about what kind of world this is set in.
 ## Credits:
 - Mouse orbit using camera (Jayanam) https://youtu.be/xcn7hz7J7sI
 - Day and Night cycle (SpeedTutor) https://youtu.be/MOuS2Wuntl8
-<<<<<<< HEAD
-- Double Shader for Flag https://assetstore.unity.com/packages/vfx/shaders/double-sided-shaders-23087
-- American Flag https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png
-=======
 - Double Sided Shaders (Ciconia Studio) https://assetstore.unity.com/packages/vfx/shaders/double-sided-shaders-23087
 - Cloth Physics (Unity) https://www.youtube.com/watch?v=Nc_ZMgEFj-A
 - Hinge Join (Xenosmash Games) https://www.youtube.com/watch?v=ti6pKDmQf7w
@@ -63,4 +44,3 @@ player think twice about what kind of world this is set in.
 - Too Many Items: Kitchen Props (Quantum Development) https://assetstore.unity.com/packages/3d/props/too-many-items-kitchen-props-127635
 - Lamps Pack (FunFant)https://assetstore.unity.com/packages/3d/props/interior/lamps-pack-19102
 - American Flag https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png
->>>>>>> master
