@@ -16,12 +16,19 @@ The reason we are choosing to have the realistic level design and character desi
 because our serious game is set in the world as a simulator of someone who has some
 sort of illness that needs to take care of themself. 
 
+<<<<<<< Updated upstream
 As we are trying to make this as analogous to real life as we can, it is
 important that we have designs that the player will not realize are abstract. The
 player model will not have a jetpack on or a hospital won't be just 1 floor are some
 examples that will make the player think twice about what kind of world this is set
 in.
 As we are trying to make this as analogous to real life as we can, it is important that we have designs that the player will not realize are abstract. The player model will not have a jetpack on or a hospital won't be just 1 floor are some examples that will make the player think twice about what kind of world this is set in.
+=======
+As we are trying to make this as analogous to real life as we can, it is important that 
+we have designs that the player will not realize are abstract. The player model will not 
+have a jetpack on or a hospital won't be just 1 floor are some examples that will make the 
+player think twice about what kind of world this is set in.
+>>>>>>> Stashed changes
 
 ## How to play:
 - Move with WASD keys
