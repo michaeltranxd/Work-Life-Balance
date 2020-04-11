@@ -21003,6 +21003,7 @@ MonoBehaviour:
   messagePlane: {fileID: 1589762389}
   message: {fileID: 171785899}
   StatsManager: {fileID: 1965558720}
+  player: {fileID: 1844054495}
 --- !u!95 &850667658
 Animator:
   serializedVersion: 3
