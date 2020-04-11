@@ -12,19 +12,19 @@ public class TimmyController : MonoBehaviour
     public Stats StatsManager;
 
     private int counter = 0;
-    private GameObject player;
+    public GameObject player;
     
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("isWalking", true);
-        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Vector3.Distance(player.transform.position, this.transform.position));
         if(Vector3.Distance(player.transform.position,this.transform.position)< 1){
             audioSource.Play();
             StartCoroutine(Wait());

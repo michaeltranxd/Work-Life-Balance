@@ -37,7 +37,7 @@ public class CarSpawner : MonoBehaviour
         time += Time.deltaTime;
         if((time - pastTime) > spawnRateInSeconds){
             spawn();
-            pastTime = 1000000000;
+            pastTime = time;
         }
     }
 
