@@ -10,6 +10,13 @@ public class Stats : MonoBehaviour
     public Text TimeText;
     public Text GameOverText;
 
+    public Text phyData;
+    public Text menData;
+    public Text wakData;
+    public Text hygData;
+    public Text energyData;
+    public Text nutriData;
+
     // set to public for testing purposes
     public float Timeleft;
     private float TimeWasLeft;
@@ -48,6 +55,13 @@ public class Stats : MonoBehaviour
         WakeBar.maxValue = Wake;
         TimeWasLeft = Timeleft;
 
+        phyData.text = ((int)PhysHealth).ToString();
+        menData.text = ((int)MentHealth).ToString();
+        nutriData.text = ((int)Nutri).ToString();
+        wakData.text = ((int)Wake).ToString();
+        energyData.text = ((int)Energy).ToString();
+        hygData.text = ((int)Hygiene).ToString();
+
     }
 
     // Update is called once per frame
@@ -65,15 +79,27 @@ public class Stats : MonoBehaviour
     public void checkStats(){
         if(Nutri <=0){
             PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier; //1 point per mins
+            if(Nutri < 0){
+                Nutri = 0;
+            }
         }
         if(Hygiene <= 0){
             PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
+            if(Hygiene < 0){
+                Hygiene = 0;
+            }
         }
         if(Wake <= 0){
             MentHealth-= Time.deltaTime / 60 * DayNightController.timeMultiplier;
+            if(Wake < 0){
+                Wake = 0;
+            }
         }
         if(Energy <= 0){
             PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
+            if(Energy < 0){
+                Energy = 0;
+            }
         }
         if(MentHealth <= 0 || PhysHealth <= 0){
             GameOverText.text = "Game Over";
@@ -87,6 +113,13 @@ public class Stats : MonoBehaviour
         HygieneBar.value = Hygiene;
         WakeBar.value = Wake;
         EnergyBar.value = Energy;
+        phyData.text = ((int)PhysHealth).ToString();
+        menData.text = ((int)MentHealth).ToString();
+        nutriData.text = ((int)Nutri).ToString();
+        wakData.text = ((int)Wake).ToString();
+        energyData.text = ((int)Energy).ToString();
+        hygData.text = ((int)Hygiene).ToString();
+
         if (PhysHealth == 0){
             message.text = "You have been sent back to the hospital";
         }

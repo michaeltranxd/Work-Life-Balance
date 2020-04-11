@@ -7,7 +7,6 @@ TagManager:
   - Bed
   - Gym
   - Restaurant
-  - Dog
   layers:
   - Default
   - TransparentFX
