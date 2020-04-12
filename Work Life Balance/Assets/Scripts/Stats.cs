@@ -39,6 +39,7 @@ public class Stats : MonoBehaviour
 
     public RectTransform GameOverPanle;
 
+    public Recap recap;
     // set to public for testing purposes
 
     public DayNightController dayNightController;
@@ -107,6 +108,8 @@ public class Stats : MonoBehaviour
         }
     }
     public void UpdateUI(){
+
+        //set statsBar values
         PhysHealthBar.value = PhysHealth;
         MentHealthBar.value = MentHealth;
         NutriBar.value = Nutri;
@@ -119,6 +122,14 @@ public class Stats : MonoBehaviour
         wakData.text = ((int)Wake).ToString();
         energyData.text = ((int)Energy).ToString();
         hygData.text = ((int)Hygiene).ToString();
+
+        //update currentPhy to recap
+        recap.setCurrentPhy(PhysHealth);
+        recap.setCurrentMen(MentHealth);
+        recap.setCurrentNutri(Nutri);
+        recap.setCurrentHygen(Hygiene);
+        recap.setCurrentWake(Wake);
+        recap.setCurrentEnergy(Energy);
 
         if (PhysHealth == 0){
             message.text = "You have been sent back to the hospital";
@@ -154,6 +165,21 @@ public class Stats : MonoBehaviour
         }
         TimeText.text = "Time: " + dayNightController.getCurrentHour() + ":" + dayNightController.getCurrentMinute();
 
+        //record the Stats when start a new day
+        /*if(dayNightController.getCurrentHour() == 8 && dayNightController.getCurrentMinute() == 24){
+            recap.setOldPhy(PhysHealth);
+        }*/
+
+    }
+
+    public void resetRecap(){
+        Debug.Log("resetRecap" + PhysHealth);
+        recap.setOldPhy(PhysHealth);
+        recap.setOldMen(MentHealth);
+        recap.setOldNutri(Nutri);
+        recap.setOldWake(Wake);
+        recap.setOldHygen(Hygiene);
+        recap.setOldEnergy(Energy);
     }
     public void SpendTime(float amount)
     { 
