@@ -8,6 +8,9 @@ TagManager:
   - Gym
   - Restaurant
   - Dog
+  - Fast
+  - Subs
+  - Veggie
   layers:
   - Default
   - TransparentFX
