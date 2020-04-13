@@ -1,0 +1,19 @@
+// Time, PH, MH, N, W, H, E, Name,tag
+100,20,-20,0,-25,-40,-25,Run on treadmill,Gym
+120,20,-15,0,-30,-40,-20,Lift weights,Gym
+60,5,0,0,0,-10,-10,Do yoga,Gym
+15,5,10,0,0,-5,-5,Play,Dog
+5,0,5,0,0,0,0,Pet,Dog
+0,0,0,0,0,0,0,Nothing,Dog
+100,0,5,0,0,0,-20,Stock up on Healthy Groceries,Grocer
+80,0,0,0,0,0,-15,Stock up on Frozen Food,Grocer
+40,0,0,0,0,0,-10,Stock up on Snacks,Grocer
+45,-15,20,5,-15,-20,5,Mega Meat Combo,Fast
+30,-10,15,10,-5,-10,10,Cheeseburger,Fast
+30,-5,10,15,0,-10,15,Veggieburger,Fast
+45,5,5,15,-5,-10,20,Veggie Melt,Subs
+45,5,10,10,-5,-10,15,Wreck w/ Veggies,Subs
+45,0,15,10,-10,-20,5,Meatball Marinara,Subs
+60,15,0,20,10,-10,30,Veggie Combo Meal,Veggie
+30,10,5,15,5,-10,25,Fruit Plate,Veggie
+45,10,10,10,5,-10,10,Spinach Pasta,Veggie

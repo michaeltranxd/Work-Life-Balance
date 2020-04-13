@@ -35,6 +35,7 @@ public class MenuHandler : MonoBehaviour
             onButtonClick(ab3);
         });
         parseActions();
+
     }
 
     // Update is called once per frame
@@ -57,7 +58,7 @@ public class MenuHandler : MonoBehaviour
         if (!audioSource.isPlaying)
             audioSource.Play();
 
-        string building = other.tag;
+        string building = other.tag; //Debug.Log(other.tag);
 
 
         // Access the actions in the database using the code below
@@ -78,6 +79,8 @@ public class MenuHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         menu.SetActive(false);
     }
 
@@ -115,8 +118,10 @@ public class MenuHandler : MonoBehaviour
     {
         // Read each line of the file into a string array. Each element
         // of the array is one line of the file.
-        string[] lines = System.IO.File.ReadAllLines(Application.dataPath + "/StreamingAssets" + "/actiondatabase.txt");
-        
+
+        Debug.Log("ParseActions method entered");
+        string[] lines = System.IO.File.ReadAllLines(Application.dataPath + "/StreamingAssets" + "/actiondatabase.csv");
+        Debug.Log("Lines end");
         foreach(string line in lines)
         {
             if (line.StartsWith("//"))
@@ -140,7 +145,7 @@ public class MenuHandler : MonoBehaviour
             float h = float.Parse(splittedLine[5]);
             float e = float.Parse(splittedLine[6]);
             string name = splittedLine[7].Trim();
-            string tag = splittedLine[8].Trim();
+            string tag = splittedLine[8].Trim(); //Debug.Log("tag: " + tag.ToString());
 
             Action action = new Action(time, ph, mh, n, w, h, e, name);
 
