@@ -15,5 +15,6 @@ public class EndRecap : MonoBehaviour
         recap.resetCurrentText();
         recapPlane.gameObject.SetActive(false);
         recap.endTyping();
+        recap.resetSkip();
     }
 }

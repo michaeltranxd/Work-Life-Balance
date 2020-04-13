@@ -32,12 +32,13 @@ public class Recap : MonoBehaviour
     private string currentText = "";
 
     private bool typing = false;
+    private bool skip = false;
     // Start is called before the first frame update
     void Start()
     {
         //statsText.text = "Stats"+ "\n" + "Physical Health: " + ((int)curr_phyHealth).ToString();
         //fullText = "Stats"+ "\n" + "Physical Health: " + ((int)curr_phyHealth).ToString();
-        actions = "Actions\n";
+        actions = "Actions\n You haven't done anthing yet!\n";
         old_phyHealth = StatsManager.PhysHealth;
         old_menHealth = StatsManager.MentHealth;
         old_nutri = StatsManager.Nutri;
@@ -49,9 +50,6 @@ public class Recap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if(actions.Equals("Actions\n")){
-                actions += "You haven't done anthing yet!";
-            }
             fullText = "Stats"+ "\n" + 
                                 "Physical Health: " + ((int)old_phyHealth).ToString()+ " -> "+ ((int)curr_phyHealth).ToString() + "\n" +
                                 "Mental Health: " + ((int)old_menHealth).ToString()+ " -> "+ ((int)curr_menHealth).ToString() +"\n" +
@@ -60,7 +58,7 @@ public class Recap : MonoBehaviour
                                 "Hygiene: " + ((int)old_hygen).ToString()+ " -> "+ ((int)curr_hygen).ToString() +"\n" +
                                 "Energy: " + ((int)old_energy).ToString()+ " -> "+ ((int)curr_energy).ToString() + "\n\n" +
                                 actions;
-
+        if(skip == false){
             if(typing  == true){                   
             tmp += Time.deltaTime;
             }else{
@@ -76,7 +74,18 @@ public class Recap : MonoBehaviour
                     currentText.Substring(currentText.Length - 1).Equals(" ")){
                 audioSource.Stop();
             }
-            statsText.text = currentText;
+        }else{
+            audioSource.Stop();
+            currentText = fullText;
+        }
+        statsText.text = currentText;
+    }
+
+    public void skipTyping(){
+        skip = true;
+    }
+    public void resetSkip(){
+        skip = false;
     }
     public void startTyping(){
         typing = true;
@@ -92,7 +101,11 @@ public class Recap : MonoBehaviour
     }
 
     public void setActions(string addAction){
-        actions += addAction;
+        if(actions.Equals("Actions\nYou haven't done anthing yet!\n")){
+            actions = "Actions\n" + addAction;
+        }else{
+            actions += addAction;
+        }
     }
     public void setCurrentPhy(float phyhealth){
         curr_phyHealth = phyhealth;
@@ -132,6 +145,6 @@ public class Recap : MonoBehaviour
         old_energy = energy;
     }
     public void resetActions(){
-        actions = "Actions\n";
+        actions = "Actions\nYou haven't done anthing yet!\n";
     }
 }
