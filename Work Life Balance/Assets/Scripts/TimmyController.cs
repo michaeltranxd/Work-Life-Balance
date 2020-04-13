@@ -24,7 +24,7 @@ public class TimmyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Vector3.Distance(player.transform.position, this.transform.position));
+        //Debug.Log(Vector3.Distance(player.transform.position, this.transform.position));
         if(Vector3.Distance(player.transform.position,this.transform.position)< 1){
             audioSource.Play();
             StartCoroutine(Wait());
