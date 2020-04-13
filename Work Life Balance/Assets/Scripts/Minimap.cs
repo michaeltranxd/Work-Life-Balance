@@ -5,7 +5,7 @@ using UnityEngine;
 public class Minimap : MonoBehaviour
 {
     public Transform player;
-    public Transform camera;
+    public Transform playerCamera;
     public Transform icon;
     public Transform mapIcons;
 
@@ -27,19 +27,19 @@ public class Minimap : MonoBehaviour
         if (Input.GetKey(KeyCode.KeypadMinus) && minimapCamera.orthographicSize < maxZoom)
         {
             minimapCamera.orthographicSize = minimapCamera.orthographicSize + increments;
-            icon.transform.localScale = new Vector3(minimapCamera.orthographicSize, minimapCamera.orthographicSize, minimapCamera.orthographicSize);
+            icon.transform.localScale = icon.transform.localScale + Vector3.one;
             foreach (Transform child in mapIcons)
             {
-                child.transform.localScale = new Vector3(minimapCamera.orthographicSize, minimapCamera.orthographicSize, minimapCamera.orthographicSize);
+                child.transform.localScale = child.transform.localScale + Vector3.one;
             }
         }    
         if (Input.GetKey(KeyCode.KeypadPlus) && minimapCamera.orthographicSize > minZoom)
         {
             minimapCamera.orthographicSize = minimapCamera.orthographicSize - increments;
-            icon.transform.localScale = new Vector3(minimapCamera.orthographicSize, minimapCamera.orthographicSize, minimapCamera.orthographicSize);
+            icon.transform.localScale = icon.transform.localScale - Vector3.one;
             foreach (Transform child in mapIcons)
             {
-                child.transform.localScale = new Vector3(minimapCamera.orthographicSize, minimapCamera.orthographicSize, minimapCamera.orthographicSize);
+                child.transform.localScale = child.transform.localScale - Vector3.one;
             }
         }
     }
@@ -49,6 +49,6 @@ public class Minimap : MonoBehaviour
         newPosition.y = transform.position.y;
         transform.position = newPosition;
 
-        transform.rotation = Quaternion.Euler(90f, camera.eulerAngles.y, 0);
+        transform.rotation = Quaternion.Euler(90f, playerCamera.eulerAngles.y, 0);
     }
 }

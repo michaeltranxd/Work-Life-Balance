@@ -24367,15 +24367,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ed217856a35c1f146b78a7a7015c8ac1, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 1.3213e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800000, guid: ed217856a35c1f146b78a7a7015c8ac1, type: 3}
-      propertyPath: m_BoundingSphereOverride.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ed217856a35c1f146b78a7a7015c8ac1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 2.3510647e-38
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: ed217856a35c1f146b78a7a7015c8ac1, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 1.28e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ed217856a35c1f146b78a7a7015c8ac1, type: 3}
       propertyPath: m_BoundingSphereOverride.z
@@ -34940,8 +34940,7 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2119007883}
+  m_Children: []
   m_Father: {fileID: 1148004632}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -34958,7 +34957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1148004632}
-  camera: {fileID: 909808639}
+  playerCamera: {fileID: 909808639}
   icon: {fileID: 2119007883}
   mapIcons: {fileID: 949042851}
 --- !u!20 &1362441078
@@ -45854,11 +45853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 82b7db4e9fadbfd4a8fb8652e53337bd, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 4.484538e+30
+      value: 2.3510647e-38
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 82b7db4e9fadbfd4a8fb8652e53337bd, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 1.846984e+25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 82b7db4e9fadbfd4a8fb8652e53337bd, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -45866,7 +45865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 82b7db4e9fadbfd4a8fb8652e53337bd, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 2.2687054e-10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b7db4e9fadbfd4a8fb8652e53337bd, type: 3}
@@ -49756,15 +49755,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ec9131e40dcdea048a8629e11b6bc485, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ec9131e40dcdea048a8629e11b6bc485, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 8.17e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ec9131e40dcdea048a8629e11b6bc485, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 2.7667e-41
+      value: 2.7952212e+20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec9131e40dcdea048a8629e11b6bc485, type: 3}
@@ -54019,13 +54018,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119007882}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 1.89}
+  m_LocalRotation: {x: 0.50000006, y: -0.5, z: 0.50000006, w: 0.5}
+  m_LocalPosition: {x: 0, y: 18.11, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
-  m_Father: {fileID: 1362441076}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_Father: {fileID: 1148004632}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &2119007884
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54065,12 +54064,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 55e49714840d8fe43855d7bc886e0e3f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 7.28, y: 5.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
