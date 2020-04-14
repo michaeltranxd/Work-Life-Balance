@@ -13,7 +13,7 @@ public class Minimap : MonoBehaviour
     
 
     private float currentZoom;
-    private float minZoom = 5;
+    private float minZoom = 10;
     private float maxZoom = 50;
     private float increments = 1;
 
@@ -27,19 +27,19 @@ public class Minimap : MonoBehaviour
         if (Input.GetKey(KeyCode.KeypadMinus) && minimapCamera.orthographicSize < maxZoom)
         {
             minimapCamera.orthographicSize = minimapCamera.orthographicSize + increments;
-            minimapIcon.transform.localScale = minimapIcon.transform.localScale + Vector3.one;
+            minimapIcon.transform.localScale = minimapIcon.transform.localScale + Vector3.one / 3;
             foreach (Transform child in minimapIcons)
             {
-                child.transform.localScale = child.transform.localScale + Vector3.one;
+                child.transform.localScale = child.transform.localScale + Vector3.one / 3;
             }
         }    
         if (Input.GetKey(KeyCode.KeypadPlus) && minimapCamera.orthographicSize > minZoom)
         {
             minimapCamera.orthographicSize = minimapCamera.orthographicSize - increments;
-            minimapIcon.transform.localScale = minimapIcon.transform.localScale - Vector3.one;
+            minimapIcon.transform.localScale = minimapIcon.transform.localScale - Vector3.one / 3;
             foreach (Transform child in minimapIcons)
             {
-                child.transform.localScale = child.transform.localScale - Vector3.one;
+                child.transform.localScale = child.transform.localScale - Vector3.one / 3;
             }
         }
     }

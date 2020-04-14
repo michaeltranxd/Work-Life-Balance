@@ -126,7 +126,6 @@ public class DayNightController : MonoBehaviour
         return (int)currentMinute;
     }
 
-
     void UpdateSunAndMoon()
     {
         // This rotates the sun and moon 360 degree in X-axis according to our current time of day.
