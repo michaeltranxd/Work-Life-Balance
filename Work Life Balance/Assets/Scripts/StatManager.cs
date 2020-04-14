@@ -54,6 +54,7 @@ public class StatManager : MonoBehaviour
     // 5 - Ability Bar
 
     public RectTransform GameOverPanle;
+    public RectTransform messagePlane;
 
     public Recap recap;
     // set to public for testing purposes
@@ -149,32 +150,67 @@ public class StatManager : MonoBehaviour
         recap.setCurrentEnergy(stats.Energy);
 
         if (stats.PhysHealth == 0){
-            message.text = "You have been sent back to the hospital";
+            string m = "You have been sent back to the hospital";
+            if(! message.text.Equals(m)){
+                messagePlane.gameObject.SetActive(true);
+                message.text = m;
+                StartCoroutine(Wait());
+            }
         }
         else if(stats.MentHealth == 0){
-            message.text = "You have been sent back to the hospital";
+            string m = "You have been sent back to the hospital";
+            if(! message.text.Equals(m)){
+                messagePlane.gameObject.SetActive(true);
+                message.text = m;
+                StartCoroutine(Wait());
+            }
         }
         else if (dayNightController.isInEvent())
         {
-            message.text = "Doing event...";
+            string m = "Doing event...";
+            if(! message.text.Equals(m)){
+                messagePlane.gameObject.SetActive(true);
+                message.text = m;
+                StartCoroutine(Wait());
+            }
         }
         else if (dayNightController.isCloseToSleep())
         {
-            message.text = "You should sleep soon";
+            string m = "You should sleep soon";
+            if(! message.text.Equals(m)){
+                messagePlane.gameObject.SetActive(true);
+                message.text = m;
+                StartCoroutine(Wait());
+            }
         }
         else if (dayNightController.isPastSleep())
         {
-            message.text = "You feel very tired";
+            string m = "You feel very tired";
+            if(! message.text.Equals(m)){
+                messagePlane.gameObject.SetActive(true);
+                message.text = m;
+                StartCoroutine(Wait());
+            }
             print("past sleep");
             // TODO, reset day and send user back home
         }
         else if (DayNightController.isNighttime())
         {
-            message.text = "It is night time";
+            string m = "It is night time";
+            if(! message.text.Equals(m)){
+                messagePlane.gameObject.SetActive(true);
+                message.text = m;
+                StartCoroutine(Wait());
+            }
         }
         else
         {
-            message.text = "Start doing actions";
+            string m = "Start doing actions";
+            if(! message.text.Equals(m)){
+                messagePlane.gameObject.SetActive(true);
+                message.text = m;
+                StartCoroutine(Wait());
+            }
         }
         TimeText.text = "Time: " + dayNightController.getCurrentHour() + ":" + dayNightController.getCurrentMinute();
 
@@ -267,6 +303,11 @@ public class StatManager : MonoBehaviour
     public float GetEnergy()
     {
         return stats.Energy;
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3);
+        messagePlane.gameObject.SetActive(false);
     }
 
 }
