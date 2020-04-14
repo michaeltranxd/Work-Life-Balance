@@ -96,7 +96,6 @@ public class MenuHandler : MonoBehaviour
             StatsManager.AddEnergy(action.Energy);
             StatsManager.AddHygiene(action.Hygiene);
             StatsManager.AddAbility(action.Ability);
-
         }
         else
         {
