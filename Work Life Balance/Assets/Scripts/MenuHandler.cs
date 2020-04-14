@@ -14,6 +14,7 @@ public class MenuHandler : MonoBehaviour
     private Dictionary<string, List<Action>> database = new Dictionary<string, List<Action>>();
 
     public AudioSource audioSource;
+    public AudioClip menuOpenSound;
     
     // Start is called before the first frame update
     void Start()
@@ -55,8 +56,7 @@ public class MenuHandler : MonoBehaviour
          * Enable menu
          */
 
-        if (!audioSource.isPlaying)
-            audioSource.Play();
+        audioSource.PlayOneShot(menuOpenSound);
 
         string building = other.tag; //Debug.Log(other.tag);
 
