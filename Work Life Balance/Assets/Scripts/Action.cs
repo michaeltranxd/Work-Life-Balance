@@ -2,7 +2,7 @@
 
 public class Action
 {
-    public Action(float Time, float PH, float MH, float N, float H, float E, float W, string name)
+    public Action(float Time, float PH, float MH, float N, float H, float E, float AP, string name)
     {
         this.Time = Time;
         this.PhysHealth = PH;
@@ -10,7 +10,7 @@ public class Action
         this.Nutri = N;
         this.Hygiene = H;
         this.Energy = E;
-        this.Wake = W;
+        this.Ability = AP;
         this.name = name;
     }
     public float Time
@@ -25,7 +25,7 @@ public class Action
     { get; set; }
     public float Energy
     { get; set; }
-    public float Wake
+    public float Ability
     { get; set; }
 
     public string name

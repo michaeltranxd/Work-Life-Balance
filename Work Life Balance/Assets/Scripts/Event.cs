@@ -32,27 +32,6 @@ public abstract class Event
     }
 }
 
-public class SleepEvent : Event
-{
-    public SleepEvent(Player player) : base(player) {}
-
-    protected override bool hasPrereqs()
-    {
-        return DayNightController.CanSkipNighttime();
-    }
-
-    protected override void doEvent() {
-        DayNightController.SkipNighttime(this);
-    }
-
-    public static void createAndRunSleepEvent(Player player)
-    {
-        SleepEvent sleepEvent = new SleepEvent(player);
-        sleepEvent.run();
-    }
-
-}
-
 public class SkipTimeEvent : Event
 {
     public float minutesToSkip

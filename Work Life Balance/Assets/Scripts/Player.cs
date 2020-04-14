@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     Vector3 velocity = new Vector3(0, 0, 0);                   // Velocity of the player
 
     Animator playerAnimation;         // Animation of player
+    public RectTransform recapPlane;
+    public Recap recapManager;
 
     void Start()
     {
@@ -104,15 +106,14 @@ public class Player : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.transform.CompareTag("Bed") && inEvent == false)
+        if (hit.transform.CompareTag("Bed") && DayNightController.CanSkipNighttime())
         {
             print("On Bed");
             // Add prompt for user to decide if to sleep
 
             // If "yes" to sleep, run the following code:
-            SleepEvent.createAndRunSleepEvent(this);
+            handlePlayerSleep();
             // Remove above code when we add dialogue for the bed
-
         }
     }
 
@@ -136,10 +137,23 @@ public class Player : MonoBehaviour
         skipTimeEvent.run();
     }
 
+    public void handlePlayerSleep()
+    {
+        DayNightController.freezeTime();
+
+        recapPlane.gameObject.SetActive(true);
+        recapManager.startTyping();
+
+        playerInControl = false;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
     public void teleportToSleep()
     {
-        SleepEvent.createAndRunSleepEvent(this);
+        handlePlayerSleep();
+
         foreach (Transform child in bed.transform)
         { 
             if (child.name.Equals("NextToBed"))
@@ -147,5 +161,13 @@ public class Player : MonoBehaviour
                 transform.position = child.position;
             }
         }
+    }
+
+    public void startOfNewDay()
+    {
+        playerInControl = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

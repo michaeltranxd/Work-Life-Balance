@@ -9,7 +9,7 @@ public class TimmyController : MonoBehaviour
     public Animator anim;
     public RectTransform messagePlane;
     public Text message;
-    public Stats StatsManager;
+    public StatManager StatsManager;
 
     private int counter = 0;
     public GameObject player;

@@ -9,7 +9,7 @@ public class MenuHandler : MonoBehaviour
 
     public Button b1, b2, b3;
     public ActionButton ab1, ab2, ab3;
-    public Stats StatsManager;
+    public StatManager StatsManager;
 
     private Dictionary<string, List<Action>> database = new Dictionary<string, List<Action>>();
 
@@ -93,9 +93,10 @@ public class MenuHandler : MonoBehaviour
             StatsManager.AddPhys(action.PhysHealth);
             StatsManager.AddMent(action.MentHealth);
             StatsManager.AddNutri(action.Nutri);
-            StatsManager.AddWake(action.Wake);
-            StatsManager.AddHygiene(action.Hygiene);
             StatsManager.AddEnergy(action.Energy);
+            StatsManager.AddHygiene(action.Hygiene);
+            StatsManager.AddAbility(action.Ability);
+
         }
         else
         {
@@ -141,13 +142,13 @@ public class MenuHandler : MonoBehaviour
             float ph = float.Parse(splittedLine[1]);
             float mh = float.Parse(splittedLine[2]);
             float n = float.Parse(splittedLine[3]);
-            float w = float.Parse(splittedLine[4]);
+            float e = float.Parse(splittedLine[4]);
             float h = float.Parse(splittedLine[5]);
-            float e = float.Parse(splittedLine[6]);
+            float ap = float.Parse(splittedLine[6]);
             string name = splittedLine[7].Trim();
             string tag = splittedLine[8].Trim(); //Debug.Log("tag: " + tag.ToString());
 
-            Action action = new Action(time, ph, mh, n, w, h, e, name);
+            Action action = new Action(time, ph, mh, n, e, h, ap, name);
 
             List<Action> actions;
             if (!database.TryGetValue(tag, out actions))

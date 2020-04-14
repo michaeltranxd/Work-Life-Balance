@@ -34,12 +34,10 @@ public class DayNightController : MonoBehaviour
     private static float currentMinute = 0f;
 
     private static Event currentEvent = null;
-    public Camera SceneCamera;
-    public Camera PlayerCamera;
     public Player player;
 
-    private static bool playSleepClip = false;
-    public AudioSource audioSource;
+    public RectTransform recapPlane;
+    public Recap recap;
 
     static bool isSunrise()
     {
@@ -71,10 +69,6 @@ public class DayNightController : MonoBehaviour
     {
         return (startOfNoAction - currentTimeOfDay) * 24f * 60f;
     }
-    public bool isSkippingNight()
-    {
-        return currentEvent != null && currentEvent is SleepEvent;
-    }
     public bool isInEvent()
     {
         return currentEvent != null;
@@ -104,28 +98,7 @@ public class DayNightController : MonoBehaviour
 
         if(currentEvent != null)
         {
-            if (currentEvent is SleepEvent)
-            {
-                if (playSleepClip)
-                {
-                    playSleepClip = false;
-                    if (!audioSource.isPlaying)
-                        audioSource.Play();
-                }
-                SceneCamera.gameObject.SetActive(true);
-                PlayerCamera.gameObject.SetActive(false);
-                if (isDaytime())
-                {
-                    if (audioSource.isPlaying)
-                        audioSource.Stop();
-                    timeMultiplier = 1f;
-                    currentEvent.end();
-                    currentEvent = null;
-                    SceneCamera.gameObject.SetActive(false);
-                    PlayerCamera.gameObject.SetActive(true);
-                }
-            }
-            else if (currentEvent is SkipTimeEvent anEvent)
+            if (currentEvent is SkipTimeEvent anEvent)
             {
                 // 1 hr / 24hrs is ratio, since we are in minutes we / 60 / 24, if we were 1 hr we do / 24
                 if (currentTimeOfDay >= (anEvent.initialTime + anEvent.minutesToSkip / 60 / 24))
@@ -185,15 +158,16 @@ public class DayNightController : MonoBehaviour
         moon.intensity = moonIntensity;
     }
 
+    public void startNewDay()
+    {
+        currentTimeOfDay = startOfDaytime;
+        timeMultiplier = 1f;
+        player.startOfNewDay();
+    }
+
     public static bool CanSkipNighttime()
     {
         return isNighttime();
-    }
-    public static void SkipNighttime(Event e)
-    {
-        currentEvent = e;
-        timeMultiplier = 50f;
-        playSleepClip = true;
     }
 
     public static bool CanSkipTime(float minutes)
@@ -206,6 +180,11 @@ public class DayNightController : MonoBehaviour
         e.initialTime = currentTimeOfDay;
         currentEvent = e;
         timeMultiplier = 40f;
+    }
+
+    public static void freezeTime()
+    {
+        timeMultiplier = 0f;
     }
 
     /* Function will remap range of [a,b] to new range [c,d]

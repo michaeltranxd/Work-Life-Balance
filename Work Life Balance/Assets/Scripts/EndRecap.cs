@@ -7,7 +7,7 @@ public class EndRecap : MonoBehaviour
 {
     public RectTransform recapPlane;
     public Recap recap;
-    public Stats StatsManager;
+    public StatManager StatsManager;
 
     public void endRecap(){
         StatsManager.resetRecap();
@@ -16,5 +16,6 @@ public class EndRecap : MonoBehaviour
         recapPlane.gameObject.SetActive(false);
         recap.endTyping();
         recap.resetSkip();
+        DayNightController.getDayNightController().startNewDay();
     }
 }

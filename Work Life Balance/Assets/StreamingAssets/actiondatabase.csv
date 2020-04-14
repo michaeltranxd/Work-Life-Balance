@@ -1,4 +1,4 @@
-// Time, PH, MH, N, W, H, E, Name,tag
+// Time, PH, MH, N,E, H,AP, Name,tag
 100,20,-20,0,-25,-40,-25,Run on treadmill,Gym
 120,20,-15,0,-30,-40,-20,Lift weights,Gym
 60,5,0,0,0,-10,-10,Do yoga,Gym

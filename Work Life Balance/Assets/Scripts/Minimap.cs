@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Minimap : MonoBehaviour
 {
-    public Transform player;
+    public Transform characterTransform;
     public Transform playerCamera;
-    public Transform icon;
-    public Transform mapIcons;
+    public Transform minimapIcon;
+    public Transform minimapIcons;
 
     private Camera minimapCamera;
     
@@ -27,8 +27,8 @@ public class Minimap : MonoBehaviour
         if (Input.GetKey(KeyCode.KeypadMinus) && minimapCamera.orthographicSize < maxZoom)
         {
             minimapCamera.orthographicSize = minimapCamera.orthographicSize + increments;
-            icon.transform.localScale = icon.transform.localScale + Vector3.one;
-            foreach (Transform child in mapIcons)
+            minimapIcon.transform.localScale = minimapIcon.transform.localScale + Vector3.one;
+            foreach (Transform child in minimapIcons)
             {
                 child.transform.localScale = child.transform.localScale + Vector3.one;
             }
@@ -36,8 +36,8 @@ public class Minimap : MonoBehaviour
         if (Input.GetKey(KeyCode.KeypadPlus) && minimapCamera.orthographicSize > minZoom)
         {
             minimapCamera.orthographicSize = minimapCamera.orthographicSize - increments;
-            icon.transform.localScale = icon.transform.localScale - Vector3.one;
-            foreach (Transform child in mapIcons)
+            minimapIcon.transform.localScale = minimapIcon.transform.localScale - Vector3.one;
+            foreach (Transform child in minimapIcons)
             {
                 child.transform.localScale = child.transform.localScale - Vector3.one;
             }
@@ -45,7 +45,7 @@ public class Minimap : MonoBehaviour
     }
     void LateUpdate()
     {
-        Vector3 newPosition = player.position;
+        Vector3 newPosition = characterTransform.position;
         newPosition.y = transform.position.y;
         transform.position = newPosition;
 
