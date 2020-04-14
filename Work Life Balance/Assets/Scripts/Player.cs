@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     Animator playerAnimation;         // Animation of player
     public RectTransform recapPlane;
     public Recap recapManager;
+    public TaskManager taskManager;
 
     void Start()
     {
@@ -139,6 +140,7 @@ public class Player : MonoBehaviour
 
     public void handlePlayerSleep()
     {
+        taskManager.checkTasks();
         DayNightController.freezeTime();
 
         recapPlane.gameObject.SetActive(true);

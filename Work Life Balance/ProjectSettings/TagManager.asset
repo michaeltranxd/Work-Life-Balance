@@ -12,6 +12,9 @@ TagManager:
   - Fast
   - Subs
   - Veggie
+  - Pharmacy
+  - Apartments
+  - Hospital
   layers:
   - Default
   - TransparentFX
