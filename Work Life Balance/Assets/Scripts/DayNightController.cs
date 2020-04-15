@@ -123,8 +123,6 @@ public class DayNightController : MonoBehaviour
         if (currentTimeOfDay >= 1) // Never hits this case
         {
             currentTimeOfDay = 0;
-            numDays++;
-            dayText.text = "Day: " + numDays;
         }
 
         if(currentEvent != null)
