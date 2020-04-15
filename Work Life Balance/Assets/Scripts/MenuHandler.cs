@@ -15,7 +15,10 @@ public class MenuHandler : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip menuOpenSound;
-    
+
+    private bool shopsClosed = false;
+    public Transform buildings;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +45,26 @@ public class MenuHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (DayNightController.getDayNightController().isTimeToCloseBuidings() && !shopsClosed)
+        {
+            foreach (Transform child in buildings)
+            {
+                BoxCollider bc = child.GetComponent<BoxCollider>();
+                if(bc)
+                    bc.enabled = false;
+            }
+            shopsClosed = true;
+        }
+        else if (DayNightController.isDaytime() && shopsClosed)
+        {
+            foreach (Transform child in buildings)
+            {
+                BoxCollider bc = child.GetComponent<BoxCollider>();
+                if (bc)
+                    bc.enabled = true;
+            }
+            shopsClosed = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -73,14 +95,12 @@ public class MenuHandler : MonoBehaviour
             b3.GetComponentInChildren<Text>().text = actionToString(actions[2]);
         }
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Player.showMouse();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Player.hideMouse();
         menu.SetActive(false);
     }
 

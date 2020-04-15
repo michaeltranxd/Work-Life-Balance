@@ -33,17 +33,17 @@ public class CameraFollowPlayer : MonoBehaviour
     // LateUpdate called after Update methods
     void LateUpdate()
     {
+        if (DayNightController.GameWon || StatManager.GameOver)
+            return;
         if (playerCharacter.playerInControl)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
             Quaternion camTurnAngle = Quaternion.AngleAxis(mouseX, Vector3.up);
-            cameraOffset = camTurnAngle * cameraOffset;
-            
 
-            
-            
+            if (!Player.cursorShown)
+                cameraOffset = camTurnAngle * cameraOffset;            
 
             Debug.DrawLine(playerCharacter.transform.position, transform.position, Color.red);
 

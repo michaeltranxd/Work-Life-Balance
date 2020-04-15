@@ -9,7 +9,9 @@ public class PlayerSounds : MonoBehaviour
     public AudioClip[] footStepSounds;
     public AudioClip daytimeSound;
     public AudioClip nighttimeSound;
-    
+
+    private bool isNight = false;
+
     void Start()
     {
         
@@ -19,6 +21,20 @@ public class PlayerSounds : MonoBehaviour
         int randomIndex = Random.Range(0, footStepSounds.Length);
         FootstepsSoundManager.PlayOneShot(footStepSounds[randomIndex], .3f);
         //Debug.Log("PrintEvent: " + s + " called at: " + Time.time);
+    }
+
+    void Update()
+    {
+        if(DayNightController.isDaytime() && isNight)
+        {
+            playDaytimeSounds();
+            isNight = false;
+        }
+        else if (DayNightController.isNighttime() && !isNight)
+        {
+            playNighttimeSounds();
+            isNight = true;
+        }
     }
 
     public void playDaytimeSounds()

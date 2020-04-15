@@ -23,6 +23,12 @@ public class Player : MonoBehaviour
     public TaskManager taskManager;
 
     public AudioSource miiSoundSource;
+    public GameObject minimapPanel;
+
+    public static bool cursorShown = false;
+    private static bool isFatigued = false;
+
+    public StatManager statManager;
 
     void Start()
     {
@@ -37,17 +43,27 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inEvent)
-            speed = 0f;
-        else
-            speed = maxSpeed;
-
-        playerGravity();
-        playerControl();
-
-        if (DayNightController.getDayNightController().isPastSleep())
+        if (StatManager.GameOver || DayNightController.GameWon)
         {
-            teleportToSleep();
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            if (inEvent)
+                speed = 0f;
+            else if (isFatigued)
+                speed = 4f;
+            else
+                speed = maxSpeed;
+
+            playerGravity();
+            playerControl();
+
+            if (DayNightController.getDayNightController().isSleep())
+            {
+                teleportToSleep();
+            }
         }
     }
 
@@ -114,6 +130,8 @@ public class Player : MonoBehaviour
             // If "yes" to sleep, run the following code:
             handlePlayerSleep();
             // Remove above code when we add dialogue for the bed
+            statManager.AddEnergy(100);
+            statManager.AddAbility(100);
         }
     }
 
@@ -143,6 +161,7 @@ public class Player : MonoBehaviour
         DayNightController.freezeTime();
 
         recapPlane.gameObject.SetActive(true);
+        minimapPanel.gameObject.SetActive(false);
         recapManager.startTyping();
         
         miiSoundSource.Play();
@@ -164,6 +183,10 @@ public class Player : MonoBehaviour
                 transform.position = child.position;
             }
         }
+
+        statManager.AddEnergy(50);
+        statManager.AddAbility(70);
+
     }
 
     public void startOfNewDay()
@@ -177,5 +200,29 @@ public class Player : MonoBehaviour
     public void stopMiiMusic()
     {
         miiSoundSource.Stop();
+        minimapPanel.gameObject.SetActive(true);
+    }
+
+    public static void showMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        cursorShown = true;
+    }
+
+    public static void hideMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        cursorShown = false;
+    }
+
+    public static void fatigued()
+    {
+        isFatigued = true;
+    }
+    public static void noFatigued()
+    {
+        isFatigued = false;
     }
 }
