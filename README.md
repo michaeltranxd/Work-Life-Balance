@@ -21,8 +21,8 @@ As we are trying to make this as analogous to real life as we can, it is importa
 ## How to play:
 - Move with WASD keys
 - Move the camera using the mouse
-- Zoom in minimap with 'numpad -'
-- Zoom out minimap with 'numpad +'
+- Zoom in minimap with 'numpad +'
+- Zoom out minimap with 'numpad -'
 - Open/close map with 'm'
 - Open task list by holding tab
 
