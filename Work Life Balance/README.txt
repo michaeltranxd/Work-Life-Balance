@@ -41,3 +41,17 @@ The project must use at least three (or two) examples of Mecanim, one of which m
 	Rigged character model for the Player Character with walking and idle animations - Michael
 	NPC walking around that gives the Player a cookie. - Spancer
 	Dog that patrols two points with walk animation. When you are near the dog, he will stop and stare at you in idle. Player leaving the area will make the dog continue walk animation and patrol. - Justin
+
+UI Design
+	The changes we made reflected the principles in the Interface Design lecture. We made sure colors weren't too saturated (and additionally texture smoothness made sense).
+	We added a map and minimap for the player to help navigate themself around the map. We also tried to minimize the unnecessary times a menu would pop up.
+	A lot of clarity issues were addressed (including color as mentioned above) with how Time was viewed and the Status Bars.
+	A lot of sound effects to help indicate feedback of menu navigation to the player.
+
+Sound Design
+	Sound Effects: We spoke extensively about which sounds fit the town of what action they were attached to. For example, something loud and cheery, though exciting to hear, may not be appropriate for constantly accessed actions like
+	hovering over a menu button. And so we would go towards a more pleasant short sound.
+
+	Background Music/Sounds: In regards to keeping a realistic level design, we found that music may not fit as a background audio for the whole day. We added natural sounds around that will change between night and day.
+	Additionally you hear frogs and still water, but only when near the pond in the park.
+	
