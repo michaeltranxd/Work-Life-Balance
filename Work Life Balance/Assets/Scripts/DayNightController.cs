@@ -35,6 +35,7 @@ public class DayNightController : MonoBehaviour
 
     private static Event currentEvent = null;
     public Player player;
+    public PlayerSounds playerSounds;
 
     public RectTransform recapPlane;
     public Recap recap;

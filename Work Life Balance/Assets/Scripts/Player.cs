@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     public Recap recapManager;
     public TaskManager taskManager;
 
+    public AudioSource miiSoundSource;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -77,32 +79,29 @@ public class Player : MonoBehaviour
      */
     private void playerControl()
     {
+
+        // Movement Handling
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        // Apply movement relative to camera
+        Vector3 move = PlayerCamera.transform.right * x + PlayerCamera.transform.forward * z;
+
+        // Remove rotation up/down direction
+        move.y = 0f;
         if (playerInControl)
         {
-            // Movement Handling
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
-
-            // Apply movement relative to camera
-            Vector3 move = PlayerCamera.transform.right * x + PlayerCamera.transform.forward * z;
-
-            // Remove rotation up/down direction
-            move.y = 0f;
-
             // Move controller
             controller.Move(move * speed * Time.deltaTime);
 
             // Only rotate when moving
             if (move != Vector3.zero)
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move.normalized), 0.1f);
-
-            if (move == Vector3.zero)
-            {
-                playerAnimation.SetBool("IsWalking", false);
-            }
-            else
-                playerAnimation.SetBool("IsWalking", true);
         }
+        if (move == Vector3.zero || !playerInControl)
+            playerAnimation.SetBool("IsWalking", false);
+        else
+            playerAnimation.SetBool("IsWalking", true);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -145,7 +144,9 @@ public class Player : MonoBehaviour
 
         recapPlane.gameObject.SetActive(true);
         recapManager.startTyping();
-
+        
+        miiSoundSource.Play();
+        
         playerInControl = false;
 
         Cursor.lockState = CursorLockMode.None;
@@ -171,5 +172,10 @@ public class Player : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public void stopMiiMusic()
+    {
+        miiSoundSource.Stop();
     }
 }

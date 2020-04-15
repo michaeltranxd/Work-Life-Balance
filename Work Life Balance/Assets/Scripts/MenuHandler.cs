@@ -56,7 +56,7 @@ public class MenuHandler : MonoBehaviour
          * Enable menu
          */
 
-        audioSource.PlayOneShot(menuOpenSound);
+        audioSource.PlayOneShot(menuOpenSound, .5f);
 
         string building = other.tag; //Debug.Log(other.tag);
 
