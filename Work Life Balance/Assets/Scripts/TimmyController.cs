@@ -13,7 +13,11 @@ public class TimmyController : MonoBehaviour
 
     private int counter = 0;
     public GameObject player;
-    
+
+    public AudioSource SoundManager;
+    public AudioClip notificationSound;
+
+    private bool inCoroutine = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +28,10 @@ public class TimmyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(player.transform.position,this.transform.position)< 1){
+        if(Vector3.Distance(player.transform.position,this.transform.position)< 1 && !inCoroutine)
+        {
             audioSource.Play();
+            inCoroutine = true;
             StartCoroutine(Wait());
         }else{
             if(counter > 1000){
@@ -47,5 +53,6 @@ public class TimmyController : MonoBehaviour
         messagePlane.gameObject.SetActive(false);
         Destroy(gameObject);
         StatsManager.AddNutri(10.0f);
+        message.text = "";
     }
 }

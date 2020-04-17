@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3355738947212017208}
-  - component: {fileID: 3355738947212017209}
   - component: {fileID: 3355738947212017210}
   m_Layer: 0
   m_Name: Car1
@@ -33,28 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!195 &3355738947212017209
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3355738947212017211}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 500
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0.8
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &3355738947212017210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b410e7cd57afaf242ba6d6c4ca329678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: {fileID: 0}
 --- !u!1 &3355738948359466781
 GameObject:
   m_ObjectHideFlags: 0

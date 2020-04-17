@@ -49,10 +49,12 @@ public class CarSpawner : MonoBehaviour
 
         // Create car
         GameObject newCar = Instantiate(carPrefab);
-        NavMeshAgent agent = newCar.GetComponent<NavMeshAgent>();
 
         // Assign position and destination to random spawn + destination points defined on map
         newCar.transform.position = spawnPoints[randomSpawnIndex];
+
+        NavMeshAgent agent = newCar.AddComponent<NavMeshAgent>();
+        agent.baseOffset = 0.9f;
         agent.destination = destinationPoints[randomDestinationIndex];
     }
 }

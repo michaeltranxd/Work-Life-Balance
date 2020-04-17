@@ -44,6 +44,7 @@ public class StatManager : MonoBehaviour
 
     public int ThirstOverTime;
     public int HungerOverTime;
+    int EnergyOverTime = 1;
 
     private Slider[] bars = new Slider[6];
     // 0 - Physical Health Bar
@@ -69,6 +70,11 @@ public class StatManager : MonoBehaviour
     private string[] barNames = { "PhyHealthBar", "MentHealthBar", "NutriBar", "HygieneBar", "EnergyBar", "AbilityBar" };
     private string[] dataNames = { "PhyData", "MentData", "NutriData", "HygData", "EnergyData", "AbilityData" };
 
+    private string messageString;
+    public static bool GameOver = false;
+    public AudioSource SoundManager;
+    public AudioClip notificationSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,9 +94,18 @@ public class StatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameOver)
+            return;
+        if (DayNightController.GameWon)
+        {
+            GameOverText.text = "You won!";
+            GameOverPanle.gameObject.SetActive(true);
+            return;
+        }
         Timeleft = dayNightController.timeLeft();
-        stats.Nutri -= HungerOverTime * Time.deltaTime / 60 * DayNightController.timeMultiplier;    // Every minute = 1 point
-        stats.Hygiene -= ThirstOverTime * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
+        stats.Nutri -= HungerOverTime * 2 * Time.deltaTime / 60 * DayNightController.timeMultiplier;    // Every minute = 1 point
+        stats.Hygiene -= ThirstOverTime * 2 *Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
+        stats.Energy -= EnergyOverTime * 2 * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
         checkStats();
         UpdateUI();
     }
@@ -116,13 +131,19 @@ public class StatManager : MonoBehaviour
         }
         if(stats.Energy <= 0){
             stats.PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
+            Player.fatigued();
             if(stats.Energy < 0){
                 stats.Energy = 0;
             }
         }
+        else
+        {
+            Player.noFatigued();
+        }
         if(stats.MentHealth <= 0 || stats.PhysHealth <= 0){
             GameOverText.text = "Game Over";
             GameOverPanle.gameObject.SetActive(true);
+            GameOver = true;
         }
     }
     public void UpdateUI(){
@@ -150,67 +171,43 @@ public class StatManager : MonoBehaviour
         recap.setCurrentEnergy(stats.Energy);
 
         if (stats.PhysHealth == 0){
-            string m = "You have been sent back to the hospital";
-            if(! message.text.Equals(m)){
-                messagePlane.gameObject.SetActive(true);
-                message.text = m;
-                StartCoroutine(Wait());
-            }
+            messageString = "You have been sent back to the hospital";
         }
         else if(stats.MentHealth == 0){
-            string m = "You have been sent back to the hospital";
-            if(! message.text.Equals(m)){
-                messagePlane.gameObject.SetActive(true);
-                message.text = m;
-                StartCoroutine(Wait());
-            }
+            messageString = "You have been sent back to the hospital";
         }
         else if (dayNightController.isInEvent())
         {
-            string m = "Doing event...";
-            if(! message.text.Equals(m)){
-                messagePlane.gameObject.SetActive(true);
-                message.text = m;
-                StartCoroutine(Wait());
-            }
+            messageString = "Doing event...";
         }
         else if (dayNightController.isCloseToSleep())
         {
-            string m = "You should sleep soon";
-            if(! message.text.Equals(m)){
-                messagePlane.gameObject.SetActive(true);
-                message.text = m;
-                StartCoroutine(Wait());
-            }
+            messageString = "It almost midnight...";
         }
-        else if (dayNightController.isPastSleep())
+        else if (dayNightController.isOneHourBeforeCloseBuilding())
         {
-            string m = "You feel very tired";
-            if(! message.text.Equals(m)){
-                messagePlane.gameObject.SetActive(true);
-                message.text = m;
-                StartCoroutine(Wait());
-            }
-            print("past sleep");
+            messageString = "Buildings are closed in one hour";
+        }
+        else if (dayNightController.isTimeToCloseBuidings())
+        {
+            messageString = "Buildings are closed... Return home";
             // TODO, reset day and send user back home
         }
         else if (DayNightController.isNighttime())
         {
-            string m = "It is night time";
-            if(! message.text.Equals(m)){
-                messagePlane.gameObject.SetActive(true);
-                message.text = m;
-                StartCoroutine(Wait());
-            }
+            messageString = "It is night time";
         }
         else
         {
-            string m = "Start doing actions";
-            if(! message.text.Equals(m)){
-                messagePlane.gameObject.SetActive(true);
-                message.text = m;
-                StartCoroutine(Wait());
-            }
+            messageString = "Start doing actions";
+        }
+
+        if (!message.text.Equals(messageString) && !message.text.Equals("Timmy gave you a cookie."))
+        {
+            messagePlane.gameObject.SetActive(true);
+            message.text = messageString;
+            SoundManager.PlayOneShot(notificationSound);
+            StartCoroutine(Wait());
         }
         TimeText.text = "Time: " + dayNightController.getCurrentHour() + ":" + dayNightController.getCurrentMinute();
 
@@ -232,9 +229,8 @@ public class StatManager : MonoBehaviour
     }
     public void SpendTime(float amount)
     { 
-        TimeWasLeft = Timeleft;
         Timeleft -= amount;
-        print(Timeleft);
+        print("Time" + Timeleft);
 
         player.playerSkipTime(amount);
     }

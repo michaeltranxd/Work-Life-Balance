@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class DayNightController : MonoBehaviour
@@ -6,16 +7,20 @@ public class DayNightController : MonoBehaviour
     public Light sun;
     public Light moon;
     private static float minutesInFullDay = 1200f;
-    private static float currentTimeOfDay = startOfNighttime;
+    private static float currentTimeOfDay = startOfDaytime;
     public static float timeMultiplier = 1f;
     static DayNightController dayNightController;
 
     public const float startOfSunrise = .25f;
     public const float startOfDaytime = .35f;
     public const float startOfSunset = .65f; 
-    public const float startOfNighttime = .80f;
-    public const float startOfMidnight = 0f;
-    public const float startOfNoAction = .90f;
+    public const float startOfNighttime = .80f;  
+    public const float startOfMidnight = 0f;     // Kick player to sleep
+    public const float startOf1HourBeforeBuildingsClose = .83333f; // 8PM warning
+    public const float startOfCloseBuildings = 0.875f;// 9PM stores close
+    public const float startOfWarning = 0.9583f; // ~11PM
+    public const float startOfNoAction = 0.875f; // 11PM cannot access gym/park TODO
+
     float startOfNoon = .5f;
 
     float sunIntensity = 1;
@@ -29,7 +34,7 @@ public class DayNightController : MonoBehaviour
     float nighttimeMaxIntensity = .7f;
     float sunsetMaxIntensity = .3f;
 
-    private static int numDays = 0;
+    private static int numDays = 1;
     private static float currentHour = 0f;
     private static float currentMinute = 0f;
 
@@ -39,6 +44,10 @@ public class DayNightController : MonoBehaviour
 
     public RectTransform recapPlane;
     public Recap recap;
+
+    public Text dayText;
+
+    public static bool GameWon = false;
 
     static bool isSunrise()
     {
@@ -55,20 +64,32 @@ public class DayNightController : MonoBehaviour
     }
     public static bool isNighttime()
     {
-        return currentTimeOfDay >= startOfNighttime || currentTimeOfDay < startOfSunrise;
+        return currentTimeOfDay >= startOfNighttime && currentTimeOfDay < startOf1HourBeforeBuildingsClose;
     }
 
     public bool isCloseToSleep()
     {
-        return currentTimeOfDay < startOfNoAction && currentTimeOfDay > .85f;
+        return currentTimeOfDay >= startOfWarning && currentTimeOfDay < 1f;
     }
-    public bool isPastSleep()
+    public bool isSleep()
+    {
+        return currentTimeOfDay >= startOfMidnight && currentTimeOfDay < startOfDaytime;
+    }
+    public bool isTimeToCloseBuidings()
+    {
+        return currentTimeOfDay >= startOfCloseBuildings && currentTimeOfDay < startOfWarning;
+    }
+    public bool isOneHourBeforeCloseBuilding()
+    {
+        return currentTimeOfDay >= startOf1HourBeforeBuildingsClose && currentTimeOfDay < .84f;
+    }
+    public bool isNoActionTime()
     {
         return currentTimeOfDay >= startOfNoAction;
     }
     public float timeLeft()
     {
-        return (startOfNoAction - currentTimeOfDay) * 24f * 60f;
+        return (startOfWarning - currentTimeOfDay) * 24f * 60f;
     }
     public bool isInEvent()
     {
@@ -83,18 +104,25 @@ public class DayNightController : MonoBehaviour
     void Start()
     {
         dayNightController = this;
+        dayText.text = "Day: 1";
     }
 
     void Update()
     {
+        if (StatManager.GameOver)
+            return;
+        if (numDays == 31)
+        {
+            GameWon = true;
+        }
+
         UpdateSunAndMoon();
 
         currentTimeOfDay += (Time.deltaTime / minutesInFullDay) * timeMultiplier;
         //print(currentTimeOfDay);
-        if (currentTimeOfDay >= 1)
+        if (currentTimeOfDay >= 1) // Never hits this case
         {
             currentTimeOfDay = 0;
-            numDays++;
         }
 
         if(currentEvent != null)
@@ -163,17 +191,20 @@ public class DayNightController : MonoBehaviour
         currentTimeOfDay = startOfDaytime;
         timeMultiplier = 1f;
         player.startOfNewDay();
+        numDays++;
+        dayText.text = "Day: " + numDays;
+        print(dayText.text);
     }
 
     public static bool CanSkipNighttime()
     {
-        return isNighttime();
+        return currentTimeOfDay >= startOfNighttime;
     }
 
     public static bool CanSkipTime(float minutes)
     {
         print(currentTimeOfDay + minutes / minutesInFullDay);
-        return currentTimeOfDay + minutes / minutesInFullDay > startOfDaytime && (currentTimeOfDay + minutes / minutesInFullDay) < startOfNighttime;
+        return currentTimeOfDay + minutes / minutesInFullDay > startOfDaytime && (currentTimeOfDay + minutes / minutesInFullDay) < startOfWarning;
     }
     public static void SkipTime(SkipTimeEvent e)
     {

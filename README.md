@@ -21,11 +21,16 @@ As we are trying to make this as analogous to real life as we can, it is importa
 ## How to play:
 - Move with WASD keys
 - Move the camera using the mouse
+- Zoom in minimap with 'numpad +'
+- Zoom out minimap with 'numpad -'
+- Open/close map with 'm'
+- Open task list by holding tab
+
 
 ## Important notes for current build
 - The bed can only be slept on when it is night time, system will tell you when it is nighttime. To do so, just collide with the bed
 - When selecting an action, if there is not enough time in the day to do the action, the game will not let you do the action. Please note that a window to display the message that player does not have enough time is not yet implemented.
-- The gray block outside the house implements our action system. Please walk close to it for actions.
+- Important buildings are on the map seen through minimap or map
 
 ## Credits:
 - Mouse orbit using camera (Jayanam) https://youtu.be/xcn7hz7J7sI
@@ -44,3 +49,12 @@ As we are trying to make this as analogous to real life as we can, it is importa
 - Too Many Items: Kitchen Props (Quantum Development) https://assetstore.unity.com/packages/3d/props/too-many-items-kitchen-props-127635
 - Lamps Pack (FunFant)https://assetstore.unity.com/packages/3d/props/interior/lamps-pack-19102
 - American Flag https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png
+Images for Map/Minimap/HUD - Google Images
+Footstep sounds - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/footsteps-31
+Panel animations (Javanam) - https://www.youtube.com/watch?v=mz9xfDQ4FCk
+Minimap (Brackeys) - https://www.youtube.com/watch?v=28JTTXqMvOU
+Most sound effects used - https://freesound.org/ AND https://www.myinstants.com/index/us/
+Background noise/sound - https://noises.online/
+Typing Noise - https://assetstore.unity.com/packages/audio/sound-fx/the-typist-135025
+Recap Icon - https://assetstore.unity.com/packages/2d/gui/icons/clean-vector-icons-132084
+HUD Inspiration - 7 Days to Die

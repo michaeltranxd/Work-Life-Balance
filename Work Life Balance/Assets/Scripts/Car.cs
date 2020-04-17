@@ -3,7 +3,6 @@ using UnityEngine.AI;
 public class Car : MonoBehaviour
 {
     NavMeshAgent agent;
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
