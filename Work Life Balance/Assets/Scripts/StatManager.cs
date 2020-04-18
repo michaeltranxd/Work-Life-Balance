@@ -77,6 +77,8 @@ public class StatManager : MonoBehaviour
 
     private float statDecreaseMultiplier = 4f;
 
+    private bool existingData = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -329,6 +331,16 @@ public class StatManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         messagePlane.gameObject.SetActive(false);
+    }
+
+    public void LoadStat(float[] playerStats)
+    {
+        stats.PhysHealth = playerStats[0];
+        stats.MentHealth = playerStats[1];
+        stats.Nutri = playerStats[2];
+        stats.Hygiene = playerStats[3];
+        stats.Energy = playerStats[4];
+        stats.Ability = playerStats[5];
     }
 
 }

@@ -160,10 +160,8 @@ public class MenuHandler : MonoBehaviour
 
 
         print(actionButton.actionToTake.name);
+        Player.hideMouse();
         menu.SetActive(false);
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     private string actionToString(Action action)

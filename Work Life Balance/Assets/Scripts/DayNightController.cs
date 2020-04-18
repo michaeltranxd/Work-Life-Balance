@@ -155,6 +155,22 @@ public class DayNightController : MonoBehaviour
         return (int)currentMinute;
     }
 
+    public float getCurrentTimeOfDay()
+    {
+        return currentTimeOfDay;
+    }
+
+    public int getNumDays()
+    {
+        return numDays;
+    }
+
+    public void LoadTime(float loadTime, int loadDay)
+    {
+        currentTimeOfDay = loadTime;
+        numDays = loadDay;
+    }
+
     void UpdateSunAndMoon()
     {
         // This rotates the sun and moon 360 degree in X-axis according to our current time of day.
