@@ -226,6 +226,10 @@ public class DayNightController : MonoBehaviour
         print(dayText.text);
     }
 
+    public int getNumDays(){
+        return numDays;
+    }
+
     public static bool CanSkipNighttime()
     {
         return currentTimeOfDay >= startOfNighttime;

@@ -30,9 +30,11 @@ public class TaskManager : MonoBehaviour
     }
 
     public void setTasks(string task){
+        if(AllTasks.Contains(task) == false){
             ToDoList = ToDoList + task + "\n";
             AllTasks.Add(task);
             Debug.Log("Adding Task " + ToDoList);
+        }
     }
 
     public void removeTask(string task){
@@ -45,5 +47,11 @@ public class TaskManager : MonoBehaviour
             StatsManager.AddAbility(-(AllTasks.Count* 20.0f));
             Debug.Log("AddAbility: " + (-(AllTasks.Count* 20.0f)));
         }
+        AllTasks.Remove("Go to work");
+        AllTasks.Remove("Work from home");
+    }
+
+    public bool hasTask(string task){
+        return AllTasks.Contains(task);
     }
 }
