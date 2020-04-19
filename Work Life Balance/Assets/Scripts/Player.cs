@@ -202,6 +202,11 @@ public class Player : MonoBehaviour
         statManager.AddAbility(40);
     }
 
+    public void onBedNo()
+    {
+        hideMouse();
+    }
+
     public void teleportToSleep()
     {
         handlePlayerSleep();
