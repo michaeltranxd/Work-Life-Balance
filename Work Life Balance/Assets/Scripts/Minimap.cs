@@ -24,6 +24,9 @@ public class Minimap : MonoBehaviour
 
     void Update()
     {
+        if (PauseManager.GamePaused)
+            return;
+
         if (Input.GetKey(KeyCode.KeypadMinus) && minimapCamera.orthographicSize < maxZoom)
         {
             minimapCamera.orthographicSize = minimapCamera.orthographicSize + increments;

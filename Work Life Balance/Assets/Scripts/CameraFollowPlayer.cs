@@ -17,7 +17,8 @@ public class CameraFollowPlayer : MonoBehaviour
     bool hit;
 
     // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -25,6 +26,14 @@ public class CameraFollowPlayer : MonoBehaviour
         maxCameraMagnitude = maxCameraOffset.magnitude;
         cameraMagnitude = maxCameraMagnitude;
         cameraOffset = maxCameraOffset;
+
+        if (LevelLoader.LoadingSavedFile)
+            LoadCamera();
+    }
+
+    void Start()
+    {
+
     }
 
     void Update()
@@ -64,6 +73,16 @@ public class CameraFollowPlayer : MonoBehaviour
             transform.position = cameraFollow.transform.position + cameraOffset.normalized * cameraMagnitude;
             transform.LookAt(cameraFollow);
         }
+    }
+    public void LoadCamera()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        Vector3 position;
+        position.x = data.cameraPosition[0];
+        position.y = data.cameraPosition[1];
+        position.z = data.cameraPosition[2];
+        transform.position = position;
     }
 
 }

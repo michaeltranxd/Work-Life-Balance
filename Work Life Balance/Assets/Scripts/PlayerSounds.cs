@@ -19,7 +19,7 @@ public class PlayerSounds : MonoBehaviour
     public void printMe(string s)
     {
         int randomIndex = Random.Range(0, footStepSounds.Length);
-        FootstepsSoundManager.PlayOneShot(footStepSounds[randomIndex], .3f);
+        FootstepsSoundManager.PlayOneShot(footStepSounds[randomIndex], 1f);
         //Debug.Log("PrintEvent: " + s + " called at: " + Time.time);
     }
 

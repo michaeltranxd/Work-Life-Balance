@@ -18,7 +18,10 @@ public class Map : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(animator != null)
+        if (PauseManager.GamePaused)
+            return;
+
+        if (animator != null)
         {
             if (Input.GetKeyDown(KeyCode.M) && !mapActive)
             {

@@ -34,6 +34,9 @@ public class CarSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseManager.GamePaused)
+            return;
+
         time += Time.deltaTime;
         if((time - pastTime) > spawnRateInSeconds){
             spawn();

@@ -30,7 +30,11 @@ public class Player : MonoBehaviour
 
     public StatManager statManager;
 
-    void Start()
+    public LevelLoader levelLoader;
+
+
+
+    void Awake()
     {
         controller = GetComponent<CharacterController>();
         playerInControl = true;
@@ -38,6 +42,15 @@ public class Player : MonoBehaviour
         playerAnimation = GetComponent<Animator>();
         //Cursor.visible = true;
         //Cursor.lockState = CursorLockMode.Confined;
+        isFatigued = false;
+        cursorShown = false;
+        if (LevelLoader.LoadingSavedFile)
+            LoadPlayer();
+    }
+    void Start()
+    {
+
+
     }
 
     // Update is called once per frame
@@ -45,26 +58,25 @@ public class Player : MonoBehaviour
     {
         if (StatManager.GameOver || DayNightController.GameWon)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            showMouse();
+            playerInControl = false;
         }
+
+        if (inEvent)
+            speed = 0f;
+        else if (isFatigued)
+            speed = 4f;
         else
+            speed = maxSpeed;
+
+        playerGravity(); 
+        playerControl();
+
+        if (DayNightController.getDayNightController().isSleep())
         {
-            if (inEvent)
-                speed = 0f;
-            else if (isFatigued)
-                speed = 4f;
-            else
-                speed = maxSpeed;
-
-            playerGravity();
-            playerControl();
-
-            if (DayNightController.getDayNightController().isSleep())
-            {
-                teleportToSleep();
-            }
+            teleportToSleep();
         }
+
     }
 
     /* 
@@ -168,8 +180,7 @@ public class Player : MonoBehaviour
         
         playerInControl = false;
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        showMouse();
     }
 
     public void teleportToSleep()
@@ -193,8 +204,7 @@ public class Player : MonoBehaviour
     {
         playerInControl = true;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        hideMouse();
     }
 
     public void stopMiiMusic()
@@ -228,22 +238,21 @@ public class Player : MonoBehaviour
 
     public void SavePlayer()
     {
-        SaveSystem.SavePlayer(this, statManager, DayNightController.getDayNightController());
+        SaveSystem.SavePlayer(this, PlayerCamera, statManager, DayNightController.getDayNightController());
+
+        levelLoader.LoadLevel(0); // Main menu
     }
 
     public void LoadPlayer()
     {
         PlayerData data = SaveSystem.LoadPlayer();
 
-        statManager.LoadStat(data.stats);
-        DayNightController.getDayNightController().LoadTime(data.time, data.day);
-
         Vector3 position;
         position.x = data.position[0];
         position.y = data.position[1];
         position.z = data.position[2];
+        controller.enabled = false;
         transform.position = position;
-
-
+        controller.enabled = true;
     }
 }
