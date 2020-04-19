@@ -49,12 +49,18 @@ As we are trying to make this as analogous to real life as we can, it is importa
 - Too Many Items: Kitchen Props (Quantum Development) https://assetstore.unity.com/packages/3d/props/too-many-items-kitchen-props-127635
 - Lamps Pack (FunFant)https://assetstore.unity.com/packages/3d/props/interior/lamps-pack-19102
 - American Flag https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png
-Images for Map/Minimap/HUD - Google Images
-Footstep sounds - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/footsteps-31
-Panel animations (Javanam) - https://www.youtube.com/watch?v=mz9xfDQ4FCk
-Minimap (Brackeys) - https://www.youtube.com/watch?v=28JTTXqMvOU
-Most sound effects used - https://freesound.org/ AND https://www.myinstants.com/index/us/
-Background noise/sound - https://noises.online/
-Typing Noise - https://assetstore.unity.com/packages/audio/sound-fx/the-typist-135025
-Recap Icon - https://assetstore.unity.com/packages/2d/gui/icons/clean-vector-icons-132084
-HUD Inspiration - 7 Days to Die
+- Images for Map/Minimap/HUD - Google Images
+- Footstep sounds - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/footsteps-31
+- Panel animations (Javanam) - https://www.youtube.com/watch?v=mz9xfDQ4FCk
+- Minimap (Brackeys) - https://www.youtube.com/watch?v=28JTTXqMvOU
+- Most sound effects used - https://freesound.org/ AND https://www.myinstants.com/index/us/
+- Background noise/sound - https://noises.online/
+- Typing Noise - https://assetstore.unity.com/packages/audio/sound-fx/the-typist-135025
+- Recap Icon - https://assetstore.unity.com/packages/2d/gui/icons/clean-vector-icons-132084
+- HUD Inspiration - 7 Days to Die
+- Loading Screen (Brackeys) - https://www.youtube.com/watch?v=YMj2qPq9CP8
+- Settings Menu (Brackeys) - https://www.youtube.com/watch?v=YOaYQrN1oYQ&t=49s
+- Main Menu (Brackeys) - https://www.youtube.com/watch?v=zc8ac_qUXQY
+- Pause Menu (Brackeys) - https://www.youtube.com/watch?v=JivuXdrIHK0
+- Pause Menu Font (Indie Flower) - https://fonts.google.com/specimen/Indie+Flower?category=Handwriting
+- Save & Load System (Brackeys) - https://www.youtube.com/watch?v=XOjd_qU2Ido
