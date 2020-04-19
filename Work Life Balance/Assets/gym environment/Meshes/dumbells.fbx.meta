@@ -1,67 +1,39 @@
 fileFormatVersion: 2
-guid: 592b7b173980fb14ba55f9f694f124e9
+guid: b4fdaff2007fb544689835b98554a750
 ModelImporter:
-  serializedVersion: 19300
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: Camera
-  - first:
-      1: 100002
-    second: Directional Light
-  - first:
-      1: 100004
-    second: Mesh
-  - first:
-      1: 100006
-    second: //RootNode
-  - first:
-      4: 400000
-    second: Camera
-  - first:
-      4: 400002
-    second: Directional Light
-  - first:
-      4: 400004
-    second: Mesh
-  - first:
-      4: 400006
-    second: //RootNode
-  - first:
-      20: 2000000
-    second: Camera
-  - first:
-      21: 2100000
-    second: Gris
-  - first:
-      21: 2100002
-    second: Default
-  - first:
-      23: 2300000
-    second: Mesh
-  - first:
-      33: 3300000
-    second: Mesh
-  - first:
-      43: 4300000
-    second: Mesh
-  - first:
-      74: 7400000
-    second: Take 001
-  - first:
-      95: 9500000
-    second: //RootNode
-  - first:
-      108: 10800000
-    second: Directional Light
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: kg15
+    100004: kg_five
+    100006: kg_ten
+    100008: kg_twenty
+    400000: //RootNode
+    400002: kg15
+    400004: kg_five
+    400006: kg_ten
+    400008: kg_twenty
+    2100000: dembells_and_bench
+    2300000: kg15
+    2300002: kg_five
+    2300004: kg_ten
+    2300006: kg_twenty
+    3300000: kg15
+    3300002: kg_five
+    3300004: kg_ten
+    3300006: kg_twenty
+    4300000: kg_five
+    4300002: kg_twenty
+    4300004: kg15
+    4300006: kg_ten
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Gris
-    second: {fileID: 2100000, guid: 0b0c390cc7cbd224da91c18abf419812, type: 2}
+      name: dembells_and_bench
+    second: {fileID: 2100000, guid: f9cfa82dba6b9c849b8ef2e5ca9cdb0c, type: 2}
   materials:
-    materialImportMode: 1
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -93,22 +65,17 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
-    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -120,13 +87,10 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
+  copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -136,16 +100,14 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
-  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

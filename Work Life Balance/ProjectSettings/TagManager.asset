@@ -15,6 +15,12 @@ TagManager:
   - Pharmacy
   - Apartments
   - Hospital
+  - Entertainment
+  - Bathroom
+  - HomeGym
+  - Computer
+  - Community
+  - Park
   layers:
   - Default
   - TransparentFX
