@@ -132,20 +132,6 @@ public class Player : MonoBehaviour
             playerAnimation.SetBool("IsWalking", true);
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.transform.CompareTag("Bed") && !bedPanel.activeSelf && !recapPlane.gameObject.activeSelf)
-        {
-            return;
-            print("On Bed");
-            // Add prompt for user to decide if to sleep
-
-            bedPanel.SetActive(true);
-            showMouse();
-
-        }
-    }
-
     private void OnTriggerEnter(Collider hit)
     {
         if (hit.transform.CompareTag("Bed") && !bedPanel.activeSelf && !recapPlane.gameObject.activeSelf)
@@ -187,6 +173,7 @@ public class Player : MonoBehaviour
     public void handlePlayerSleep()
     {
         taskManager.checkTasks();
+        
         DayNightController.freezeTime();
 
         recapPlane.gameObject.SetActive(true);
@@ -198,37 +185,36 @@ public class Player : MonoBehaviour
         playerInControl = false;
 
         showMouse();
+
+        foreach (Transform child in bed.transform)
+        {
+            if (child.name.Equals("NextToBed"))
+            {
+                transform.position = child.position;
+            }
+        }
     }
 
     public void onBedSleep()
     {
         handlePlayerSleep();
-        // Remove above code when we add dialogue for the bed
-        statManager.AddEnergy(100);
-        statManager.AddAbility(100);
+        statManager.AddEnergy(40);
+        statManager.AddAbility(40);
     }
 
     public void teleportToSleep()
     {
         handlePlayerSleep();
 
-        foreach (Transform child in bed.transform)
-        { 
-            if (child.name.Equals("NextToBed"))
-            {
-                transform.position = child.position;
-            }
-        }
-
-        statManager.AddEnergy(50);
-        statManager.AddAbility(70);
+        statManager.AddEnergy(20);
+        statManager.AddAbility(20);
 
     }
 
     public void startOfNewDay()
     {
+        SavePlayer();
         playerInControl = true;
-
         hideMouse();
     }
 
@@ -264,7 +250,11 @@ public class Player : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(this, PlayerCamera, statManager, DayNightController.getDayNightController());
+    }
 
+    public void SavePlayerAndMainMenu()
+    {
+        SavePlayer();
         levelLoader.LoadLevel(0); // Main menu
     }
 

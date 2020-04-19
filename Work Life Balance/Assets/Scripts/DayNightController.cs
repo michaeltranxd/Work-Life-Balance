@@ -104,7 +104,7 @@ public class DayNightController : MonoBehaviour
     void Awake()
     {
         dayNightController = this;
-        dayText.text = "Day: 1";
+        dayText.text = "Day: " + numDays;
         timeMultiplier = 1f;
         currentTimeOfDay = startOfDaytime;
         if (LevelLoader.LoadingSavedFile)

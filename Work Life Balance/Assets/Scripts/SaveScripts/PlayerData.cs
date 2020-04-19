@@ -26,10 +26,12 @@ public class PlayerData
         position[1] = player.transform.position.y;
         position[2] = player.transform.position.z;
 
+        Vector3 cameraOriginalPosition = CameraFollowPlayer.originalPosition;
+
         cameraPosition = new float[3];
-        cameraPosition[0] = camera.transform.position.x;
-        cameraPosition[1] = camera.transform.position.y;
-        cameraPosition[2] = camera.transform.position.z;
+        cameraPosition[0] = cameraOriginalPosition.x;
+        cameraPosition[1] = cameraOriginalPosition.y;
+        cameraPosition[2] = cameraOriginalPosition.z;
 
         time = dayNightController.getCurrentTimeOfDay();
         day = dayNightController.getNumDays();
