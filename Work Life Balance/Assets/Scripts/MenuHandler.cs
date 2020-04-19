@@ -140,7 +140,8 @@ public class MenuHandler : MonoBehaviour
         // of the array is one line of the file.
 
         Debug.Log("ParseActions method entered");
-        string[] lines = System.IO.File.ReadAllLines(Application.dataPath + "/StreamingAssets" + "/actiondatabase.csv");
+        string[] lines = System.IO.File.ReadAllLines(Application.streamingAssetsPath + "/actiondatabase.csv");
+        
         Debug.Log("Lines end");
         foreach(string line in lines)
         {
