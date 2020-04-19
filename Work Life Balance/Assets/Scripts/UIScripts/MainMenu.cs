@@ -13,6 +13,11 @@ public class MainMenu : MonoBehaviour
     public GameObject WarningPanel;
     public LevelLoader levelLoader;
 
+    public AudioSource audioSource;
+
+    public AudioClip hoverSound;
+    public AudioClip clickSound;
+
     public void QuitGame()
     {
         //UnityEditor.EditorApplication.isPlaying = false;
@@ -58,5 +63,15 @@ public class MainMenu : MonoBehaviour
             EnableLoadGameText.gameObject.SetActive(false);
             DisableLoadGameText.gameObject.SetActive(true);
         }
+    }
+
+    public void onButtonHoverSound()
+    {
+        audioSource.PlayOneShot(hoverSound);
+    }
+
+    public void onButtonClickSound()
+    {
+        audioSource.PlayOneShot(clickSound);
     }
 }

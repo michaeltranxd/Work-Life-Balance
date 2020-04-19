@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
     public LevelLoader levelLoader;
 
-
+    public GameObject bedPanel;
 
     void Awake()
     {
@@ -134,16 +134,33 @@ public class Player : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.transform.CompareTag("Bed") && DayNightController.CanSkipNighttime())
+        if (hit.transform.CompareTag("Bed") && !bedPanel.activeSelf && !recapPlane.gameObject.activeSelf)
         {
+            return;
             print("On Bed");
             // Add prompt for user to decide if to sleep
 
-            // If "yes" to sleep, run the following code:
-            handlePlayerSleep();
-            // Remove above code when we add dialogue for the bed
-            statManager.AddEnergy(100);
-            statManager.AddAbility(100);
+            bedPanel.SetActive(true);
+            showMouse();
+
+        }
+    }
+
+    private void OnTriggerEnter(Collider hit)
+    {
+        if (hit.transform.CompareTag("Bed") && !bedPanel.activeSelf && !recapPlane.gameObject.activeSelf)
+        {
+            bedPanel.SetActive(true);
+            showMouse();
+        }
+    }
+
+    private void OnTriggerExit(Collider hit)
+    {
+        if (hit.transform.CompareTag("Bed") && bedPanel.activeSelf && !recapPlane.gameObject.activeSelf)
+        {
+            bedPanel.SetActive(false);
+            hideMouse();
         }
     }
 
@@ -181,6 +198,14 @@ public class Player : MonoBehaviour
         playerInControl = false;
 
         showMouse();
+    }
+
+    public void onBedSleep()
+    {
+        handlePlayerSleep();
+        // Remove above code when we add dialogue for the bed
+        statManager.AddEnergy(100);
+        statManager.AddAbility(100);
     }
 
     public void teleportToSleep()

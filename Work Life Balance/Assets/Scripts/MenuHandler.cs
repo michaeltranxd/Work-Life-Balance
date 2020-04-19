@@ -69,7 +69,7 @@ public class MenuHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Equals("Untagged"))
+        if (other.tag.Equals("Untagged") || other.tag.Equals("Bed"))
             return;
 
         menu.SetActive(true);
