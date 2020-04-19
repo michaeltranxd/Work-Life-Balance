@@ -11,12 +11,14 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI DisableLoadGameText;
 
     public GameObject WarningPanel;
+    public GameObject TutorialPanel;
     public LevelLoader levelLoader;
 
     public AudioSource audioSource;
 
     public AudioClip hoverSound;
     public AudioClip clickSound;
+    public AudioClip popupSound;
 
     public void QuitGame()
     {
@@ -39,14 +41,26 @@ public class MainMenu : MonoBehaviour
 
     public void onYesWarning()
     {
-        levelLoader.LoadLevel(1);
         WarningPanel.SetActive(false);
+        TutorialPanel.SetActive(true);
     }
 
     public void onLoadGame()
     {
-        levelLoader.LoadSaveLevel(1);
+        levelLoader.LoadSaveLevel(2);
         WarningPanel.SetActive(false);
+    }
+
+    public void onYesTutorial()
+    {
+        levelLoader.LoadLevel(1);
+        TutorialPanel.SetActive(false);
+    }
+
+    public void onNoTutorial()
+    {
+        levelLoader.LoadLevel(2);
+        TutorialPanel.SetActive(false);
     }
 
     void Update()
@@ -73,5 +87,10 @@ public class MainMenu : MonoBehaviour
     public void onButtonClickSound()
     {
         audioSource.PlayOneShot(clickSound);
+    }
+
+    public void onMenuPopup()
+    {
+        audioSource.PlayOneShot(popupSound);
     }
 }

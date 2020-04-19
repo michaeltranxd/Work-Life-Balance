@@ -27,7 +27,7 @@ public class Minimap : MonoBehaviour
         if (PauseManager.GamePaused)
             return;
 
-        if (Input.GetKey(KeyCode.KeypadMinus) && minimapCamera.orthographicSize < maxZoom)
+        if (Input.GetKey(KeyCode.PageDown) && minimapCamera.orthographicSize < maxZoom)
         {
             minimapCamera.orthographicSize = minimapCamera.orthographicSize + increments;
             minimapIcon.transform.localScale = minimapIcon.transform.localScale + Vector3.one / 3;
@@ -36,7 +36,7 @@ public class Minimap : MonoBehaviour
                 child.transform.localScale = child.transform.localScale + Vector3.one / 3;
             }
         }    
-        if (Input.GetKey(KeyCode.KeypadPlus) && minimapCamera.orthographicSize > minZoom)
+        if (Input.GetKey(KeyCode.PageUp) && minimapCamera.orthographicSize > minZoom)
         {
             minimapCamera.orthographicSize = minimapCamera.orthographicSize - increments;
             minimapIcon.transform.localScale = minimapIcon.transform.localScale - Vector3.one / 3;

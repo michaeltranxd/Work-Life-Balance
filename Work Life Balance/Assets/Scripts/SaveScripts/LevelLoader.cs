@@ -14,7 +14,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevel(int sceneIndex)
     {
-        if(sceneIndex == 1)
+        if(sceneIndex == 2)
             LoadingSavedFile = false;
         StartCoroutine(LoadAsynchronously(sceneIndex));
     }
@@ -38,7 +38,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadSaveLevel(int sceneIndex)
     {
-        if(sceneIndex == 1)
+        if(sceneIndex == 2)
             LoadingSavedFile = true;
         StartCoroutine(LoadAsynchronously(sceneIndex));
     }
