@@ -103,6 +103,11 @@ public class MenuHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        hideMenu();
+    }
+
+    public void hideMenu()
+    {
         Player.hideMouse();
         menu.SetActive(false);
     }

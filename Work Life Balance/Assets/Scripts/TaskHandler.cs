@@ -14,6 +14,8 @@ public class TaskHandler : MonoBehaviour
                                 "Grocery shipping(Supermarket)", "Get a Haircut", "Car shipping",
                                 "Cloth shipping", "Buy fresh produce","Work from home"};
     private int day = 0;
+
+    public MenuHandler menuHandler;
     
     void Start()
     {
@@ -96,6 +98,7 @@ public class TaskHandler : MonoBehaviour
             message.text = m;
             StartCoroutine(Wait());
             taskManager.removeTask(Tasks[task]);
+            menuHandler.hideMenu();
         }
     }
 

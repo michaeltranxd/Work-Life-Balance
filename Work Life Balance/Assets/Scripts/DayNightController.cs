@@ -9,6 +9,7 @@ public class DayNightController : MonoBehaviour
     private static float minutesInFullDay = 1200f;
     private static float currentTimeOfDay = startOfDaytime;
     public static float timeMultiplier = 1f;
+    private static float oldTimeMultiplier = 1f;
     static DayNightController dayNightController;
 
     public const float startOfSunrise = .25f;
@@ -128,6 +129,23 @@ public class DayNightController : MonoBehaviour
             GameWon = true;
         }
 
+        // Delete when release for beta TODO
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            startNewDay();
+        }
+        else if (Input.GetKey(KeyCode.Alpha0))
+        {
+            timeMultiplier = 20f;
+        }
+        else if(currentEvent == null)
+        {
+            timeMultiplier = 1f;
+        }
+        // End of delete
+        
+
+
         UpdateSunAndMoon();
 
         currentTimeOfDay += (Time.deltaTime / minutesInFullDay) * timeMultiplier;
@@ -224,10 +242,6 @@ public class DayNightController : MonoBehaviour
         numDays++;
         dayText.text = "Day: " + numDays;
         print(dayText.text);
-    }
-
-    public int getNumDays(){
-        return numDays;
     }
 
     public static bool CanSkipNighttime()
