@@ -2,14 +2,14 @@
 
 public class Action
 {
-    public Action(float Time, float PH, float MH, float N, float H, float E, float AP, string name)
+    public Action(float Time, float PH, float MH, float N, float E, float H, float AP, string name)
     {
         this.Time = Time;
         this.PhysHealth = PH;
         this.MentHealth = MH;
         this.Nutri = N;
-        this.Hygiene = H;
         this.Energy = E;
+        this.Hygiene = H;
         this.Ability = AP;
         this.name = name;
     }

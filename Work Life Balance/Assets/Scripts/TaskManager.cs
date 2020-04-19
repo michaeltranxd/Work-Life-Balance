@@ -42,8 +42,8 @@ public class TaskManager : MonoBehaviour
     public void checkTasks(){
 
         if(AllTasks.Count > 0){
-            StatsManager.AddAbility(-(AllTasks.Count* 10.0f));
-            Debug.Log("AddAbility: " + (-(AllTasks.Count* 10.0f)));
+            StatsManager.AddAbility(-(AllTasks.Count* 20.0f));
+            Debug.Log("AddAbility: " + (-(AllTasks.Count* 20.0f)));
         }
     }
 }

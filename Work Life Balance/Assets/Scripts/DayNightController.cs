@@ -101,14 +101,26 @@ public class DayNightController : MonoBehaviour
         return dayNightController;
     }
 
-    void Start()
+    void Awake()
     {
         dayNightController = this;
-        dayText.text = "Day: 1";
+        dayText.text = "Day: " + numDays;
+        timeMultiplier = 1f;
+        currentTimeOfDay = startOfDaytime;
+        if (LevelLoader.LoadingSavedFile)
+            LoadTime();
+    }
+
+    void Start()
+    {
+
+
     }
 
     void Update()
     {
+        if (PauseManager.GamePaused)
+            return;
         if (StatManager.GameOver)
             return;
         if (numDays == 31)
@@ -153,6 +165,24 @@ public class DayNightController : MonoBehaviour
     {
         currentMinute = 60 * (currentHour - Mathf.Floor(currentHour));
         return (int)currentMinute;
+    }
+
+    public float getCurrentTimeOfDay()
+    {
+        return currentTimeOfDay;
+    }
+
+    public int getNumDays()
+    {
+        return numDays;
+    }
+
+    public void LoadTime()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        currentTimeOfDay = data.time;
+        numDays = data.day;
     }
 
     void UpdateSunAndMoon()

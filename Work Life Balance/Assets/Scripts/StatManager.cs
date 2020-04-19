@@ -75,10 +75,13 @@ public class StatManager : MonoBehaviour
     public AudioSource SoundManager;
     public AudioClip notificationSound;
 
-    // Start is called before the first frame update
-    void Start()
+    private float statDecreaseMultiplier = 4f;
+
+    private bool existingData = false;
+
+    void Awake()
     {
-        for(int i = 0; i < barNames.Length; i++)
+        for (int i = 0; i < barNames.Length; i++)
         {
             bars[i] = statsUI.transform.Find(barNames[i]).GetComponent<Slider>();
             barTexts[i] = statsUI.transform.Find(barNames[i]).Find(dataNames[i]).GetComponent<Text>();
@@ -87,6 +90,13 @@ public class StatManager : MonoBehaviour
         }
         stats = new Stats(MaxValues[0], MaxValues[1], MaxValues[2], MaxValues[3], MaxValues[4], MaxValues[5]);
 
+        if (LevelLoader.LoadingSavedFile)
+            LoadStat();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
         // Allow recap to grab our intiial configurations
         recap.setInitialConfiguartion();
     }
@@ -94,7 +104,7 @@ public class StatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameOver)
+        if (GameOver || PauseManager.GamePaused)
             return;
         if (DayNightController.GameWon)
         {
@@ -103,9 +113,9 @@ public class StatManager : MonoBehaviour
             return;
         }
         Timeleft = dayNightController.timeLeft();
-        stats.Nutri -= HungerOverTime * 2 * Time.deltaTime / 60 * DayNightController.timeMultiplier;    // Every minute = 1 point
-        stats.Hygiene -= ThirstOverTime * 2 *Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
-        stats.Energy -= EnergyOverTime * 2 * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
+        stats.Nutri -= HungerOverTime * statDecreaseMultiplier * Time.deltaTime / 60 * DayNightController.timeMultiplier;    // Every minute = 1 point
+        stats.Hygiene -= ThirstOverTime * statDecreaseMultiplier * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
+        stats.Energy -= EnergyOverTime * statDecreaseMultiplier * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
         checkStats();
         UpdateUI();
     }
@@ -121,12 +131,6 @@ public class StatManager : MonoBehaviour
             stats.PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
             if(stats.Hygiene < 0){
                 stats.Hygiene = 0;
-            }
-        }
-        if(stats.Ability <= 0){ // Might not need this
-            stats.MentHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
-            if(stats.Ability < 0){
-                stats.Ability = 0;
             }
         }
         if(stats.Energy <= 0){
@@ -237,7 +241,7 @@ public class StatManager : MonoBehaviour
 
     public bool EnoughTime(float amount)
     {
-        return Timeleft - amount > 0;
+        return Timeleft + amount > 0;
     }
 
     public void AddPhys(float amount)
@@ -245,9 +249,19 @@ public class StatManager : MonoBehaviour
         stats.PhysHealth = Mathf.Clamp(stats.PhysHealth + amount, 0, bars[0].maxValue);
     }
 
+    public bool EnoughPhys(float amount)
+    {
+        return stats.PhysHealth + amount > 0;
+    }
+
     public void AddMent(float amount)
     {
         stats.MentHealth = Mathf.Clamp(stats.MentHealth + amount, 0, bars[1].maxValue);
+    }
+
+    public bool EnoughMent(float amount)
+    {
+        return stats.MentHealth + amount > 0;
     }
 
     public void AddNutri(float amount)
@@ -255,21 +269,40 @@ public class StatManager : MonoBehaviour
         stats.Nutri = Mathf.Clamp(stats.Nutri + amount, 0, bars[2].maxValue);
     }
 
+    public bool EnoughNutri(float amount)
+    {
+        return stats.Nutri + amount > 0;
+    }
+
     public void AddHygiene(float amount)
     {
         stats.Hygiene = Mathf.Clamp(stats.Hygiene + amount, 0, bars[3].maxValue);
     }
 
-    public void AddAbility(float amount)
+    public bool EnoughHygiene(float amount)
     {
-        stats.Ability = Mathf.Clamp(stats.Ability + amount, 0, bars[4].maxValue);
+        return stats.Hygiene + amount > 0;
     }
 
     public void AddEnergy(float amount)
     {
-        stats.Energy = Mathf.Clamp(stats.Energy + amount, 0, bars[5].maxValue);
+        stats.Energy = Mathf.Clamp(stats.Energy + amount, 0, bars[4].maxValue);
     }
 
+    public bool EnoughEnergy(float amount)
+    {
+        return stats.Energy + amount > 0;
+    }
+
+    public void AddAbility(float amount)
+    {
+        stats.Ability = Mathf.Clamp(stats.Ability + amount, 0, bars[5].maxValue);
+    }
+
+    public bool EnoughAbility(float amount)
+    {
+        return stats.Ability + amount > 0;
+    }
 
     public float GetPhys()
     {
@@ -304,6 +337,18 @@ public class StatManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         messagePlane.gameObject.SetActive(false);
+    }
+
+    public void LoadStat()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        stats.PhysHealth = data.stats[0];
+        stats.MentHealth = data.stats[1];
+        stats.Nutri = data.stats[2];
+        stats.Hygiene = data.stats[3];
+        stats.Energy = data.stats[4];
+        stats.Ability = data.stats[5];
     }
 
 }

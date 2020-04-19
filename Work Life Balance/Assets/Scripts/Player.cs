@@ -30,7 +30,11 @@ public class Player : MonoBehaviour
 
     public StatManager statManager;
 
-    void Start()
+    public LevelLoader levelLoader;
+
+    public GameObject bedPanel;
+
+    void Awake()
     {
         controller = GetComponent<CharacterController>();
         playerInControl = true;
@@ -38,6 +42,15 @@ public class Player : MonoBehaviour
         playerAnimation = GetComponent<Animator>();
         //Cursor.visible = true;
         //Cursor.lockState = CursorLockMode.Confined;
+        isFatigued = false;
+        cursorShown = false;
+        if (LevelLoader.LoadingSavedFile)
+            LoadPlayer();
+    }
+    void Start()
+    {
+
+
     }
 
     // Update is called once per frame
@@ -45,26 +58,25 @@ public class Player : MonoBehaviour
     {
         if (StatManager.GameOver || DayNightController.GameWon)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            showMouse();
+            playerInControl = false;
         }
+
+        if (inEvent)
+            speed = 0f;
+        else if (isFatigued)
+            speed = 4f;
         else
+            speed = maxSpeed;
+
+        playerGravity(); 
+        playerControl();
+
+        if (DayNightController.getDayNightController().isSleep())
         {
-            if (inEvent)
-                speed = 0f;
-            else if (isFatigued)
-                speed = 4f;
-            else
-                speed = maxSpeed;
-
-            playerGravity();
-            playerControl();
-
-            if (DayNightController.getDayNightController().isSleep())
-            {
-                teleportToSleep();
-            }
+            teleportToSleep();
         }
+
     }
 
     /* 
@@ -120,18 +132,21 @@ public class Player : MonoBehaviour
             playerAnimation.SetBool("IsWalking", true);
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnTriggerEnter(Collider hit)
     {
-        if (hit.transform.CompareTag("Bed") && DayNightController.CanSkipNighttime())
+        if (hit.transform.CompareTag("Bed") && !bedPanel.activeSelf && !recapPlane.gameObject.activeSelf)
         {
-            print("On Bed");
-            // Add prompt for user to decide if to sleep
+            bedPanel.SetActive(true);
+            showMouse();
+        }
+    }
 
-            // If "yes" to sleep, run the following code:
-            handlePlayerSleep();
-            // Remove above code when we add dialogue for the bed
-            statManager.AddEnergy(100);
-            statManager.AddAbility(100);
+    private void OnTriggerExit(Collider hit)
+    {
+        if (hit.transform.CompareTag("Bed") && bedPanel.activeSelf && !recapPlane.gameObject.activeSelf)
+        {
+            bedPanel.SetActive(false);
+            hideMouse();
         }
     }
 
@@ -158,6 +173,7 @@ public class Player : MonoBehaviour
     public void handlePlayerSleep()
     {
         taskManager.checkTasks();
+        
         DayNightController.freezeTime();
 
         recapPlane.gameObject.SetActive(true);
@@ -168,33 +184,38 @@ public class Player : MonoBehaviour
         
         playerInControl = false;
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        showMouse();
+
+        foreach (Transform child in bed.transform)
+        {
+            if (child.name.Equals("NextToBed"))
+            {
+                transform.position = child.position;
+            }
+        }
+    }
+
+    public void onBedSleep()
+    {
+        handlePlayerSleep();
+        statManager.AddEnergy(40);
+        statManager.AddAbility(40);
     }
 
     public void teleportToSleep()
     {
         handlePlayerSleep();
 
-        foreach (Transform child in bed.transform)
-        { 
-            if (child.name.Equals("NextToBed"))
-            {
-                transform.position = child.position;
-            }
-        }
-
-        statManager.AddEnergy(50);
-        statManager.AddAbility(70);
+        statManager.AddEnergy(20);
+        statManager.AddAbility(20);
 
     }
 
     public void startOfNewDay()
     {
+        SavePlayer();
         playerInControl = true;
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        hideMouse();
     }
 
     public void stopMiiMusic()
@@ -224,5 +245,29 @@ public class Player : MonoBehaviour
     public static void noFatigued()
     {
         isFatigued = false;
+    }
+
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this, PlayerCamera, statManager, DayNightController.getDayNightController());
+    }
+
+    public void SavePlayerAndMainMenu()
+    {
+        SavePlayer();
+        levelLoader.LoadLevel(0); // Main menu
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        controller.enabled = false;
+        transform.position = position;
+        controller.enabled = true;
     }
 }
