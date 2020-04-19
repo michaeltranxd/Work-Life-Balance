@@ -1,10 +1,10 @@
 // Time, PH, MH, N,E, H,AP, Name,tag
-100,20,-20,0,-25,-40,-25,Run on treadmill,Gym
-120,20,-15,0,-30,-40,-20,Lift weights,Gym
-60,5,0,0,0,-10,-10,Do yoga,Gym
+100,20,-20,0,-25,-40,-25,Run on Treadmill,Gym
+120,20,-15,0,-30,-40,-20,Lift Weights,Gym
+60,5,0,0,0,-10,-10,Do Yoga,Gym
 15,5,10,0,0,-5,-5,Play,Dog
 5,0,5,0,0,0,0,Pet,Dog
-0,0,0,0,0,0,0,Nothing,Dog
+0,0,0,0,0,0,0,Watch,Dog
 100,0,5,0,0,0,-20,Stock up on Healthy Groceries,Grocer
 80,0,0,0,0,0,-15,Stock up on Frozen Food,Grocer
 40,0,0,0,0,0,-10,Stock up on Snacks,Grocer
@@ -17,3 +17,15 @@
 60,15,0,20,10,-10,30,Veggie Combo Meal,Veggie
 30,10,5,15,5,-10,25,Fruit Plate,Veggie
 45,10,10,10,5,-10,10,Spinach Pasta,Veggie
+0,0,0,0,0,0,0,Attend Heart Health Session,Community
+0,0,0,0,0,0,0,Attend Small Concert,Community
+0,0,0,0,0,0,0,Attend Cooking Seminar,Community
+0,0,0,0,0,0,0,Take a Bath,Bathroom
+0,0,0,0,0,0,0,Take a Bubble Bath,Bathroom
+0,0,0,0,0,0,0,Use the Toilet,Bathroom
+0,0,0,0,0,0,0,Read a Book,Entertainment
+0,0,0,0,0,0,0,Watch TV,Entertainment
+0,0,0,0,0,0,0,Take a Nap,Entertainment
+0,0,0,0,0,0,0,Run on Treadmill,HomeGym
+0,0,0,0,0,0,0,Lift Weights,HomeGym
+0,0,0,0,0,0,0,Zumba on TV,HomeGym
