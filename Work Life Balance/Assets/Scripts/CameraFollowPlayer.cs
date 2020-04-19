@@ -11,6 +11,7 @@ public class CameraFollowPlayer : MonoBehaviour
     private Vector3 cameraOffset;
     private Vector3 maxCameraOffset;
     private float maxCameraMagnitude;
+    private float cameraMagnitude;
 
     RaycastHit raycast;
     bool hit;
@@ -22,12 +23,14 @@ public class CameraFollowPlayer : MonoBehaviour
         Cursor.visible = false;
         maxCameraOffset = transform.position - cameraFollow.transform.position;
         maxCameraMagnitude = maxCameraOffset.magnitude;
+        cameraMagnitude = maxCameraMagnitude;
         cameraOffset = maxCameraOffset;
     }
 
     void Update()
     {
-        hit = Physics.Raycast(playerCharacter.transform.position, cameraOffset, out raycast, cameraOffset.magnitude);
+        hit = Physics.Raycast(cameraFollow.transform.position, cameraOffset, out raycast, cameraOffset.magnitude);
+        Debug.DrawLine(cameraFollow.transform.position, transform.position, Color.red);
     }
 
     // LateUpdate called after Update methods
@@ -43,35 +46,22 @@ public class CameraFollowPlayer : MonoBehaviour
             Quaternion camTurnAngle = Quaternion.AngleAxis(mouseX, Vector3.up);
 
             if (!Player.cursorShown)
-                cameraOffset = camTurnAngle * cameraOffset;            
-
-            Debug.DrawLine(playerCharacter.transform.position, transform.position, Color.red);
+                cameraOffset = camTurnAngle * cameraOffset;
 
             if (hit)
             {
                 if (!raycast.transform.tag.Equals("Player"))
                 {
-                    Vector3 scaleCamera = cameraOffset / (1.05f);
-                    if ((cameraFollow.transform.position - raycast.point).sqrMagnitude - 1.5f < scaleCamera.sqrMagnitude)
-                    {
-                        cameraOffset = scaleCamera;
-                    }
-                    print("cam" + scaleCamera.magnitude);
-                    print("player" + (cameraFollow.transform.position - raycast.point).magnitude);
+                    cameraMagnitude = Mathf.Clamp(raycast.distance - 0.5f, 1f, maxCameraMagnitude);
                 }
 
             }
             else
             {
-                Vector3 scaleCamera = cameraOffset * (1.05f);
-                if (scaleCamera.magnitude < maxCameraMagnitude)
-                {
-                    cameraOffset = scaleCamera;
-                }
-
+                cameraMagnitude = Mathf.Lerp(cameraMagnitude, maxCameraMagnitude, 0.05f);
             }
 
-            transform.position = cameraFollow.transform.position + cameraOffset;
+            transform.position = cameraFollow.transform.position + cameraOffset.normalized * cameraMagnitude;
             transform.LookAt(cameraFollow);
         }
     }

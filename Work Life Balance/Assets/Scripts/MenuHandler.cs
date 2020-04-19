@@ -69,6 +69,9 @@ public class MenuHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag.Equals("Untagged"))
+            return;
+
         menu.SetActive(true);
         /*
          * Get tag of collider
@@ -107,7 +110,39 @@ public class MenuHandler : MonoBehaviour
     private void onButtonClick(ActionButton actionButton)
     {
         Action action = actionButton.actionToTake;
-        if (StatsManager.EnoughTime(action.Time))
+        String notEnoughStats = "";
+        if (!StatsManager.EnoughTime(action.Time))
+        {
+            // Print you don't have enough time...
+        }
+        else // Check the stats
+        {
+            if (!StatsManager.EnoughNutri(action.Nutri))
+            {
+                notEnoughStats = addStatRequirementMissing(notEnoughStats, "Nutrition");
+            }
+            if (!StatsManager.EnoughHygiene(action.Hygiene))
+            {
+                notEnoughStats = addStatRequirementMissing(notEnoughStats, "Hygiene");
+            }
+            if (!StatsManager.EnoughEnergy(action.Energy))
+            {
+                notEnoughStats = addStatRequirementMissing(notEnoughStats, "Energy");
+            }
+            if (!StatsManager.EnoughAbility(action.Ability))
+            {
+                notEnoughStats = addStatRequirementMissing(notEnoughStats, "Ability");
+            }
+            if (!StatsManager.EnoughPhys(action.PhysHealth))
+            {
+                notEnoughStats = addStatRequirementMissing(notEnoughStats, "Physical Health");
+            }
+            if (!StatsManager.EnoughMent(action.MentHealth))
+            {
+                notEnoughStats = addStatRequirementMissing(notEnoughStats, "Mental Health");
+            }
+        }
+        if (notEnoughStats.Equals(""))
         {
             StatsManager.SpendTime(action.Time);
             StatsManager.AddPhys(action.PhysHealth);
@@ -116,12 +151,14 @@ public class MenuHandler : MonoBehaviour
             StatsManager.AddEnergy(action.Energy);
             StatsManager.AddHygiene(action.Hygiene);
             StatsManager.AddAbility(action.Ability);
+            print("xd");
         }
         else
         {
-            // Handle time issues
-            print("not enough time");
+            // TODO add handler for insufficient stats
         }
+
+
         print(actionButton.actionToTake.name);
         menu.SetActive(false);
 
@@ -134,6 +171,15 @@ public class MenuHandler : MonoBehaviour
         return action.name + " - " + action.Time;
     }
 
+    private string addStatRequirementMissing(string overall, string toAdd)
+    {
+        if(overall.Equals(""))
+        {
+            return toAdd;
+        }
+        return overall + ", " + toAdd;
+    }
+
     private void parseActions()
     {
         // Read each line of the file into a string array. Each element
@@ -141,7 +187,6 @@ public class MenuHandler : MonoBehaviour
 
         Debug.Log("ParseActions method entered");
         string[] lines = System.IO.File.ReadAllLines(Application.streamingAssetsPath + "/actiondatabase.csv");
-        
         Debug.Log("Lines end");
         foreach(string line in lines)
         {
