@@ -1,7 +1,7 @@
 // Time, PH, MH, N,E, H,AP, Name,tag
-100,20,-20,0,-25,-40,-25,Run on Treadmill,Gym
-120,20,-15,0,-30,-40,-20,Lift Weights,Gym
-60,5,0,0,0,-10,-10,Do Yoga,Gym
+100,20,-20,0,-25,-40,-25,Run on Track,Gym
+120,20,-15,0,-30,-40,-20,Use Workout Equipment,Gym
+60,5,0,0,0,-10,-10,Swim Laps in the Pool,Gym
 15,5,10,0,0,-5,-5,Play,Dog
 5,0,5,0,0,0,0,Pet,Dog
 0,0,0,0,0,0,0,Watch,Dog
@@ -29,3 +29,9 @@
 0,0,0,0,0,0,0,Run on Treadmill,HomeGym
 0,0,0,0,0,0,0,Lift Weights,HomeGym
 0,0,0,0,0,0,0,Zumba on TV,HomeGym
+0,0,0,0,0,0,0,Watch Funny Cat Videos,Computer
+0,0,0,0,0,0,0,Chat with Friends,Computer
+0,0,0,0,0,0,0,Look up Recipes,Computer
+0,0,0,0,0,0,0,Jog Around the Park,Park
+0,0,0,0,0,0,0,Feed Pigeons,Park
+0,0,0,0,0,0,0,Feed Ducks,Park

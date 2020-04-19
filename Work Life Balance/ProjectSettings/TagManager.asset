@@ -18,6 +18,9 @@ TagManager:
   - Entertainment
   - Bathroom
   - HomeGym
+  - Computer
+  - Community
+  - Park
   layers:
   - Default
   - TransparentFX
