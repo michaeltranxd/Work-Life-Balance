@@ -8,7 +8,10 @@ public class DayNightController : MonoBehaviour
     public Light moon;
     private static float minutesInFullDay = 1200f;
     private static float currentTimeOfDay = startOfDaytime;
-    public static float timeMultiplier = 20f;
+
+    public static float timeMultiplier = 1f;
+    private static float oldTimeMultiplier = 1f;
+
     static DayNightController dayNightController;
 
     public const float startOfSunrise = .25f;
@@ -101,20 +104,49 @@ public class DayNightController : MonoBehaviour
         return dayNightController;
     }
 
-    void Start()
+    void Awake()
     {
         dayNightController = this;
-        dayText.text = "Day: 1";
+        dayText.text = "Day: " + numDays;
+        timeMultiplier = 1f;
+        currentTimeOfDay = startOfDaytime;
+        if (LevelLoader.LoadingSavedFile)
+            LoadTime();
+    }
+
+    void Start()
+    {
+
+
     }
 
     void Update()
     {
+        if (PauseManager.GamePaused)
+            return;
         if (StatManager.GameOver)
             return;
         if (numDays == 31)
         {
             GameWon = true;
         }
+
+        // Delete when release for beta TODO
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            startNewDay();
+        }
+        else if (Input.GetKey(KeyCode.Alpha0))
+        {
+            timeMultiplier = 20f;
+        }
+        else if(currentEvent == null)
+        {
+            timeMultiplier = 1f;
+        }
+        // End of delete
+        
+
 
         UpdateSunAndMoon();
 
@@ -153,6 +185,24 @@ public class DayNightController : MonoBehaviour
     {
         currentMinute = 60 * (currentHour - Mathf.Floor(currentHour));
         return (int)currentMinute;
+    }
+
+    public float getCurrentTimeOfDay()
+    {
+        return currentTimeOfDay;
+    }
+
+    public int getNumDays()
+    {
+        return numDays;
+    }
+
+    public void LoadTime()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        currentTimeOfDay = data.time;
+        numDays = data.day;
     }
 
     void UpdateSunAndMoon()
@@ -194,10 +244,6 @@ public class DayNightController : MonoBehaviour
         numDays++;
         dayText.text = "Day: " + numDays;
         print(dayText.text);
-    }
-
-    public int getNumDays(){
-        return numDays;
     }
 
     public static bool CanSkipNighttime()

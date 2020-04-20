@@ -69,7 +69,7 @@ public class MenuHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Equals("Untagged"))
+        if (other.tag.Equals("Untagged") || other.tag.Equals("Bed"))
             return;
 
         menu.SetActive(true);
@@ -102,6 +102,11 @@ public class MenuHandler : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other)
+    {
+        hideMenu();
+    }
+
+    public void hideMenu()
     {
         Player.hideMouse();
         menu.SetActive(false);
@@ -160,10 +165,8 @@ public class MenuHandler : MonoBehaviour
 
 
         print(actionButton.actionToTake.name);
+        Player.hideMouse();
         menu.SetActive(false);
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     private string actionToString(Action action)

@@ -13,18 +13,29 @@ public class CameraFollowPlayer : MonoBehaviour
     private float maxCameraMagnitude;
     private float cameraMagnitude;
 
+    public static Vector3 originalPosition;
+
     RaycastHit raycast;
     bool hit;
 
     // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         maxCameraOffset = transform.position - cameraFollow.transform.position;
-        maxCameraMagnitude = maxCameraOffset.magnitude;
+        maxCameraMagnitude = 3.5f;
         cameraMagnitude = maxCameraMagnitude;
         cameraOffset = maxCameraOffset;
+
+        if (LevelLoader.LoadingSavedFile)
+            LoadCamera();
+    }
+
+    void Start()
+    {
+
     }
 
     void Update()
@@ -64,6 +75,20 @@ public class CameraFollowPlayer : MonoBehaviour
             transform.position = cameraFollow.transform.position + cameraOffset.normalized * cameraMagnitude;
             transform.LookAt(cameraFollow);
         }
+
+        originalPosition = cameraFollow.transform.position + cameraOffset.normalized * maxCameraMagnitude;
+    }
+
+    public void LoadCamera()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        Vector3 position;
+        position.x = data.cameraPosition[0];
+        position.y = data.cameraPosition[1];
+        position.z = data.cameraPosition[2];
+        transform.position = position;
+
     }
 
 }

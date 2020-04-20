@@ -77,10 +77,11 @@ public class StatManager : MonoBehaviour
 
     private float statDecreaseMultiplier = 4f;
 
-    // Start is called before the first frame update
-    void Start()
+    private bool existingData = false;
+
+    void Awake()
     {
-        for(int i = 0; i < barNames.Length; i++)
+        for (int i = 0; i < barNames.Length; i++)
         {
             bars[i] = statsUI.transform.Find(barNames[i]).GetComponent<Slider>();
             barTexts[i] = statsUI.transform.Find(barNames[i]).Find(dataNames[i]).GetComponent<Text>();
@@ -89,6 +90,13 @@ public class StatManager : MonoBehaviour
         }
         stats = new Stats(MaxValues[0], MaxValues[1], MaxValues[2], MaxValues[3], MaxValues[4], MaxValues[5]);
 
+        if (LevelLoader.LoadingSavedFile)
+            LoadStat();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
         // Allow recap to grab our intiial configurations
         recap.setInitialConfiguartion();
     }
@@ -96,7 +104,7 @@ public class StatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameOver)
+        if (GameOver || PauseManager.GamePaused)
             return;
         if (DayNightController.GameWon)
         {
@@ -329,6 +337,18 @@ public class StatManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         messagePlane.gameObject.SetActive(false);
+    }
+
+    public void LoadStat()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        stats.PhysHealth = data.stats[0];
+        stats.MentHealth = data.stats[1];
+        stats.Nutri = data.stats[2];
+        stats.Hygiene = data.stats[3];
+        stats.Energy = data.stats[4];
+        stats.Ability = data.stats[5];
     }
 
 }
