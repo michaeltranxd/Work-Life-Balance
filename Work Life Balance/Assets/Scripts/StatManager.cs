@@ -154,6 +154,7 @@ public class StatManager : MonoBehaviour
             Player.noFatigued();
         }
         if(stats.MentHealth <= 0 || stats.PhysHealth <= 0){
+            Debug.Log(stats.MentHealth + " " + stats.PhysHealth);
             GameOverText.text = "Game Over!\n Your physical health and/or mental health reached zero!";
             GameOverPanle.gameObject.SetActive(true);
             GameOver = true;

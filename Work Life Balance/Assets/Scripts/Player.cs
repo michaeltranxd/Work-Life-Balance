@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
         playerGravity(); 
         playerControl();
 
-        if (DayNightController.getDayNightController().isSleep())
+        if (DayNightController.getDayNightController().isSleep() && playerInControl)
         {
             teleportToSleep();
         }
@@ -231,8 +231,8 @@ public class Player : MonoBehaviour
 
         statManager.AddEnergy(20);
         statManager.AddAbility(20);
-        statManager.AddHygiene(-20);
-        statManager.AddNutri(-20);
+        statManager.AddHygiene(-30);
+        statManager.AddNutri(-30);
 
     }
 
