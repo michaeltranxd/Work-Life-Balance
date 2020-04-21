@@ -11,6 +11,8 @@ public class PlayerData
     public float time;
     public int day;
 
+    public bool gameOver;
+
     public PlayerData(Player player, Camera camera, StatManager statManager, DayNightController dayNightController)
     {
         stats = new float[6];
@@ -35,5 +37,7 @@ public class PlayerData
 
         time = dayNightController.getCurrentTimeOfDay();
         day = dayNightController.getNumDays();
+
+        gameOver = dayNightController.isOver();
     }
 }

@@ -27,9 +27,13 @@ public class Action
     { get; set; }
     public float Ability
     { get; set; }
-
     public string name
     { get; set; }
+
+    public string toString()
+    {
+        return name;  
+    }
 }
 public class ActionButton
 {

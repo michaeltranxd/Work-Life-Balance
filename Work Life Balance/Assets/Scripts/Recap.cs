@@ -33,6 +33,9 @@ public class Recap : MonoBehaviour
 
     private bool typing = false;
     private bool skip = false;
+
+    public MenuHandler menuHandler;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,26 +46,30 @@ public class Recap : MonoBehaviour
 
     public void setInitialConfiguartion()
     {
-        actions = "Actions\n You haven't done anthing yet!\n";
+        actions = "";
         old_phyHealth = StatsManager.GetPhys();
         old_menHealth = StatsManager.GetMent();
         old_nutri = StatsManager.GetNutri();
         old_hygen = StatsManager.GetHygiene();
         old_energy = StatsManager.GetEnergy();
         old_ability = StatsManager.GetAbility();
+        setActions(menuHandler.getActionListString());
+        menuHandler.resetActionList();
     }
 
     // Update is called once per frame
     void Update()
     {
-            fullText = "Stats"+ "\n" + 
-                                "Physical Health: " + ((int)old_phyHealth).ToString()+ " -> "+ ((int)curr_phyHealth).ToString() + "\n" +
-                                "Mental Health: " + ((int)old_menHealth).ToString()+ " -> "+ ((int)curr_menHealth).ToString() +"\n" +
-                                "Nutrition: " + ((int)old_nutri).ToString()+ " -> "+ ((int)curr_nutri).ToString() +"\n" +
-                                "Energy: " + ((int)old_energy).ToString() + " -> " + ((int)curr_energy).ToString() + "\n" +
-                                "Hygiene: " + ((int)old_hygen).ToString()+ " -> "+ ((int)curr_hygen).ToString() +"\n" +
-                                "Ability: " + ((int)old_ability).ToString()+ " -> "+ ((int)curr_ability).ToString() + "\n\n" +
-                                actions;
+        if (StatManager.GameOver)
+            return;
+        fullText = "Stats"+ "\n" + 
+                            "Physical Health: " + ((int)old_phyHealth).ToString()+ " -> "+ ((int)curr_phyHealth).ToString() + "\n" +
+                            "Mental Health: " + ((int)old_menHealth).ToString()+ " -> "+ ((int)curr_menHealth).ToString() +"\n" +
+                            "Nutrition: " + ((int)old_nutri).ToString()+ " -> "+ ((int)curr_nutri).ToString() +"\n" +
+                            "Energy: " + ((int)old_energy).ToString() + " -> " + ((int)curr_energy).ToString() + "\n" +
+                            "Hygiene: " + ((int)old_hygen).ToString()+ " -> "+ ((int)curr_hygen).ToString() +"\n" +
+                            "Ability: " + ((int)old_ability).ToString()+ " -> "+ ((int)curr_ability).ToString() + "\n\n" +
+                            actions;
         if(skip == false){
             if(typing  == true){                   
             tmp += Time.deltaTime;
@@ -111,10 +118,11 @@ public class Recap : MonoBehaviour
     }
 
     public void setActions(string addAction){
-        if(actions.Equals("Actions\nYou haven't done anthing yet!\n")){
+        if(addAction.Equals("")){
+            actions = "Actions\n You haven't done anthing yet!\n";
+        }
+        else{
             actions = "Actions\n" + addAction;
-        }else{
-            actions += addAction;
         }
     }
     public void setCurrentPhy(float phyhealth){

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MenuHandler : MonoBehaviour
 {
     public GameObject menu;
+    private ArrayList listOfActions = new ArrayList();
 
     public Button b1, b2, b3;
     public ActionButton ab1, ab2, ab3;
@@ -149,6 +151,7 @@ public class MenuHandler : MonoBehaviour
         }
         if (notEnoughStats.Equals(""))
         {
+            listOfActions.Add(action);
             StatsManager.SpendTime(action.Time);
             StatsManager.AddPhys(action.PhysHealth);
             StatsManager.AddMent(action.MentHealth);
@@ -167,6 +170,20 @@ public class MenuHandler : MonoBehaviour
         print(actionButton.actionToTake.name);
         Player.hideMouse();
         menu.SetActive(false);
+    }
+
+    public string getActionListString() {
+        string output = "";
+        foreach (Action a in listOfActions)
+        {
+            output += a.name + " (" + a.Time + " minutes)" + "\n";
+        }
+        return output;
+    }
+
+    public void resetActionList()
+    {
+        listOfActions.Clear();
     }
 
     private string actionToString(Action action)

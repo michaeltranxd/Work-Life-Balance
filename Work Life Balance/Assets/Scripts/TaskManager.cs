@@ -9,9 +9,9 @@ public class TaskManager : MonoBehaviour
     public RectTransform TaskPanel;
     public Text ListofTask;
     private string ToDoList;
-    private string[] Tasks = {"Go to work - 8 hrs","Pharmacy run - 15 mins", "Visit grandma - 2 hrs", "Doctor visit - 1 hr", 
-                                "Grocery shipping - 20 mins", "Get a Haircut - 40 mins", "Car shopping - 1 hr",
-                                "Cloth shipping - 2hrs", "Find your lost dog","Work from home - 4 hrs"};
+    private string[] Tasks = {"Go to work - 8 hrs (Mental Health)","Pharmacy run - 15 mins (Physical Health)", "Visit grandma - 2 hrs (Mental Health)", "Doctor visit - 1 hr (Physical Health)",
+                                "Grocery shipping - 20 mins (Nutrition)", "Get a Haircut - 40 mins (Hygiene)", "Car shopping - 1 hr (Mental Health)",
+                                "Clothes shopping - 2hrs (Mental Health)", "Find your lost dog (Mental Health)","Work from home - 4 hrs (Mental Health)"};
     private List<string> AllTasks = new List<string>();
 
     // Start is called before the first frame update
@@ -64,10 +64,10 @@ public class TaskManager : MonoBehaviour
                 StatsManager.AddPhys(-10.0f);
             }
             if(hasTask(Tasks[4]) == true){//grocery
-                StatsManager.AddPhys(-10.0f);
+                StatsManager.AddNutri(-10.0f);
             }
             if(hasTask(Tasks[5]) == true){//haircut
-                StatsManager.AddNutri(-5.0f);
+                StatsManager.AddHygiene(-5.0f);
             }
             if(hasTask(Tasks[6]) == true){//car
                 StatsManager.AddMent(-2.0f);
