@@ -50,8 +50,9 @@ public class SlideScript : MonoBehaviour
      /*29*/                       "You can change the volume settings in here",
      /*30*/                       "You can save and quit the game here",
      /*31*/                       "Walk up to buildings if you would like to be prompted for actions. The following window will pop up with the actions",
-     /*32*/                       "Now that is all for the tutorial, hopefully you have a better grasp of the game. \n\nSome tips before you start:\n - Try to complete all tasks before you sleep\n - Prevent any of your stats from reaching zero\n - Always go to sleep before midnight!\n - Game will save everytime you go to sleep",
-     /*33*/                       "Story: You have been recently discharged from the hopsital and your medical bill is very costly. The doctor assures you that if you can prevent yourself from going back to the hospital by staying healthy, the medical bill will be significantly reduced. Press \"Start\" to begin"
+     /*32*/                       "Press 'H' key for any questions regarding the controls. It will display the controls of the game",
+     /*33*/                       "Now that is all for the tutorial, hopefully you have a better grasp of the game. \n\nSome tips before you start:\n - Try to complete all tasks before you sleep\n - Prevent any of your stats from reaching zero\n - Always go to sleep before midnight!\n - Game will save everytime you go to sleep",
+     /*34*/                       "Story: You have been recently discharged from the hopsital and your medical bill is very costly. The doctor assures you that if you can prevent yourself from going back to the hospital by staying healthy, the medical bill will be significantly reduced. Press \"Start\" to begin"
     };
 
     // Start is called before the first frame update
