@@ -10,9 +10,12 @@ public class TaskHandler : MonoBehaviour
     public DayNightController dayNightController;
     public RectTransform doingTaskPlane;
     public Text message;
-    private string[] Tasks = {"Go to work","Pharmacy run", "Visit grandma", "Doctor visit", 
-                                "Grocery shipping(Supermarket)", "Get a Haircut", "Car shipping",
-                                "Cloth shipping", "Buy fresh produce","Work from home"};
+    public Player player;
+    public RectTransform DialoguePlane;
+    public Text Dialogue;
+    private string[] Tasks = {"Go to work - 8 hrs","Pharmacy run - 15 mins", "Visit grandma - 2 hrs", "Doctor visit - 1 hr", 
+                                "Grocery shipping - 20 mins", "Get a Haircut - 40 mins", "Car shopping - 1 hr",
+                                "Cloth shipping - 2hrs", "Find your lost dog","Work from home - 4 hrs"};
     private int day = 0;
 
     public MenuHandler menuHandler;
@@ -39,7 +42,7 @@ public class TaskHandler : MonoBehaviour
                 taskManager.setTasks(Tasks[6]);//find dog
             }
             else if(day == 7 || day == 27){
-                taskManager.setTasks(Tasks[4]);//supermarket
+                taskManager.setTasks(Tasks[4]);//grocery
             }
             else if(day == 13){
                 taskManager.setTasks(Tasks[5]);//haircut
@@ -48,10 +51,10 @@ public class TaskHandler : MonoBehaviour
                 taskManager.setTasks(Tasks[2]);//grandma
             }
             else if(day ==20){
-                taskManager.setTasks(Tasks[7]);//cloth shopping
+                taskManager.setTasks(Tasks[7]);//clothes shopping
             }
             else if(day == 21){
-                taskManager.setTasks(Tasks[8]);//fresh produce
+                taskManager.setTasks(Tasks[8]);//dog
             }
             else{
                 taskManager.setTasks(Tasks[0]);//go to work
@@ -61,50 +64,56 @@ public class TaskHandler : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit other){
         if(other.transform.CompareTag("work")){
-            doTasks( "Working for 6 hours...",0);
+            doTasks( "Let's work!", 0, 480f);
+            //Dialogue.text = "I could really go for some coffee right about now...";
         }
         else if(other.transform.CompareTag("Pharmacy")){
-            doTasks( "Picking up prescription which takes 15 minutes",1);
+            doTasks( "Oh man, do I really have to eat all those medicine？", 1, 15f);
         }
         else if(other.transform.CompareTag("Grandma")){
-            doTasks("Visiting grandma for 2 hours...",2);
+            doTasks("When is the last time I visit grandma... \nI should come visit her more often!!!", 2, 120f);
         }
         else if(other.transform.CompareTag("Hospital")){
-            doTasks( "Doctor visit which takes 1 hour...",3);
+            doTasks("I wonder if there is someone can help me stay health... \nI should check the community center later!", 3, 60f);
         }
-        else if(other.transform.CompareTag("Supermarket")){
-            doTasks( "Shopping in the supermarket for 30 minutes...",4);
+        else if(other.transform.CompareTag("Dog")){
+            doTasks( "Oh, that's where you were buddy!",8,0.0f);
         }
         else if(other.transform.CompareTag("Haircut")){
-            doTasks( "Getting a haircut which takes 40 minutes...",5);
+            doTasks( "Oh no my face is itchy. \nShould I itch it? I don't know how to get my hands out from under the cape!",5,40f);
         }
         else if(other.transform.CompareTag("Car")){
-            doTasks( "Car shipping for 1 hour",6);
+            doTasks( "OMG, look all those cars!!!",6,60f);
         }
         else if(other.transform.CompareTag("Cloth")){
-            doTasks( "Cloth shopping for 2 hours",7);
+            doTasks( "Will I look good in this color?",7,120f);
         }
         else if(other.transform.CompareTag("Grocery")){
-            doTasks( "Buying fresh produce which takes 20 minutes",8);
+            doTasks( "I wish eating healthy could be more affordable, this is gonna be tough to keep up",4,20f);
         }
         else if(other.transform.CompareTag("WorkFhome")){
-            doTasks( "Working from home for 4 hours...",9);
+            doTasks( "Ugh, work work work...",9,240f);
         }
     }
 
-    public void doTasks(string m, int task){
+    public void doTasks(string m, int task,float time){
         if(taskManager.hasTask(Tasks[task]) == true){
-            doingTaskPlane.gameObject.SetActive(true);
-            message.text = m;
+            //doingTaskPlane.gameObject.SetActive(true);
+            DialoguePlane.gameObject.SetActive(true);
+            //message.text = m;
+            Dialogue.text = m;
             StartCoroutine(Wait());
             taskManager.removeTask(Tasks[task]);
             menuHandler.hideMenu();
+            player.playerSkipTime(time);
         }
     }
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(3);
-        doingTaskPlane.gameObject.SetActive(false);
+        yield return new WaitForSeconds(5);
+        //doingTaskPlane.gameObject.SetActive(false);
+        DialoguePlane.gameObject.SetActive(false);
+        Dialogue.text = "";
     }
 }
