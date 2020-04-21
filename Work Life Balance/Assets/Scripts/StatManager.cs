@@ -188,16 +188,6 @@ public class StatManager : MonoBehaviour
             messageString = "You have been sent back to the hospital";
             showMessage();
         }
-        else if (dayNightController.isInEvent())
-        {
-            messageString = "Doing event...";
-            if(!messagePlane.gameObject.activeSelf){
-                messagePlane.gameObject.SetActive(true);
-                message.text = messageString;
-                SoundManager.PlayOneShot(notificationSound);
-                doingEvent = true;
-            }
-        }
         else if (dayNightController.isCloseToSleep())
         {
             messageString = "It almost midnight...";
@@ -229,28 +219,44 @@ public class StatManager : MonoBehaviour
         }
         else if(stats.PhysHealth <= 60 && feelgoodPhy == false){
             messageString = "I don’t feel so good!";
-            showMessage();
             feelgoodPhy = true;
+            showMessage();
+            
         }
         else if(stats.MentHealth <= 60 && feelgoodMen == false){
             messageString = "I don’t feel so good!";
-            showMessage();
             feelgoodMen = true;
+            showMessage();
+            
         }
         else if(stats.Hygiene <= 40 && smell == false){
             messageString = "I must smell really musty right now";
+            smell = true;
             showMessage();
-            feelgoodMen = true;
+            
         }
         else if(stats.Energy <= 40 && longday == false){
             messageString = "Ugh,It’s been a long day";
+            longday = true;
             showMessage();
-            feelgoodMen = true;
+            
         }
         else if(stats.Nutri <= 40 && hungery == false){
             messageString = "Man, I’m hungry! One burger can’t hurt that much";
+            hungery = true;
             showMessage();
-            feelgoodMen = true;
+            
+        }
+        else if (dayNightController.isInEvent())
+        {
+            messageString = "Doing event...";
+            if (!messagePlane.gameObject.activeSelf)
+            {
+                messagePlane.gameObject.SetActive(true);
+                message.text = messageString;
+                SoundManager.PlayOneShot(notificationSound);
+                doingEvent = true;
+            }
         }
         else
         {

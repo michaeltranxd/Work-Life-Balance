@@ -19,6 +19,8 @@ public class TaskHandler : MonoBehaviour
     private int day = 0;
 
     public MenuHandler menuHandler;
+    public BoxCollider dogActionCollider;
+    public BoxCollider dogTaskCollider;
     
     void Start()
     {
@@ -106,6 +108,13 @@ public class TaskHandler : MonoBehaviour
             taskManager.removeTask(Tasks[task]);
             menuHandler.hideMenu();
             player.playerSkipTime(time);
+
+            // If dog task, then we disable some colliders
+            if(task == 8)
+            {
+                dogActionCollider.enabled = true;
+                dogTaskCollider.enabled = false;
+            }
         }
     }
 
