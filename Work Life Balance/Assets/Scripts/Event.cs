@@ -22,13 +22,16 @@ public abstract class Event
         playerToNotify.eventEnded();
     }
 
-    public void run()
+    public bool run()
     {
         if (hasPrereqs())
         {
             begin();
             doEvent();
+            return true;
         }
+
+        return false;
     }
 }
 

@@ -100,14 +100,22 @@ public class TaskHandler : MonoBehaviour
 
     public void doTasks(string m, int task,float time){
         if(taskManager.hasTask(Tasks[task]) == true){
-            //doingTaskPlane.gameObject.SetActive(true);
-            DialoguePlane.gameObject.SetActive(true);
-            //message.text = m;
-            Dialogue.text = m;
-            StartCoroutine(Wait());
-            taskManager.removeTask(Tasks[task]);
-            menuHandler.hideMenu();
-            player.playerSkipTime(time);
+
+            if (player.playerSkipTime(time))
+            {
+                //doingTaskPlane.gameObject.SetActive(true);
+                DialoguePlane.gameObject.SetActive(true);
+                //message.text = m;
+                Dialogue.text = m;
+                StartCoroutine(Wait());
+                taskManager.removeTask(Tasks[task]);
+                menuHandler.hideMenu();
+            }
+            else
+            {
+                // Throw error
+                StatsManager.displayInsufficientTime();
+            }
 
             // If dog task, then we disable some colliders
             if(task == 8)

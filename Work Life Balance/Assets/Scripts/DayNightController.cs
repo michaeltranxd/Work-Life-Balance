@@ -179,6 +179,38 @@ public class DayNightController : MonoBehaviour
         }
     }
 
+    public string getTime()
+    {
+        int hour = getCurrentHour();
+        int minute = getCurrentMinute();
+        
+        string hourString = hour.ToString();
+        string minuteString = minute.ToString();
+        string ampmString = "AM";
+
+        if (hour == 0) // 12:xx AM
+        {
+            hourString = "12";
+        }
+
+        if (minute < 10) // Add one zero
+        {
+            minuteString = "0" + minuteString;
+        }
+
+        if(hour >= 12)
+        {
+            ampmString = "PM";
+        }
+
+        if(hour > 12)
+        {
+            hourString = (hour - 12).ToString();
+        }
+
+        return hourString + ":" + minuteString + " " + ampmString;
+    }
+
     public int getCurrentHour()
     {
         currentHour = 24 * currentTimeOfDay;
