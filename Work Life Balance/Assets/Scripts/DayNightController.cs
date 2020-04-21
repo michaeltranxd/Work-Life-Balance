@@ -8,8 +8,10 @@ public class DayNightController : MonoBehaviour
     public Light moon;
     private static float minutesInFullDay = 1200f;
     private static float currentTimeOfDay = startOfDaytime;
+
     public static float timeMultiplier = 1f;
     private static float oldTimeMultiplier = 1f;
+
     static DayNightController dayNightController;
 
     public const float startOfSunrise = .25f;
