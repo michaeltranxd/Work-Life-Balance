@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
         playerGravity(); 
         playerControl();
 
-        if (DayNightController.getDayNightController().isSleep())
+        if (DayNightController.getDayNightController().isSleep() && playerInControl)
         {
             teleportToSleep();
         }
@@ -190,6 +190,8 @@ public class Player : MonoBehaviour
         
         DayNightController.freezeTime();
 
+        recapManager.setInitialConfiguartion();
+
         recapPlane.gameObject.SetActive(true);
         minimapPanel.gameObject.SetActive(false);
         recapManager.startTyping();
@@ -212,6 +214,8 @@ public class Player : MonoBehaviour
     public void onBedSleep()
     {
         handlePlayerSleep();
+        statManager.AddHygiene(-20);
+        statManager.AddNutri(-20);
         statManager.AddEnergy(40);
         statManager.AddAbility(40);
     }
@@ -227,6 +231,8 @@ public class Player : MonoBehaviour
 
         statManager.AddEnergy(20);
         statManager.AddAbility(20);
+        statManager.AddHygiene(-30);
+        statManager.AddNutri(-30);
 
     }
 

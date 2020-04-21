@@ -13,9 +13,9 @@ public class TaskHandler : MonoBehaviour
     public Player player;
     public RectTransform DialoguePlane;
     public Text Dialogue;
-    private string[] Tasks = {"Go to work - 8 hrs","Pharmacy run - 15 mins", "Visit grandma - 2 hrs", "Doctor visit - 1 hr", 
-                                "Grocery shipping - 20 mins", "Get a Haircut - 40 mins", "Car shopping - 1 hr",
-                                "Cloth shipping - 2hrs", "Find your lost dog","Work from home - 4 hrs"};
+    private string[] Tasks = {"Go to work - 8 hrs (Mental Health)","Pharmacy run - 15 mins (Physical Health)", "Visit grandma - 2 hrs (Mental Health)", "Doctor visit - 1 hr (Physical Health)",
+                                "Grocery shipping - 20 mins (Nutrition)", "Get a Haircut - 40 mins (Hygiene)", "Car shopping - 1 hr (Mental Health)",
+                                "Clothes shopping - 2hrs (Mental Health)", "Find your lost dog (Mental Health)","Work from home - 4 hrs (Mental Health)"};
     private int day = 0;
 
     public MenuHandler menuHandler;

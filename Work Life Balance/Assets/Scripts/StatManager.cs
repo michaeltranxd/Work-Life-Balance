@@ -2,6 +2,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StatManager : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class StatManager : MonoBehaviour
     //public Text stats;
     public Text message;
     public Text TimeText;
-    public Text GameOverText;
+    public TextMeshProUGUI GameOverText;
 
     private Text[] barTexts = new Text[6];
 
@@ -96,6 +97,8 @@ public class StatManager : MonoBehaviour
         }
         stats = new Stats(MaxValues[0], MaxValues[1], MaxValues[2], MaxValues[3], MaxValues[4], MaxValues[5]);
 
+        GameOver = false;
+
         if (LevelLoader.LoadingSavedFile)
             LoadStat();
     }
@@ -151,7 +154,8 @@ public class StatManager : MonoBehaviour
             Player.noFatigued();
         }
         if(stats.MentHealth <= 0 || stats.PhysHealth <= 0){
-            GameOverText.text = "Game Over";
+            Debug.Log(stats.MentHealth + " " + stats.PhysHealth);
+            GameOverText.text = "Game Over!\n Your physical health and/or mental health reached zero!";
             GameOverPanle.gameObject.SetActive(true);
             GameOver = true;
         }
@@ -274,6 +278,12 @@ public class StatManager : MonoBehaviour
             recap.setOldPhy(PhysHealth);
         }*/
 
+    }
+
+    public void displayInsufficientStat()
+    {
+        messageString = "Hmm. I don't think I have enough stats to do that right now";
+        showMessage();
     }
 
     public void showMessage(){

@@ -51,6 +51,7 @@ public class DayNightController : MonoBehaviour
     public Text dayText;
 
     public static bool GameWon = false;
+    private bool gameIsOver = false;
 
     static bool isSunrise()
     {
@@ -107,9 +108,11 @@ public class DayNightController : MonoBehaviour
     void Awake()
     {
         dayNightController = this;
-        dayText.text = "Day: " + numDays;
         timeMultiplier = 1f;
+        numDays = 1;
+        dayText.text = "Day: " + numDays;
         currentTimeOfDay = startOfDaytime;
+        GameWon = false;
         if (LevelLoader.LoadingSavedFile)
             LoadTime();
     }
@@ -129,6 +132,7 @@ public class DayNightController : MonoBehaviour
         if (numDays == 31)
         {
             GameWon = true;
+            gameIsOver = true;
         }
 
         // Delete when release for beta TODO
@@ -138,7 +142,7 @@ public class DayNightController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.Alpha0))
         {
-            timeMultiplier = 20f;
+            timeMultiplier = 50f;
         }
         else if(currentEvent == null)
         {
@@ -203,6 +207,14 @@ public class DayNightController : MonoBehaviour
 
         currentTimeOfDay = data.time;
         numDays = data.day;
+
+        gameIsOver = data.gameOver;
+        GameWon = data.gameOver;
+    }
+
+    public bool isOver()
+    {
+        return gameIsOver;
     }
 
     void UpdateSunAndMoon()
@@ -240,9 +252,9 @@ public class DayNightController : MonoBehaviour
     {
         currentTimeOfDay = startOfDaytime;
         timeMultiplier = 1f;
-        player.startOfNewDay();
         numDays++;
         dayText.text = "Day: " + numDays;
+        player.startOfNewDay();
         print(dayText.text);
     }
 
