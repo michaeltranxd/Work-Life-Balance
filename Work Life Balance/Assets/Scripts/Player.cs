@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (StatManager.GameOver || DayNightController.GameWon)
         {
             showMouse();
@@ -68,6 +69,19 @@ public class Player : MonoBehaviour
             speed = 4f;
         else
             speed = maxSpeed;
+
+        // Delete when release for beta TODO
+        if (Input.GetKey(KeyCode.Alpha8))
+        {
+            speed = 30f;
+            print("hello");
+        }
+        else
+        {
+            speed = 8f;
+        }
+        // End of delete
+
 
         playerGravity(); 
         playerControl();

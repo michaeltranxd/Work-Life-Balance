@@ -21,14 +21,14 @@ As we are trying to make this as analogous to real life as we can, it is importa
 ## How to play:
 - Move with WASD keys
 - Move the camera using the mouse
-- Zoom in minimap with 'numpad +'
-- Zoom out minimap with 'numpad -'
-- Open/close map with 'm'
-- Open task list by holding tab
+- Zoom in minimap with 'Page Up'
+- Zoom out minimap with 'Page Down'
+- Open/close map with 'M'
+- Open task list by holding 'Tab' Key
+- Open pause menu by pressing 'Escape' Key
 
 
 ## Important notes for current build
-- The bed can only be slept on when it is night time, system will tell you when it is nighttime. To do so, just collide with the bed
 - When selecting an action, if there is not enough time in the day to do the action, the game will not let you do the action. Please note that a window to display the message that player does not have enough time is not yet implemented.
 - Important buildings are on the map seen through minimap or map
 
@@ -64,3 +64,8 @@ As we are trying to make this as analogous to real life as we can, it is importa
 - Pause Menu (Brackeys) - https://www.youtube.com/watch?v=JivuXdrIHK0
 - Pause Menu Font (Indie Flower) - https://fonts.google.com/specimen/Indie+Flower?category=Handwriting
 - Save & Load System (Brackeys) - https://www.youtube.com/watch?v=XOjd_qU2Ido
+- Gym Environment - https://assetstore.unity.com/packages/3d/environments/gym-environment-150616
+- Mk Glass Free - https://assetstore.unity.com/packages/vfx/shaders/mk-glass-free-100712
+- Fake Interiors - https://assetstore.unity.com/packages/vfx/shaders/fake-interiors-free-104029
+- Toon Shader Free - https://assetstore.unity.com/packages/vfx/shaders/toon-shader-free-21288
+- Map/Minimap Icons - Based off of images from google, but pxiel-drawn by Michael

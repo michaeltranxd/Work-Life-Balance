@@ -188,27 +188,17 @@ public class StatManager : MonoBehaviour
             messageString = "You have been sent back to the hospital";
             showMessage();
         }
-        else if (dayNightController.isInEvent())
-        {
-            messageString = "Doing event...";
-            if(!messagePlane.gameObject.activeSelf){
-                messagePlane.gameObject.SetActive(true);
-                message.text = messageString;
-                SoundManager.PlayOneShot(notificationSound);
-                doingEvent = true;
-            }
-        }
-        else if (dayNightController.isCloseToSleep())
+        else if (dayNightController.getCurrentHour() == 23 && dayNightController.getCurrentMinute() == 0)
         {
             messageString = "It almost midnight...";
             showMessage();
         }
-        else if (dayNightController.isOneHourBeforeCloseBuilding())
+        else if (dayNightController.getCurrentHour() == 20 && dayNightController.getCurrentMinute() == 0)
         {
             messageString = "Buildings are closed in one hour.";
-            messagePlane.gameObject.SetActive(true);
+            showMessage();
         }
-        else if (dayNightController.isTimeToCloseBuidings())
+        else if (dayNightController.getCurrentHour() == 21 && dayNightController.getCurrentMinute() == 0)
         {
             messageString = "Buildings are closed... I should really go home!";
             showMessage();
@@ -220,7 +210,7 @@ public class StatManager : MonoBehaviour
             showMessage();
         }
         else if(dayNightController.getCurrentHour() == 15 && dayNightController.getCurrentMinute() == 0){
-            messageString = "Oh boy! 15:00 PM Already?";
+            messageString = "Oh boy! 3:00 PM Already?";
             showMessage();
         }
         else if(dayNightController.getCurrentHour() == 9 && dayNightController.getCurrentMinute() == 0){
@@ -229,28 +219,44 @@ public class StatManager : MonoBehaviour
         }
         else if(stats.PhysHealth <= 60 && feelgoodPhy == false){
             messageString = "I don’t feel so good!";
-            showMessage();
             feelgoodPhy = true;
+            showMessage();
+            
         }
         else if(stats.MentHealth <= 60 && feelgoodMen == false){
             messageString = "I don’t feel so good!";
-            showMessage();
             feelgoodMen = true;
+            showMessage();
+            
         }
         else if(stats.Hygiene <= 40 && smell == false){
             messageString = "I must smell really musty right now";
+            smell = true;
             showMessage();
-            feelgoodMen = true;
+            
         }
         else if(stats.Energy <= 40 && longday == false){
             messageString = "Ugh,It’s been a long day";
+            longday = true;
             showMessage();
-            feelgoodMen = true;
+            
         }
         else if(stats.Nutri <= 40 && hungery == false){
             messageString = "Man, I’m hungry! One burger can’t hurt that much";
+            hungery = true;
             showMessage();
-            feelgoodMen = true;
+            
+        }
+        else if (dayNightController.isInEvent())
+        {
+            messageString = "Doing event...";
+            if (!messagePlane.gameObject.activeSelf)
+            {
+                messagePlane.gameObject.SetActive(true);
+                message.text = messageString;
+                SoundManager.PlayOneShot(notificationSound);
+                doingEvent = true;
+            }
         }
         else
         {
