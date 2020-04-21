@@ -163,6 +163,7 @@ public class MenuHandler : MonoBehaviour
         }
         else
         {
+            StatsManager.displayInsufficientStat();
             // TODO add handler for insufficient stats
         }
 

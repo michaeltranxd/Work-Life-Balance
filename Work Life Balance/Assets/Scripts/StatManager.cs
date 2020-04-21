@@ -280,6 +280,12 @@ public class StatManager : MonoBehaviour
 
     }
 
+    public void displayInsufficientStat()
+    {
+        messageString = "Hmm. I don't think I have enough stats to do that right now";
+        showMessage();
+    }
+
     public void showMessage(){
         if (message.text.Equals("") && !messageString.Equals(""))
         {
