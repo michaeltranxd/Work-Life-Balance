@@ -188,17 +188,17 @@ public class StatManager : MonoBehaviour
             messageString = "You have been sent back to the hospital";
             showMessage();
         }
-        else if (dayNightController.isCloseToSleep())
+        else if (dayNightController.getCurrentHour() == 23 && dayNightController.getCurrentMinute() == 0)
         {
             messageString = "It almost midnight...";
             showMessage();
         }
-        else if (dayNightController.isOneHourBeforeCloseBuilding())
+        else if (dayNightController.getCurrentHour() == 20 && dayNightController.getCurrentMinute() == 0)
         {
             messageString = "Buildings are closed in one hour.";
-            messagePlane.gameObject.SetActive(true);
+            showMessage();
         }
-        else if (dayNightController.isTimeToCloseBuidings())
+        else if (dayNightController.getCurrentHour() == 21 && dayNightController.getCurrentMinute() == 0)
         {
             messageString = "Buildings are closed... I should really go home!";
             showMessage();
@@ -210,7 +210,7 @@ public class StatManager : MonoBehaviour
             showMessage();
         }
         else if(dayNightController.getCurrentHour() == 15 && dayNightController.getCurrentMinute() == 0){
-            messageString = "Oh boy! 15:00 PM Already?";
+            messageString = "Oh boy! 3:00 PM Already?";
             showMessage();
         }
         else if(dayNightController.getCurrentHour() == 9 && dayNightController.getCurrentMinute() == 0){

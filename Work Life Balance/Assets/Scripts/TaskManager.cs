@@ -36,7 +36,6 @@ public class TaskManager : MonoBehaviour
         if(AllTasks.Contains(task) == false){
             //ToDoList = ToDoList + task + "\n";
             AllTasks.Add(task);
-            Debug.Log("Adding Task " + ToDoList);
         }
         ToDoList = string.Join( "\n", AllTasks.ToArray() );
         print("set: " + ToDoList);
