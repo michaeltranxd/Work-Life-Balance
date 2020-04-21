@@ -178,10 +178,12 @@ public class Player : MonoBehaviour
         playerInControl = true;
     }
 
-    public void playerSkipTime(float amount)
+    public bool playerSkipTime(float amount)
     {
         SkipTimeEvent skipTimeEvent = new SkipTimeEvent(this, amount);
-        skipTimeEvent.run();
+        if (skipTimeEvent.run())
+            return true;
+        return false;
     }
 
     public void handlePlayerSleep()

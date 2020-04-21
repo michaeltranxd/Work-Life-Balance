@@ -272,7 +272,7 @@ public class StatManager : MonoBehaviour
             }
         }
 
-        TimeText.text = "Time: " + dayNightController.getCurrentHour() + ":" + dayNightController.getCurrentMinute();
+        TimeText.text = "Time: " + dayNightController.getTime();
         //record the Stats when start a new day
         /*if(dayNightController.getCurrentHour() == 8 && dayNightController.getCurrentMinute() == 24){
             recap.setOldPhy(PhysHealth);
@@ -283,6 +283,12 @@ public class StatManager : MonoBehaviour
     public void displayInsufficientStat()
     {
         messageString = "Hmm. I don't think I have enough stats to do that right now";
+        showMessage();
+    }
+
+    public void displayInsufficientTime()
+    {
+        messageString = "Hmm. I don't think I have enough time to do that right now";
         showMessage();
     }
 
