@@ -1,40 +1,40 @@
 // Time, PH, MH, N,E, H,AP, Name,tag
-100,25,-30,-10,-25,-80,-25,Run on Track,Gym
-120,20,-25,-10,-30,-70,-20,Use Workout Equipment,Gym
-120,30,-20,-10,-35,-60,-30,Swim Laps in the Pool,Gym
-15,5,10,0,0,-5,-5,Play,Dog
-5,0,5,0,0,0,0,Pet,Dog
+100,5,-3,-10,-25,-80,-30,Run on Track,Gym
+120,4,-2,-10,-30,-80,-30,Use Workout Equipment,Gym
+120,5,-2,-10,-35,-60,-30,Swim Laps in the Pool,Gym
+15,1,0,0,0,-5,0,Play,Dog
+5,0,0,0,0,0,0,Pet,Dog
 0,0,0,0,0,0,0,Watch,Dog
-100,0,5,0,0,0,-20,Stock up on Healthy Groceries,Grocer
-80,0,0,0,0,0,-15,Stock up on Frozen Food,Grocer
-40,0,0,0,0,0,-10,Stock up on Snacks,Grocer
-45,-40,20,5,-15,-20,5,Mega Meat Combo,Fast
-30,-25,15,10,-5,-10,10,Cheeseburger,Fast
-30,-10,10,15,0,-10,15,Veggieburger,Fast
-45,-10,5,15,-5,-10,20,Veggie Melt,Subs
-45,-10,10,10,-5,-10,15,Wreck w/ Veggies,Subs
-45,-25,15,10,-10,-20,5,Meatball Marinara,Subs
-60,15,0,20,10,-10,30,Veggie Combo Meal,Veggie
-30,10,5,15,5,-10,25,Fruit Plate,Veggie
-45,10,10,10,5,-10,10,Spinach Pasta,Veggie
-120,10,15,0,-20,0,-20,Attend Heart Health Session,Community
-120,0,40,0,-25,0,-30,Attend Small Concert,Community
-120,0,25,0,-20,0,-20,Attend Cooking Seminar,Community
-30,0,5,0,5,120,-15,Take a Bath,Bathroom
-45,0,15,0,10,100,-20,Take a Bubble Bath,Bathroom
-10,5,5,0,0,-10,-5,Use the Toilet,Bathroom
-60,0,20,0,-15,0,-15,Read a Book,Entertainment
-60,0,20,0,-15,0,-15,Watch TV,Entertainment
-45,0,25,0,-20,0,-15,Call Friends,Entertainment
-100,20,-25,-10,-25,-80,-30,Run on Treadmill,HomeGym
-120,20,-25,-10,-30,-70,-30,Lift Weights,HomeGym
-60,10,-10,-10,-20,-60,-15,Zumba on TV,HomeGym
-60,0,20,0,0,0,-15,Watch Funny Cat Videos,Computer
-60,0,25,0,0,0,-20,Chat with Friends,Computer
-30,0,10,0,0,0,-10,Look up Recipes,Computer
-120,20,10,0,-30,-40,-25,Jog Around the Park,Park
-30,0,20,0,-10,-10,-15,Feed Pigeons,Park
-30,0,20,0,-10,-10,-15,Feed Ducks,Park
-60,-10,15,-10,-15,0,-30,Cook Lasagna,Kitchen
-60,-10,10,-10,-15,0,-40,Cook Veggie Medley,Kitchen
-30,-20,20,-10,-10,0,-15,Eat Some Chips and Guac,Kitchen
+100,0,0,0,0,0,0,Stock up on Healthy Groceries,Grocer
+80,0,0,0,0,0,0,Stock up on Frozen Food,Grocer
+40,0,0,0,0,0,0,Stock up on Snacks,Grocer
+45,-2,3,10,0,-20,-15,Mega Meat Combo,Fast
+30,-1,2,20,0,-10,-15,Cheeseburger,Fast
+30,0,1,35,0,-10,-15,Veggieburger,Fast
+30,0,1,50,0,-10,-15,Veggie Melt,Subs
+30,0,2,40,0,-10,-15,Wreck w/ Veggies,Subs
+30,0,2,35,0,-20,-15,Meatball Marinara,Subs
+45,2,-1,60,0,-10,-15,Veggie Combo Meal,Veggie
+30,1,1,30,0,-10,-15,Fruit Plate,Veggie
+30,0,1,30,0,-10,-15,Spinach Pasta,Veggie
+120,0,0,0,-20,0,0,Attend Heart Health Session,Community
+120,0,0,0,-25,0,0,Attend Small Concert,Community
+120,0,0,0,-20,0,0,Attend Cooking Seminar,Community
+30,0,0,0,0,120,0,Take a Bath,Bathroom
+45,0,1,0,0,100,0,Take a Bubble Bath,Bathroom
+10,0,1,0,0,-10,0,Use the Toilet,Bathroom
+60,0,4,0,-15,0,0,Read a Book,Entertainment
+60,-1,5,0,-15,0,0,Watch TV,Entertainment
+45,0,3,0,-20,0,0,Call Friends,Entertainment
+100,4,-4,-10,-25,-80,-30,Run on Treadmill,HomeGym
+120,3,-3,-10,-30,-70,-30,Lift Weights,HomeGym
+60,2,-2,-10,-20,-60,-30,Zumba on TV,HomeGym
+60,0,0,0,0,0,0,Watch Funny Cat Videos,Computer
+60,0,0,0,0,0,0,Chat with Friends,Computer
+30,0,0,0,0,0,0,Look up Recipes,Computer
+120,0,0,0,-30,-40,-30,Jog Around the Park,Park
+30,0,0,0,-10,-10,0,Feed Pigeons,Park
+30,0,0,0,-10,-10,0,Feed Ducks,Park
+60,0,1,30,-10,0,-10,Cook Lasagna,Kitchen
+60,1,0,40,-10,0,-10,Cook Veggie Medley,Kitchen
+30,0,1,15,-10,0,-10,Eat Some Chips and Guac,Kitchen
