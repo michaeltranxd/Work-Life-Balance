@@ -142,11 +142,7 @@ public class DayNightController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.Alpha0))
         {
-            timeMultiplier = 50f;
-        }
-        else if(currentEvent == null)
-        {
-            timeMultiplier = 1f;
+            currentTimeOfDay += .01f;
         }
         // End of delete
         

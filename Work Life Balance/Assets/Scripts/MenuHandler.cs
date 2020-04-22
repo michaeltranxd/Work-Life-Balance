@@ -189,7 +189,7 @@ public class MenuHandler : MonoBehaviour
 
     private string actionToString(Action action)
     {
-        return action.name + " - " + action.Time;
+        return action.name + "\n" + action.Time + " minutes      " + action.Ability + " AP";
     }
 
     private string addStatRequirementMissing(string overall, string toAdd)

@@ -95,7 +95,7 @@ public class StatManager : MonoBehaviour
             bars[i].maxValue = MaxValues[i];
             barTexts[i].text = ((int)MaxValues[i]).ToString();
         }
-        stats = new Stats(MaxValues[0], MaxValues[1], MaxValues[2], MaxValues[3], MaxValues[4], MaxValues[5]);
+        stats = new Stats(100, 100, 100, 100, 100, 100);
 
         GameOver = false;
 

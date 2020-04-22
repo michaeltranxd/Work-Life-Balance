@@ -197,7 +197,7 @@ public class Player : MonoBehaviour
         recapPlane.gameObject.SetActive(true);
         minimapPanel.gameObject.SetActive(false);
         recapManager.startTyping();
-        
+
         miiSoundSource.Play();
         
         playerInControl = false;
@@ -218,8 +218,8 @@ public class Player : MonoBehaviour
         handlePlayerSleep();
         statManager.AddHygiene(-20);
         statManager.AddNutri(-20);
-        statManager.AddEnergy(40);
-        statManager.AddAbility(40);
+        statManager.AddEnergy(60);
+        statManager.AddAbility(60);
     }
 
     public void onBedNo()

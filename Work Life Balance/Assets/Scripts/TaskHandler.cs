@@ -110,6 +110,7 @@ public class TaskHandler : MonoBehaviour
                 StartCoroutine(Wait());
                 taskManager.removeTask(Tasks[task]);
                 menuHandler.hideMenu();
+                StatsManager.AddAbility(10);
             }
             else
             {
