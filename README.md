@@ -26,7 +26,7 @@ As we are trying to make this as analogous to real life as we can, it is importa
 - Open/close map with 'M'
 - Open task list by holding 'Tab' Key
 - Open pause menu by pressing 'Escape' Key
-
+- Open panel with list of controls using 'H' Key
 
 ## Important notes for current build
 - When selecting an action, if there is not enough time in the day to do the action, the game will not let you do the action. Please note that a window to display the message that player does not have enough time is not yet implemented.
