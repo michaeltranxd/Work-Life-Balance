@@ -1,37 +1,37 @@
 // Time, PH, MH, N,E, H,AP, Name,tag
-100,5,-3,-10,-20,-60,-18,Run on Track,Gym
-120,4,-2,-10,-18,-60,-20,Use Workout Equipment,Gym
-120,5,-2,-10,-20,-40,-20,Swim Laps in the Pool,Gym
+100,15,-3,-10,-20,-60,-18,Run on Track,Gym
+120,12,-2,-10,-18,-60,-20,Use Workout Equipment,Gym
+120,15,-2,-10,-20,-40,-20,Swim Laps in the Pool,Gym
 30,1,1,0,-15,-5,-10,Play,Dog
 15,0,1,0,-10,-5,-5,Pet,Dog
 10,0,0,0,3,0,-5,Watch,Dog
-45,-4,3,15,10,-25,-15,Mega Meat Combo,Fast
-30,-2,2,20,5,-15,-15,Cheeseburger,Fast
-30,-1,1,30,3,-10,-15,Veggieburger,Fast
+45,-4,5,15,10,-25,-15,Mega Meat Combo,Fast
+30,-2,4,20,5,-15,-15,Cheeseburger,Fast
+30,-1,2,30,3,-10,-15,Veggieburger,Fast
 30,1,-1,35,2,-10,-15,Veggie Melt,Subs
 30,1,0,30,5,-10,-15,Wreck w/ Veggies,Subs
-30,-1,2,25,7,-20,-15,Meatball Marinara,Subs
+30,-1,4,25,7,-20,-15,Meatball Marinara,Subs
 45,2,-1,40,0,-10,-15,Veggie Combo Meal,Veggie
 30,1,1,20,10,-15,-10,Fruit Plate,Veggie
 60,1,1,30,15,-15,-15,Spinach Pasta,Veggie
-120,0,1,0,-5,-10,-10,Attend Heart Health Session,Community
-120,0,2,0,-7,-30,-10,Attend Small Concert,Community
-120,0,1,0,-10,-20,-10,Attend Cooking Seminar,Community
+120,0,10,0,-5,-10,-10,Attend Heart Health Session,Community
+120,0,15,0,-7,-30,-10,Attend Small Concert,Community
+120,0,12,0,-10,-20,-10,Attend Cooking Seminar,Community
 45,1,0,0,2,120,-10,Take a Bath,Bathroom
 60,1,1,0,3,100,-10,Take a Bubble Bath,Bathroom
 20,0,0,0,1,60,-20,Quick Bath,Bathroom
-60,0,2,0,-15,0,-10,Read a Book,Entertainment
-60,-1,2,0,-15,0,-10,Watch TV,Entertainment
-45,0,1,0,-20,0,-10,Call Friends,Entertainment
-100,3,-4,-10,-30,-70,-25,Run on Treadmill,HomeGym
-120,3,-3,-15,-30,-70,-25,Lift Weights,HomeGym
-60,2,-1,-10,-20,-60,-25,Zumba on TV,HomeGym
-60,0,2,0,-20,-10,-10,Watch Funny Cat Videos,Computer
-60,-1,3,0,-15,-10,-15,Chat with Friends,Computer
-30,0,1,0,-10,-10,-10,Look up Recipes,Computer
-120,2,1,0,-30,-50,-25,Jog Around the Park,Park
-60,0,1,0,-10,-15,-10,Feed Pigeons,Park
-60,0,1,0,-10,-15,-10,Feed Ducks,Park
-360,0,3,60,30,0,-30,Cook Lasagna,Kitchen
-120,2,1,45,20,0,-25,Cook Veggie Medley,Kitchen
-30,0,1,15,5,0,-15,Have a Snack,Kitchen
+60,0,8,0,-15,0,-10,Read a Book,Entertainment
+60,-1,9,0,-15,0,-10,Watch TV,Entertainment
+45,0,8,0,-20,0,-10,Call Friends,Entertainment
+100,11,-4,-10,-30,-70,-25,Run on Treadmill,HomeGym
+120,9,-3,-15,-30,-70,-25,Lift Weights,HomeGym
+60,7,-1,-10,-20,-60,-25,Zumba on TV,HomeGym
+60,0,6,0,-20,-10,-10,Watch Funny Cat Videos,Computer
+60,-1,5,0,-15,-10,-15,Chat with Friends,Computer
+30,0,8,0,-10,-10,-10,Look up Recipes,Computer
+120,11,5,0,-30,-50,-25,Jog Around the Park,Park
+60,0,5,0,-10,-15,-10,Feed Pigeons,Park
+60,0,5,0,-10,-15,-10,Feed Ducks,Park
+180,0,8,60,30,0,-30,Cook Lasagna,Kitchen
+120,2,5,45,20,0,-25,Cook Veggie Medley,Kitchen
+30,0,3,15,5,0,-15,Have a Snack,Kitchen
