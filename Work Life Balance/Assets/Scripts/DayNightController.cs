@@ -136,14 +136,14 @@ public class DayNightController : MonoBehaviour
         }
 
         // Delete when release for beta TODO
-        if (Input.GetKeyDown(KeyCode.Alpha9))
+/*        if (Input.GetKeyDown(KeyCode.Alpha9))
         {
             startNewDay();
         }
         else if (Input.GetKey(KeyCode.Alpha0))
         {
             currentTimeOfDay += .01f;
-        }
+        }*/
         // End of delete
         
 

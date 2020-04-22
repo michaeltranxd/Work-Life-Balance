@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
             speed = maxSpeed;
 
         // Delete when release for beta TODO
-        if (Input.GetKey(KeyCode.Alpha8))
+/*        if (Input.GetKey(KeyCode.Alpha8))
         {
             speed = 30f;
             print("hello");
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
         else
         {
             speed = 8f;
-        }
+        }*/
         // End of delete
 
 
