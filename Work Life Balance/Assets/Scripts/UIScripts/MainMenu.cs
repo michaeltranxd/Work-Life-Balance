@@ -32,6 +32,10 @@ public class MainMenu : MonoBehaviour
         {
             WarningPanel.SetActive(true);
         }
+        else
+        {
+            TutorialPanel.SetActive(true);
+        }
     }
 
     public void onNoWarning()
