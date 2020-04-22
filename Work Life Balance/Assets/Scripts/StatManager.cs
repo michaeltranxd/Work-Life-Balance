@@ -124,7 +124,9 @@ public class StatManager : MonoBehaviour
         Timeleft = dayNightController.timeLeft();
         stats.Nutri -= HungerOverTime * statDecreaseMultiplier * Time.deltaTime / 60 * DayNightController.timeMultiplier;    // Every minute = 1 point
         stats.Hygiene -= ThirstOverTime * statDecreaseMultiplier * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
-        stats.Energy -= EnergyOverTime * statDecreaseMultiplier * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
+        stats.Energy -= EnergyOverTime * statDecreaseMultiplier / 2 * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
+        stats.PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
+        stats.MentHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
         checkStats();
         UpdateUI();
     }
