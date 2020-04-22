@@ -174,3 +174,44 @@ Sound Effects
 		Rejected: 
 			- Eating sound before the boy's voice. There is already a sound effect of a boy’s voice, after adding this sound it’s a little too much going on for just one event.
 	
+
+Beta Release
+SUMMARY:
+The significant changes made since Alpha are as follows: 
+	- A tutorial scene that teaches the player the game’s mechanics.
+	- Why? There was no clear (if at all) direction given to the player, and the alpha testing feedback reflected that, so a tutorial was crafted that shows before any new game starts.
+
+	- Task System that can vary day by day (w/ consequences!)
+	- Why? This adds more consequences to the days of the player and gives more drive to play the game’s days in general.
+
+	- There are more options at home that either work better or worse than outside sources depending on the action.
+	- Why? In a realism design point of view, no one will always eat out or can always work out at a gym. Additionally this serves as a way to get integral actions if the player is short on time as walking from place to place adds up significantly.
+
+	- In general more feedback to the player on actions taken.
+	- Why? Mainly a more obvious way to players that they have completed a task in the form of a panel that appears when an event occurs.
+
+
+Changes we made since Alpha:
+	- Based on feedback from alpha, what did we change and why
+	- Scaled UI with screen: Playtesters commented that some aspects of the UI were difficult to see. That was because the UI was constant size and we changed the canvas to scale with the screen. This way, players with different screen sizes can enjoy the game with the resolution we designed the game for.
+	- Added Tutorial Scene: Playtesters commented that they would like to see a tutorial scene of some sort or have the controls inside the game. We added a tutorial scene with slides that the user can advance through and read through important controls/UI interface. They can skip the tutorial at any points and jump straight into the game. We believe that adding a tutorial will help the player understand the UI/controls before going straight into the game.
+	- Added mesh colliders: Playtesters gave feedback on objects that had no colliders. They suggested adding colliders to prevent players from clipping through objects. We added many mesh colliders to prevent the player from clipping so that they stay immersed in the game.
+	- More actions/actions at home: Playtesters gave feedback about the lack of actions at home and overall the lack of actions throughout the map. We added more actions and actions at home to fully grasp our idea of Work Life Balance. Also, it makes sense that the user should do actions at home since buildings are closed at a certain time.
+	- Tasks Variability/Icons: Playtesters suggested having more variability in tasks that a player is required to do and perhaps some symbols or icons to show the destination of the task. We added more icons on the map for tasks and colored them yellow because the playtesters had a hard time seeing what was available to them
+	- Lack of player visual/audio feedback for tasks: Playtesters noticed that the task system did not have any feedback for them to notice that they finished the task. We added a visual panel for the player to see that the task that they are doing so the player is acknowledged by the game system.
+
+
+Shaders
+	- Justin 
+		- Dog Shader - Dog now has a more cartoony shader. This shader has a more cel shaded look, however it reacts to the camera for its shadows, not the light source. It also gives the object a small outline.
+	- Spancer 
+		- Fake Interior - The windows of a few buildings are using a fake interior shader. The shader has adjustable content (like using a brick wall or wallpaper) to be used as the interior. It has the scalability so it can fit appropriately to whatever ‘window’ you’re applying it to.
+	- Michael 
+		- Glass Windows - This shader makes and mesh see through. There were glass windows added to the player’s house. They have ‘textures’ and are see-through. 
+
+
+Writing Contributions - 
+	- Opening Scene
+		- When you start the game via the main menu, there is a tutorial scene where you flip through a few screens detailing how to play the game. It covers items like the minimap, player stats, and house activities. At any time you can skip the tutorial by clicking on ‘start’.
+	- Closing Scene
+		- For our closing scene we have a credit scene giving credits and naming the ones who worked on Work Life Balance.
