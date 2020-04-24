@@ -110,11 +110,11 @@ public class DayNightController : MonoBehaviour
         dayNightController = this;
         timeMultiplier = 1f;
         numDays = 1;
-        dayText.text = "Day: " + numDays;
         currentTimeOfDay = startOfDaytime;
         GameWon = false;
         if (LevelLoader.LoadingSavedFile)
             LoadTime();
+        dayText.text = "Day: " + numDays;
     }
 
     void Start()
