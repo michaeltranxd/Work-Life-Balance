@@ -43,9 +43,10 @@ public class StatManager : MonoBehaviour
     private float TimeWasLeft;
     public float[] MaxValues = new float[6];
 
-    public int ThirstOverTime;
-    public int HungerOverTime;
-    int EnergyOverTime = 1;
+    private int ThirstOverTime = 1;
+    private int HungerOverTime = 1;
+    private int EnergyOverTime = 1;
+    private int MentalOverTime = 1;
 
     private Slider[] bars = new Slider[6];
     // 0 - Physical Health Bar
@@ -125,6 +126,7 @@ public class StatManager : MonoBehaviour
         stats.Nutri -= HungerOverTime * statDecreaseMultiplier * Time.deltaTime / 60 * DayNightController.timeMultiplier;    // Every minute = 1 point
         stats.Hygiene -= ThirstOverTime * statDecreaseMultiplier * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
         stats.Energy -= EnergyOverTime * statDecreaseMultiplier / 2 * Time.deltaTime / 60 * DayNightController.timeMultiplier;  // Every minute = 1 point
+        stats.MentHealth -= MentalOverTime * statDecreaseMultiplier /2 * Time.deltaTime / 60 * DayNightController.timeMultiplier; //Every minute = 2 points
         stats.PhysHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
         stats.MentHealth -= Time.deltaTime / 60 * DayNightController.timeMultiplier;
         checkStats();
