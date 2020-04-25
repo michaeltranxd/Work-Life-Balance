@@ -16056,6 +16056,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 465292291}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &465910246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5913117798386011080, guid: 5c01c2007b7344bbc900405912c6cffa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1265149584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &470275383
 GameObject:
   m_ObjectHideFlags: 0
@@ -41321,10 +41327,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 145329066}
   anim: {fileID: 1265149587}
-  messagePlane: {fileID: 0}
-  message: {fileID: 0}
+  messagePlane: {fileID: 1106748284}
+  message: {fileID: 1912513633}
   StatsManager: {fileID: 410477554}
   player: {fileID: 145329071}
+  npc: {fileID: 465910246}
   SoundManager: {fileID: 246597107}
   notificationSound: {fileID: 8300000, guid: b0b855f3e381fa34facde2fdc71292ca, type: 3}
 --- !u!95 &1265149587
