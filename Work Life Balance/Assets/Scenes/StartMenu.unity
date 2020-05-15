@@ -481,7 +481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 135.59, y: -27.199997}
+  m_AnchoredPosition: {x: 135.58997, y: -27.199951}
   m_SizeDelta: {x: 231.18, y: -94.399994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129379286
@@ -816,12 +816,12 @@ MonoBehaviour:
 
     This
     work was done at UIC as part of CS426 Videogame Design and in collaboration with
-    Collaboration with Memes for Health under Dr. Younge.
+    Memes for Health under Dr. Younge and Faiz Rehman.
 
 
-    All music credits
-    and images all belong to their respective owners. For more info, please check
-    our GitHub repository: https://github.com/michaeltranxd/Work-Life-Balance
+    All music credits and
+    images all belong to their respective owners. For more info, please check our
+    GitHub repository: https://github.com/michaeltranxd/Work-Life-Balance
 
 
     Thank

@@ -19,11 +19,11 @@ public class SlideScript : MonoBehaviour
     private GameObject[] slideGameObjects;
     private int slideGameObjectIndex = 0;
     private string[] slideText = {
-     /*1*/                        "Hello, this will be a tutorial over the basic UI elements and controls of the game.\n\nClick the \">\" button to advance.\nClick the \"<\" button to go back to an earlier slide\nAt any point you can skip the tutorial and play the game by clicking \"Start\"",
+     /*1*/                        "Hello, this will be a tutorial over the basic UI elements and controls of the game.\n\nClick the \">\" button to advance.\nClick the \"<\" button to go back to an earlier slide\n\nAt any point you can skip the tutorial and play the game by clicking \"Start\"",
      /*2*/                        "We will be going over the UI to familiarize you with each component",
      /*3*/                        "This is the minimap. It will always be displayed and show your location on the map. You can zoom in and out using \"Page up\" and \"Page Down\" respectively",
      /*4*/                        "This is the time and day. It displays the current day and time of the game",
-     /*5*/                        "These are your stats. It is the following:\n - Red -> Physical Health\n - Green -> Mental Health\n - Yellow -> Nutrition\n - Blue -> Hygiene\n - Purple -> Energy\n - Gray -> Ability Points\n\n Physical and Mental Health are very important stats, while the other four may indirectly impact the Physical and Mental Health",
+     /*5*/                        "These are your stats. It is the following:\n - Red -> Physical Health\n - Green -> Mental Health\n - Yellow -> Nutrition\n - Blue -> Hygiene\n - Purple -> Energy\n - Gray -> Ability Points\n\nPhysical and Mental Health are very important stats, while the other four may indirectly impact the Physical and Mental Health",
      /*6*/                        "Physical Health is how healthy you are. Your food choices and fitness have an impact on this",
      /*7*/                        "Mental Health is the state of your mind. Having too many worries from not completeing tasks have an impact on this",
      /*8*/                        "Nutrition is affected by the type of food that you eat. It is always decreasing because your body is working on keeping your body healthy so you will always need to keep eating nutritious food",
@@ -52,7 +52,7 @@ public class SlideScript : MonoBehaviour
      /*31*/                       "Walk up to buildings if you would like to be prompted for actions. The following window will pop up with the actions",
      /*32*/                       "Press 'H' key for any questions regarding the controls. It will display the controls of the game",
      /*33*/                       "Now that is all for the tutorial, hopefully you have a better grasp of the game. \n\nSome tips before you start:\n - Try to complete all tasks before you sleep\n - Prevent any of your stats from reaching zero\n - Always go to sleep before midnight!\n - Game will save everytime you go to sleep",
-     /*34*/                       "Story: You have been recently discharged from the hopsital and your medical bill is very costly. The doctor assures you that if you can prevent yourself from going back to the hospital by staying healthy, the medical bill will be significantly reduced. Press \"Start\" to begin"
+     /*34*/                       "Story: You have just been discharged from the hospital after a distressing few days and your doctor’s have told you that you will need to start new medications and significantly change your lifestyle habits to maintain your health. Your main objective for the next 30 days is to recover, establish new healthy habits, find a good work life balance, and prevent getting readmitted into the hospital. Explore your community and utilize all the resources available to reach your new health goals!\n\nPress \"Start\" to begin"
     };
 
     // Start is called before the first frame update
