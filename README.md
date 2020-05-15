@@ -9,7 +9,7 @@ Work-life balance is a 3d healthcare awareness serious game that is targeted for
 - Spancer Guo [@spancerrr](https://github.com/spancerrr)
 - Michael Tran [@michaeltranxd](https://github.com/michaeltranxd)
 
-Collaboration with Memes for Health under Dr. Younge
+Collaboration with Memes for Health under Dr. Younge and Faiz Rehman
 
 Level and Character Design: 
 The reason we are choosing to have the realistic level design and character design is
