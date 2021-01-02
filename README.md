@@ -1,5 +1,7 @@
 # Work Life Balance
 
+[![Work Life Balance Video](work_life_balance_image.png)](https://drive.google.com/file/d/1stWdVfwezEuoU63P2aSpV3VyEWIyAkK5/view?usp=sharing "Work Life Balance Video")
+
 Work-life balance is a 3d healthcare awareness serious game that is targeted for individuals that have experienced hospital admission. Players will play as a patient recently discharged from the hospital and have to perform specific actions under restrictions to achieve one goal: to prevent hospital readmission. Each action will increase/decrease the physical, mental, nutrition, wakefulness, hygiene, and energy, depending on the action.
 
 [Design Document](https://docs.google.com/document/d/1Ck8zF3Yt3X1N1JXT_AUpbYGIUTo74_H7UZIEWQ4_muc/edit?usp=sharing)
